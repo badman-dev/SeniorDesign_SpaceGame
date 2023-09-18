@@ -53,12 +53,12 @@ public class playerController : MonoBehaviour
 
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
         }
-        //Debug.Log("Current Velocity: " + rb.velocity);
-
+        
+        //TODO: should this apply to rotation as well?
+        //apply counter-thrust if brake is pressed
         if (currentBrakeValue != 0)
         {
-            //TODO: holding brake should activate thrusters in opposite direction to current velocity so ship holds in place
-            //possibly this should also apply to rotation? or separate rotation brake?
+            rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue);
         }
     }
 }
