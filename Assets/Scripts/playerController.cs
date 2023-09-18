@@ -12,10 +12,14 @@ public class playerController : MonoBehaviour
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
 
+    [Header("Thrust Settings")]
     public int thrusterStrength = 5;
     public int brakeStrength = 5;
     public float maximumVelocity = 10;
     public bool thrustRelative = false;
+    public bool applyBrakeToRotation = false;
+    [Range(0, 1)]
+    public float brakeRotationStrength = .1f;
 
     private Vector2 currentThrusterAxisValue;
     private float currentBrakeValue;
@@ -59,6 +63,9 @@ public class playerController : MonoBehaviour
         if (currentBrakeValue != 0)
         {
             rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
+
+            if (applyBrakeToRotation)
+                rb.AddTorque(rb.angularVelocity * -1 * brakeRotationStrength * currentBrakeValue * Time.deltaTime);
         }
     }
 }

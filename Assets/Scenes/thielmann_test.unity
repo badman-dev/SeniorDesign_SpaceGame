@@ -569,6 +569,8 @@ MonoBehaviour:
   brakeStrength: 300
   maximumVelocity: 15
   thrustRelative: 0
+  applyBrakeToRotation: 1
+  brakeRotationStrength: 0.3
 --- !u!212 &1996976189
 SpriteRenderer:
   m_ObjectHideFlags: 0
