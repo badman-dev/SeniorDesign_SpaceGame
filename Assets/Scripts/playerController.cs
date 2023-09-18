@@ -44,11 +44,11 @@ public class playerController : MonoBehaviour
         {
             if (thrustRelative)
             {
-                rb.AddRelativeForce(currentThrusterAxisValue * thrusterStrength);
+                rb.AddRelativeForce(currentThrusterAxisValue * thrusterStrength * Time.deltaTime);
             }
             else
             {
-                rb.AddForce(currentThrusterAxisValue * thrusterStrength);
+                rb.AddForce(currentThrusterAxisValue * thrusterStrength * Time.deltaTime);
             }
 
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
@@ -58,7 +58,7 @@ public class playerController : MonoBehaviour
         //apply counter-thrust if brake is pressed
         if (currentBrakeValue != 0)
         {
-            rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue);
+            rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
         }
     }
 }
