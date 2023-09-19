@@ -18,6 +18,7 @@ public class playerController : MonoBehaviour
     public int brakeStrength = 5;
     public float maximumVelocity = 10;
     public bool thrustRelative = false;
+    [Header("Rotational Thrust Settings")]
     public bool applyBrakeToRotation = false;
     [Range(0, 1)]
     public float brakeRotationStrength = .1f;
@@ -65,7 +66,6 @@ public class playerController : MonoBehaviour
         }
 
         //add torque based on rotation direction input
-        Debug.Log("Current rotation input: " + currentThrusterRotateValue);
         if (currentThrusterRotateValue != 0)
         {
             rb.AddTorque(currentThrusterRotateValue * thrusterRotationStrength * Time.deltaTime);
