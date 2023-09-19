@@ -565,12 +565,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrusterAction: {fileID: 1013188170841487215, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   brakesAction: {fileID: -4821001230440160799, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
+  rotationAction: {fileID: 5068603306116860961, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   thrusterStrength: 380
   brakeStrength: 300
   maximumVelocity: 15
   thrustRelative: 0
   applyBrakeToRotation: 1
   brakeRotationStrength: 0.3
+  thrusterRotationStrength: 20
+  maximumTorque: 90
 --- !u!212 &1996976189
 SpriteRenderer:
   m_ObjectHideFlags: 0
