@@ -17,7 +17,6 @@ public class playerController : MonoBehaviour
     public int thrusterStrength = 5;
     public int brakeStrength = 5;
     public float maximumVelocity = 10;
-    public bool thrustRelative = false;
     [Header("Rotational Thrust Settings")]
     public bool applyBrakeToRotation = false;
     [Range(0, 1)]
@@ -25,7 +24,7 @@ public class playerController : MonoBehaviour
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
 
-    private Vector2 currentThrusterAxisValue;
+    private float currentThrusterAxisValue;
     private float currentBrakeValue;
     private float currentThrusterRotateValue;
 
@@ -46,21 +45,15 @@ public class playerController : MonoBehaviour
     void Update()
     {
         //save current input values
-        currentThrusterAxisValue = thrusterAction.action.ReadValue<Vector2>();
+        currentThrusterAxisValue = thrusterAction.action.ReadValue<float>();
         currentBrakeValue = brakesAction.action.ReadValue<float>();
         currentThrusterRotateValue = rotationAction.action.ReadValue<float>();
 
-        //add force based on directional input
-        if (currentThrusterAxisValue != Vector2.zero)
+        //add forward/backward thrust
+        //TODO: play with the physics on this more, maybe figure out a way to make the horizontal momentum slow when the player rotates?
+        if (currentThrusterAxisValue != 0)
         {
-            if (thrustRelative)
-            {
-                rb.AddRelativeForce(currentThrusterAxisValue * thrusterStrength * Time.deltaTime);
-            }
-            else
-            {
-                rb.AddForce(currentThrusterAxisValue * thrusterStrength * Time.deltaTime);
-            }
+            rb.AddRelativeForce(new Vector2(currentThrusterAxisValue * thrusterStrength * Time.deltaTime, 0));
 
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
         }
@@ -69,6 +62,11 @@ public class playerController : MonoBehaviour
         if (currentThrusterRotateValue != 0)
         {
             rb.AddTorque(currentThrusterRotateValue * thrusterRotationStrength * Time.deltaTime);
+        }
+
+        //clamp torque in general, not just when thrusting
+        if (rb.angularVelocity > maximumTorque)
+        {
             rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, maximumTorque * -1, maximumTorque);
         }
         
