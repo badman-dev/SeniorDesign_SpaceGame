@@ -5,6 +5,7 @@ using TMPro;
 
 public class TextFade : MonoBehaviour
 {
+    //Known limitation of this: If you trigger a fade while another fade is running it won't lerp from the current point, but rather from an alpha of 0 or 255
     public bool startFadedOut = true;
 
     TextMeshPro text;
@@ -25,7 +26,7 @@ public class TextFade : MonoBehaviour
         if (isFadingIn)
             return;
         if (isFadingOut)
-            isFadingOut = false;
+            isFadingOut = false; //Stop fading out if doing so
         isFadingIn = true;
 
         StartCoroutine(FadeInRoutine(fadeTime));
@@ -35,6 +36,7 @@ public class TextFade : MonoBehaviour
     {
         float currentTime = 0;
 
+        //Lerp between alpha 0 to alpha 255 over set fadeTime
         while (isFadingIn && currentTime < fadeTime) {
             currentTime += Time.deltaTime;
             byte newAlpha = (byte)Mathf.Lerp(0, 255, currentTime / fadeTime);
@@ -48,7 +50,7 @@ public class TextFade : MonoBehaviour
         if (isFadingOut)
             return;
         if (isFadingIn)
-            isFadingIn = false;
+            isFadingIn = false; //Stop fading in if doing so
         isFadingOut = true;
         
         StartCoroutine(FadeOutRoutine(fadeTime));
@@ -58,6 +60,7 @@ public class TextFade : MonoBehaviour
     {
         float currentTime = 0;
 
+        //Lerp between alpha 255 to alpha 0 over set fadeTime
         while (isFadingOut && currentTime < fadeTime) {
             currentTime += Time.deltaTime;
             byte newAlpha = (byte)Mathf.Lerp(255, 0, currentTime / fadeTime);
