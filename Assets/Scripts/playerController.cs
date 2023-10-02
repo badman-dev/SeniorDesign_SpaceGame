@@ -77,7 +77,7 @@ public class playerController : MonoBehaviour
         }
 
         //clamp torque in general, not just when thrusting
-        if (rb.angularVelocity > maximumTorque)
+        if (Mathf.Abs(rb.angularVelocity) > maximumTorque)
         {
             rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, maximumTorque * -1, maximumTorque);
         }
