@@ -26,6 +26,10 @@ public class playerController : MonoBehaviour
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
 
+    [Header("Player Stats")]
+    public TMPro.TextMeshProUGUI healthText;
+    public float playerHealth = 100f;
+
     [HideInInspector]
     public float currentThrusterAxisValue;
     [HideInInspector]
@@ -44,6 +48,8 @@ public class playerController : MonoBehaviour
         brakesAction.action.Enable();
         rotationAction.action.Enable();
 
+        //display player health (change this to actual ui later)
+        healthText.text = playerHealth.ToString();
     }
 
     // Update is called once per frame
@@ -84,5 +90,27 @@ public class playerController : MonoBehaviour
             if (applyBrakeToRotation)
                 rb.AddTorque(rb.angularVelocity * -1 * brakeRotationStrength * currentBrakeValue * Time.deltaTime);
         }
+    }
+
+    //----------------------------------
+    //Player Stat Modification Functions
+    //----------------------------------
+
+    public void applyDamage(float dmgAmount)
+    {
+        playerHealth -= dmgAmount;
+        healthText.text = playerHealth.ToString();
+    }
+
+    public void giveHealth(float hlthAmount)
+    {
+        playerHealth += hlthAmount;
+        healthText.text = playerHealth.ToString();
+    }
+
+    public void setHealth(float amount)
+    {
+        playerHealth = amount;
+        healthText.text = playerHealth.ToString();
     }
 }
