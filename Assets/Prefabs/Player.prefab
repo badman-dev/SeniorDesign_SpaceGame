@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 423829973}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 16.919, y: 16.919, z: 16.919}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2024978894}
@@ -263,15 +263,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804189453975380233}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.009999992, y: -0.060000014, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.071922, y: 0.071922, z: 0.071922}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 423829974}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1804189453975380238
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -313,8 +313,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.23994851, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0fa69fc159d2a914296cfda9e9ead04b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -340,13 +340,13 @@ MonoBehaviour:
   thrusterAction: {fileID: 1013188170841487215, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   brakesAction: {fileID: -4821001230440160799, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   rotationAction: {fileID: 5068603306116860961, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
-  thrusterStrength: 300
-  brakeStrength: 300
-  maximumVelocity: 15
+  thrusterStrength: 200
+  brakeStrength: 200
+  maximumVelocity: 5
   applyBrakeToRotation: 1
   brakeRotationStrength: 0.3
   thrusterRotationStrength: 20
-  maximumTorque: 90
+  maximumTorque: 45
   healthText: {fileID: 2024978895}
   playerHealth: 100
   currentThrusterAxisValue: 0
@@ -386,16 +386,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.62720656, y: -0.00000047683716}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 20, y: 25.006105}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 14.673096, y: 14.798537}
   m_EdgeRadius: 0
