@@ -340,13 +340,13 @@ MonoBehaviour:
   thrusterAction: {fileID: 1013188170841487215, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   brakesAction: {fileID: -4821001230440160799, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   rotationAction: {fileID: 5068603306116860961, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
-  thrusterStrength: 300
-  brakeStrength: 300
-  maximumVelocity: 15
+  thrusterStrength: 200
+  brakeStrength: 200
+  maximumVelocity: 5
   applyBrakeToRotation: 1
   brakeRotationStrength: 0.3
   thrusterRotationStrength: 20
-  maximumTorque: 90
+  maximumTorque: 45
   healthText: {fileID: 2024978895}
   playerHealth: 100
   currentThrusterAxisValue: 0
