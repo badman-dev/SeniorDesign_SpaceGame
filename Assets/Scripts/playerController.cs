@@ -4,11 +4,13 @@ using Unity.VisualScripting;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Timeline;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class playerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    [HideInInspector]
+    public Rigidbody2D rb;
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
@@ -24,9 +26,16 @@ public class playerController : MonoBehaviour
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
 
-    private float currentThrusterAxisValue;
-    private float currentBrakeValue;
-    private float currentThrusterRotateValue;
+    [Header("Player Stats")]
+    public TMPro.TextMeshProUGUI healthText;
+    public float playerHealth = 100f;
+
+    [HideInInspector]
+    public float currentThrusterAxisValue;
+    [HideInInspector]
+    public float currentBrakeValue;
+    [HideInInspector]
+    public float currentThrusterRotateValue;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +48,8 @@ public class playerController : MonoBehaviour
         brakesAction.action.Enable();
         rotationAction.action.Enable();
 
+        //display player health (change this to actual ui later)
+        healthText.text = playerHealth.ToString();
     }
 
     // Update is called once per frame
@@ -51,9 +62,10 @@ public class playerController : MonoBehaviour
 
         //add forward/backward thrust
         //TODO: play with the physics on this more, maybe figure out a way to make the horizontal momentum slow when the player rotates?
+        //apply counter thrust based on how close to 90 degrees away from velocity vector player is oriented?
         if (currentThrusterAxisValue != 0)
         {
-            rb.AddRelativeForce(new Vector2(currentThrusterAxisValue * thrusterStrength * Time.deltaTime, 0));
+            rb.AddRelativeForce(new Vector2(0, currentThrusterAxisValue * thrusterStrength * Time.deltaTime));
 
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
         }
@@ -65,7 +77,7 @@ public class playerController : MonoBehaviour
         }
 
         //clamp torque in general, not just when thrusting
-        if (rb.angularVelocity > maximumTorque)
+        if (Mathf.Abs(rb.angularVelocity) > maximumTorque)
         {
             rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, maximumTorque * -1, maximumTorque);
         }
@@ -78,5 +90,27 @@ public class playerController : MonoBehaviour
             if (applyBrakeToRotation)
                 rb.AddTorque(rb.angularVelocity * -1 * brakeRotationStrength * currentBrakeValue * Time.deltaTime);
         }
+    }
+
+    //----------------------------------
+    //Player Stat Modification Functions
+    //----------------------------------
+
+    public void applyDamage(float dmgAmount)
+    {
+        playerHealth -= dmgAmount;
+        healthText.text = playerHealth.ToString();
+    }
+
+    public void giveHealth(float hlthAmount)
+    {
+        playerHealth += hlthAmount;
+        healthText.text = playerHealth.ToString();
+    }
+
+    public void setHealth(float amount)
+    {
+        playerHealth = amount;
+        healthText.text = playerHealth.ToString();
     }
 }
