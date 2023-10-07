@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2567307996769114637}
   - component: {fileID: 2037033475258070341}
   - component: {fileID: 2230125914729418475}
+  - component: {fileID: 7752128326993116589}
   m_Layer: 0
   m_Name: Asteroid3
   m_TagString: Untagged
@@ -222,3 +223,19 @@ MonoBehaviour:
   maxCollisionDmg: 10
   terminalVelocity: 5
   minimumVelocity: 2
+--- !u!114 &7752128326993116589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710254295569470817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b1d642fa981444995c8b398f677351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedType: 0
+  minRandomSpeed: 5
+  maxRandomSpeed: 20
+  fixedRotateSpeed: 10
