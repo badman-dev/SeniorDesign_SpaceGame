@@ -13,6 +13,7 @@ public class AsteroidSpin : MonoBehaviour
     public float minRandomSpeed = 5;
     public float maxRandomSpeed = 20;
     public float fixedRotateSpeed = 10;
+    public bool isCounterClockwise = true;
     private float speed = 0;
 
     void Start()
@@ -20,10 +21,12 @@ public class AsteroidSpin : MonoBehaviour
         switch (speedType)
         {
             case SpeedType.RandomSpeedFromRange:
-                speed = Random.Range(minRandomSpeed, maxRandomSpeed);
+                int directionMultiplier = (int)Random.Range(0, 2);
+                if (directionMultiplier == 0) { directionMultiplier = -1; }
+                speed = Random.Range(minRandomSpeed, maxRandomSpeed) * directionMultiplier;
                 break;
             case SpeedType.FixedSpeed:
-                speed = fixedRotateSpeed;
+                speed = fixedRotateSpeed * (isCounterClockwise ? 1 : -1);
                 break;
         }
     }
