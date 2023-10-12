@@ -19,6 +19,18 @@ public class AsteroidSpin : MonoBehaviour
 
     void Start()
     {
+        CircleCollider2D col = gameObject.AddComponent<CircleCollider2D>();
+        col.isTrigger = true;
+        float transformScale = transform.localScale.x;
+        if (transformScale > 1)
+        {
+            col.radius = 25;
+        }
+        else
+        {
+            col.radius = 25 / transformScale;
+        }
+
         switch (speedType)
         {
             case SpeedType.RandomSpeedFromRange:
