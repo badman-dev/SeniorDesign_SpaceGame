@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2056150645877165424}
   - component: {fileID: 2567307996769114637}
   - component: {fileID: 9168845559477512334}
+  - component: {fileID: 5538618478270786678}
   - component: {fileID: 1489607925735846402}
   - component: {fileID: 3174356484607307297}
   m_Layer: 0
@@ -204,6 +205,22 @@ PolygonCollider2D:
       - {x: 0.19999999, y: -2.99}
       - {x: 0.35, y: -2.96}
       - {x: 0.62, y: -2.9299998}
+--- !u!58 &5538618478270786678
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710254295569470817}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 20
 --- !u!114 &1489607925735846402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,3 +252,4 @@ MonoBehaviour:
   minRandomSpeed: 5
   maxRandomSpeed: 20
   fixedRotateSpeed: 10
+  isCounterClockwise: 1

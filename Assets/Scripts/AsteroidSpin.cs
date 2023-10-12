@@ -15,6 +15,7 @@ public class AsteroidSpin : MonoBehaviour
     public float fixedRotateSpeed = 10;
     public bool isCounterClockwise = true;
     private float speed = 0;
+    private bool spinning = false;
 
     void Start()
     {
@@ -31,8 +32,39 @@ public class AsteroidSpin : MonoBehaviour
         }
     }
 
-    void Update()
+    void StartSpinning()
     {
-        transform.Rotate (0 ,0 , speed * Time.deltaTime);
+        spinning = true;
+        StartCoroutine(SpinRoutine());
+    }
+
+    void StopSpinning()
+    {
+        spinning = false;
+    }
+
+    IEnumerator SpinRoutine()
+    {
+        while (spinning)
+        {
+            transform.Rotate (0 ,0 , speed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Player")
+        {
+            StartSpinning();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.tag == "Player")
+        {
+            StopSpinning();
+        }
     }
 }
