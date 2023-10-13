@@ -25,6 +25,7 @@ public class playerController : MonoBehaviour
     public float brakeRotationStrength = .1f;
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
+    public float rotationStrafeStrength = 3;
 
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
@@ -62,24 +63,32 @@ public class playerController : MonoBehaviour
 
         //add forward/backward thrust
         //TODO: play with the physics on this more, maybe figure out a way to make the horizontal momentum slow when the player rotates?
-        //apply counter thrust based on how close to 90 degrees away from velocity vector player is oriented?
+        //apply counter thrust based on how close to 90 degrees away from velocity vector player is oriented? use dot prod of velocity and vector3.right?
+        //apply horizontal thrust when rotating might work better actually
         if (currentThrusterAxisValue != 0)
         {
             rb.AddRelativeForce(new Vector2(0, currentThrusterAxisValue * thrusterStrength * Time.deltaTime));
-
-            rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
         }
 
         //add torque based on rotation direction input
         if (currentThrusterRotateValue != 0)
         {
             rb.AddTorque(currentThrusterRotateValue * thrusterRotationStrength * Time.deltaTime);
+            
+            //add some horizontal force when turning to keep the flying from being totally uncontrollable (hopefully)
+            rb.AddRelativeForce(Vector2.right * Mathf.Sign(currentThrusterRotateValue * -1) * rotationStrafeStrength * currentThrusterAxisValue * (rb.velocity.magnitude / maximumVelocity) * Time.deltaTime);
         }
 
         //clamp torque in general, not just when thrusting
         if (Mathf.Abs(rb.angularVelocity) > maximumTorque)
         {
             rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, maximumTorque * -1, maximumTorque);
+        }
+
+        //clamp velocity in general, not just when thrusting
+        if (rb.velocity.magnitude > maximumVelocity)
+        {
+            rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
         }
         
         //apply counter-thrust if brake is pressed

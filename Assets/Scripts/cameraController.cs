@@ -28,6 +28,7 @@ public class cameraController : MonoBehaviour
         pushDir = new Vector3(pushDir.x, pushDir.y, 0);
 
         transform.position += pushDir * pushStrength;
+        //switch this to lerping you fool!!
     }
 
     private void OnDrawGizmos()
