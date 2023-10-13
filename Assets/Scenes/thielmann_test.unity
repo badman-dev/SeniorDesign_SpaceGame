@@ -2258,10 +2258,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1804189453975380232, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 1804189453975380233, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2309,10 +2305,6 @@ PrefabInstance:
     - target: {fileID: 1804189453975380237, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1804189453975380239, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
-      propertyPath: rotationStrafeStrength
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}

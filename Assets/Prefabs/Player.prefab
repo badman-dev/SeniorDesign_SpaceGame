@@ -347,6 +347,7 @@ MonoBehaviour:
   brakeRotationStrength: 0.3
   thrusterRotationStrength: 20
   maximumTorque: 45
+  rotationStrafeStrength: 200
   healthText: {fileID: 2024978895}
   playerHealth: 100
   currentThrusterAxisValue: 0
