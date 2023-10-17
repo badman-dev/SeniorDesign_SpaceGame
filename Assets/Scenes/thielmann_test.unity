@@ -1950,6 +1950,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1668867599}
+  - component: {fileID: 1668867603}
+  - component: {fileID: 1668867602}
+  - component: {fileID: 1668867601}
+  - component: {fileID: 1668867600}
   m_Layer: 0
   m_Name: Radiation Zone
   m_TagString: Untagged
@@ -1965,13 +1969,83 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668867598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.16432, y: -0.27753976, z: 0.03372003}
+  m_LocalPosition: {x: -2.2, y: -0.29, z: 0.03372003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1668867600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668867598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008b6fa273f447e4d92ef3ae1eb088c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowDmgTrigger: {fileID: 1668867603}
+  medDmgTrigger: {fileID: 1668867602}
+  highDmgTrigger: {fileID: 1668867601}
+  setColliderRadiusAutomatically: 1
+  lowDmgRadius: 3.17
+  medDmgRadius: 1.65
+  highDmgRadius: 0.75
+  lowDmgValue: 2
+  medDmgValue: 4
+  highDmgValue: 6
+--- !u!58 &1668867601
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668867598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
+--- !u!58 &1668867602
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668867598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.65
+--- !u!58 &1668867603
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668867598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.17
 --- !u!1001 &1802005053
 PrefabInstance:
   m_ObjectHideFlags: 0

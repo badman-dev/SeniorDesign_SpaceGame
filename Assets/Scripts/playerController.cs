@@ -62,9 +62,6 @@ public class playerController : MonoBehaviour
         currentThrusterRotateValue = rotationAction.action.ReadValue<float>();
 
         //add forward/backward thrust
-        //TODO: play with the physics on this more, maybe figure out a way to make the horizontal momentum slow when the player rotates?
-        //apply counter thrust based on how close to 90 degrees away from velocity vector player is oriented? use dot prod of velocity and vector3.right?
-        //apply horizontal thrust when rotating might work better actually
         if (currentThrusterAxisValue != 0)
         {
             rb.AddRelativeForce(new Vector2(0, currentThrusterAxisValue * thrusterStrength * Time.deltaTime));
