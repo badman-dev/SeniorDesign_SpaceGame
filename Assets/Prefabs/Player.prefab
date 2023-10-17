@@ -350,6 +350,7 @@ MonoBehaviour:
   rotationStrafeStrength: 200
   healthText: {fileID: 2024978895}
   playerHealth: 100
+  radDmgTickRateSeconds: 1
   currentThrusterAxisValue: 0
   currentBrakeValue: 0
   currentThrusterRotateValue: 0
@@ -371,7 +372,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &1804189453975380236

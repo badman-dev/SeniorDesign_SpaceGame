@@ -46,17 +46,18 @@ public class radZone : MonoBehaviour
 
         Collider2D playerCollider = player.GetComponent<Collider2D>();
 
+        //Apply damage based on zone player is in. Damage tick rate determined by player controller.
         if (highDmgTrigger.IsTouching(playerCollider))
         {
-            Debug.Log("Player within high rad damage zone");
+            player.applyRadDamage(highDmgValue, true);
         }
         else if (medDmgTrigger.IsTouching(playerCollider))
         {
-            Debug.Log("Player within med rad damage zone");
+            player.applyRadDamage(medDmgValue, true);
         }
         else if (lowDmgTrigger.IsTouching(playerCollider))
         {
-            Debug.Log("Player within low rad damage zone");
+            player.applyRadDamage(lowDmgValue, true);
         }
     }
 

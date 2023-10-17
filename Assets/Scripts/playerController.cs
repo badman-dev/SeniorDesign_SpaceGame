@@ -30,6 +30,7 @@ public class playerController : MonoBehaviour
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
     public float playerHealth = 100f;
+    public float radDmgTickRateSeconds = 1;
 
     [HideInInspector]
     public float currentThrusterAxisValue;
@@ -38,9 +39,13 @@ public class playerController : MonoBehaviour
     [HideInInspector]
     public float currentThrusterRotateValue;
 
+    private float radDmgTimer;
+
     // Start is called before the first frame update
     void Start()
     {
+        radDmgTimer = radDmgTickRateSeconds; //makes sure the player gets immediately damaged first time they enter a rad zone
+
         //get reference to rigidbody
         rb = this.GetComponent<Rigidbody2D>();
 
@@ -89,6 +94,7 @@ public class playerController : MonoBehaviour
         }
         
         //apply counter-thrust if brake is pressed
+        //TODO: holding the brake button shifts player back and forth very slightly instead of coming to a stop
         if (currentBrakeValue != 0)
         {
             rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
@@ -96,16 +102,34 @@ public class playerController : MonoBehaviour
             if (applyBrakeToRotation)
                 rb.AddTorque(rb.angularVelocity * -1 * brakeRotationStrength * currentBrakeValue * Time.deltaTime);
         }
+
+        //keep incrementing radiation timer until enough time has elapsed to allow the player to be damaged by radiation again
+        if (radDmgTimer < radDmgTickRateSeconds)
+        {
+            radDmgTimer += Time.deltaTime;
+        }
     }
 
     //----------------------------------
     //Player Stat Modification Functions
     //----------------------------------
 
-    public void applyDamage(float dmgAmount)
+    public void applyDamage(float dmgAmount, bool logDamage = false)
     {
         playerHealth -= dmgAmount;
         healthText.text = playerHealth.ToString();
+
+        if (logDamage)
+            Debug.Log("playerController: damage taken: " + dmgAmount);
+    }
+
+    public void applyRadDamage(float dmgAmount, bool logDamage = false)
+    {
+        if (radDmgTimer >= radDmgTickRateSeconds)
+        {
+            applyDamage(dmgAmount, logDamage);
+            radDmgTimer = 0;
+        }
     }
 
     public void giveHealth(float hlthAmount)
