@@ -24,10 +24,12 @@ public class playerController : MonoBehaviour
     public float brakeRotationStrength = .1f;
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
+    public float rotationStrafeStrength = 3;
 
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
     public float playerHealth = 100f;
+    public float radDmgTickRateSeconds = 1;
 
     [HideInInspector]
     public float currentThrusterAxisValue;
@@ -36,9 +38,13 @@ public class playerController : MonoBehaviour
     [HideInInspector]
     public float currentThrusterRotateValue;
 
+    private float radDmgTimer;
+
     // Start is called before the first frame update
     void Start()
     {
+        radDmgTimer = radDmgTickRateSeconds; //makes sure the player gets immediately damaged first time they enter a rad zone
+
         //get reference to rigidbody
         rb = this.GetComponent<Rigidbody2D>();
 
@@ -60,19 +66,18 @@ public class playerController : MonoBehaviour
         currentThrusterRotateValue = rotationAction.action.ReadValue<float>();
 
         //add forward/backward thrust
-        //TODO: play with the physics on this more, maybe figure out a way to make the horizontal momentum slow when the player rotates?
-        //apply counter thrust based on how close to 90 degrees away from velocity vector player is oriented?
         if (currentThrusterAxisValue != 0)
         {
             rb.AddRelativeForce(new Vector2(0, currentThrusterAxisValue * thrusterStrength * Time.deltaTime));
-
-            rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
         }
 
         //add torque based on rotation direction input
         if (currentThrusterRotateValue != 0)
         {
             rb.AddTorque(currentThrusterRotateValue * thrusterRotationStrength * Time.deltaTime);
+            
+            //add some horizontal force when turning to keep the flying from being totally uncontrollable (hopefully)
+            rb.AddRelativeForce(Vector2.right * Mathf.Sign(currentThrusterRotateValue * -1) * rotationStrafeStrength * currentThrusterAxisValue * (rb.velocity.magnitude / maximumVelocity) * Time.deltaTime);
         }
 
         //clamp torque in general, not just when thrusting
@@ -80,8 +85,15 @@ public class playerController : MonoBehaviour
         {
             rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, maximumTorque * -1, maximumTorque);
         }
+
+        //clamp velocity in general, not just when thrusting
+        if (rb.velocity.magnitude > maximumVelocity)
+        {
+            rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
+        }
         
         //apply counter-thrust if brake is pressed
+        //TODO: holding the brake button shifts player back and forth very slightly instead of coming to a stop
         if (currentBrakeValue != 0)
         {
             rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
@@ -89,16 +101,34 @@ public class playerController : MonoBehaviour
             if (applyBrakeToRotation)
                 rb.AddTorque(rb.angularVelocity * -1 * brakeRotationStrength * currentBrakeValue * Time.deltaTime);
         }
+
+        //keep incrementing radiation timer until enough time has elapsed to allow the player to be damaged by radiation again
+        if (radDmgTimer < radDmgTickRateSeconds)
+        {
+            radDmgTimer += Time.deltaTime;
+        }
     }
 
     //----------------------------------
     //Player Stat Modification Functions
     //----------------------------------
 
-    public void applyDamage(float dmgAmount)
+    public void applyDamage(float dmgAmount, bool logDamage = false)
     {
         playerHealth -= dmgAmount;
         healthText.text = playerHealth.ToString();
+
+        if (logDamage)
+            Debug.Log("playerController: damage taken: " + dmgAmount);
+    }
+
+    public void applyRadDamage(float dmgAmount, bool logDamage = false)
+    {
+        if (radDmgTimer >= radDmgTickRateSeconds)
+        {
+            applyDamage(dmgAmount, logDamage);
+            radDmgTimer = 0;
+        }
     }
 
     public void giveHealth(float hlthAmount)
