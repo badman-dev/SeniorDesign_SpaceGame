@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2834119345888123070}
   - component: {fileID: 5296850435139514088}
   - component: {fileID: 3192475063337939381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LevelBorderCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

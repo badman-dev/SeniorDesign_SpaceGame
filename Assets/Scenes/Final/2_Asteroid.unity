@@ -7315,10 +7315,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1842913335}
-    - target: {fileID: 3891227335350955033, guid: 5540f257f4be00f4f909a0c22184f4b4, type: 3}
-      propertyPath: field of view
-      value: 133
-      objectReference: {fileID: 0}
     - target: {fileID: 3891227335350955036, guid: 5540f257f4be00f4f909a0c22184f4b4, type: 3}
       propertyPath: m_RootOrder
       value: 8
