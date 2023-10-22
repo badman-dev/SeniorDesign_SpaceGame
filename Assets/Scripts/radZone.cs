@@ -20,6 +20,11 @@ public class radZone : MonoBehaviour
     public float medDmgValue = 4;
     public float highDmgValue = 6;
 
+    [Header("Radar Visualization")]
+    public GameObject lowDmgObject;
+    public GameObject medDmgObject;
+    public GameObject highDmgObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,5 +74,9 @@ public class radZone : MonoBehaviour
             medDmgTrigger.radius = medDmgRadius;
             highDmgTrigger.radius = highDmgRadius;
         }
+
+        lowDmgObject.transform.localScale = new Vector2(lowDmgRadius * 2, lowDmgRadius * 2);
+        medDmgObject.transform.localScale = new Vector2(medDmgRadius * 2, medDmgRadius * 2);
+        highDmgObject.transform.localScale = new Vector2(highDmgRadius * 2, highDmgRadius * 2);
     }
 }
