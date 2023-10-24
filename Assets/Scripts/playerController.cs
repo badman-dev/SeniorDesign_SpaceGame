@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
+using DG.Tweening;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class playerController : MonoBehaviour
@@ -91,7 +92,7 @@ public class playerController : MonoBehaviour
         //handle side dash input
         if (currentSideDashInputValue != 0)
         {
-
+            
         }
 
 
