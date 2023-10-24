@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  playerCollider: {fileID: 0}
   thrusterAction: {fileID: 1013188170841487215, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   brakesAction: {fileID: -4821001230440160799, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   rotationAction: {fileID: 5068603306116860961, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
@@ -350,6 +351,8 @@ MonoBehaviour:
   maximumTorque: 113
   rotationStrafeStrength: 200
   dashCooldownSeconds: 1
+  dashDuration: 0.1
+  dashDistance: 1
   healthText: {fileID: 2024978895}
   playerHealth: 100
   radDmgTickRateSeconds: 1
