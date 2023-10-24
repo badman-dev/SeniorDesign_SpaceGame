@@ -133,6 +133,7 @@ public class playerController : MonoBehaviour
         
         //apply counter-thrust if brake is pressed
         //TODO: holding the brake button shifts player back and forth very slightly instead of coming to a stop
+        //(maybe because brake Strength isn't zero so it overshoots a little every time unless you're very quick?
         if (currentBrakeValue != 0)
         {
             rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
