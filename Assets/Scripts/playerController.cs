@@ -11,6 +11,8 @@ public class playerController : MonoBehaviour
 {
     [HideInInspector]
     public Rigidbody2D rb;
+    [HideInInspector]
+    public Collider2D playerCollider;
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
@@ -56,6 +58,8 @@ public class playerController : MonoBehaviour
 
         //get reference to rigidbody
         rb = this.GetComponent<Rigidbody2D>();
+        //get reference to collider
+        playerCollider = this.GetComponent<Collider2D>();
 
         //Activate actions (without this the inputs will not register)
         thrusterAction.action.Enable();
