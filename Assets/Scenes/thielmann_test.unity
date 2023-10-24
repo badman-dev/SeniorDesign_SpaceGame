@@ -2307,18 +2307,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1804189453975380239, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
-      propertyPath: maximumTorque
-      value: 113
-      objectReference: {fileID: 0}
-    - target: {fileID: 1804189453975380239, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
-      propertyPath: sideDashAction
-      value: 
-      objectReference: {fileID: 6765874131710462758, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
-    - target: {fileID: 1804189453975380239, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
-      propertyPath: thrusterRotationStrength
-      value: 80
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
 --- !u!114 &1804189453052416308 stripped
