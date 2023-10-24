@@ -97,7 +97,6 @@ public class playerController : MonoBehaviour
 
         //handle side dash input
 
-        Debug.Log(transform.InverseTransformDirection(rb.velocity)); //ok now have the dash cancel the relative x velocity before the tween... or add the force from the dash?
         if (currentSideDashInputValue != 0 && dashTimer >= dashCooldownSeconds)
         {
             //remove relative horizontal component from player velocity
