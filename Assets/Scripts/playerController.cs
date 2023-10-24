@@ -29,6 +29,8 @@ public class playerController : MonoBehaviour
     public float rotationStrafeStrength = 3;
     [Header("Dash Settings")]
     public float dashCooldownSeconds = 1;
+    public float dashDuration = .25f;
+    public float dashDistance = 1;
 
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
@@ -90,9 +92,24 @@ public class playerController : MonoBehaviour
         }
 
         //handle side dash input
-        if (currentSideDashInputValue != 0)
+
+        Debug.Log(transform.InverseTransformDirection(rb.velocity)); //ok now have the dash cancel the relative x velocity before the tween... or add the force from the dash?
+        if (currentSideDashInputValue != 0 && dashTimer >= dashCooldownSeconds)
         {
-            
+            //remove relative horizontal component from player velocity
+            Vector2 relativeForwardVelocity = new Vector2(0, transform.InverseTransformDirection(rb.velocity).y);
+            rb.velocity = transform.TransformDirection(relativeForwardVelocity);
+
+            rb.DOMove(transform.position + (transform.right * currentSideDashInputValue * dashDistance), dashDuration);
+            dashTimer = 0;
+        }
+        if (dashTimer >= dashCooldownSeconds)
+        {
+            dashTimer = dashCooldownSeconds;
+        }
+        else
+        {
+            dashTimer += Time.deltaTime;
         }
 
 
