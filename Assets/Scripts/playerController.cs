@@ -36,7 +36,8 @@ public class playerController : MonoBehaviour
 
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
-    public float playerHealth = 100f;
+    public float startingPlayerHealth = 100f;
+    private float currentPlayerHealth;
     public float radDmgTickRateSeconds = 1;
 
     [HideInInspector]
@@ -68,7 +69,8 @@ public class playerController : MonoBehaviour
         sideDashAction.action.Enable();
 
         //display player health (change this to actual ui later)
-        healthText.text = playerHealth.ToString();
+        healthText.text = startingPlayerHealth.ToString();
+        currentPlayerHealth = startingPlayerHealth;
     }
 
     // Update is called once per frame
@@ -152,8 +154,8 @@ public class playerController : MonoBehaviour
 
     public void applyDamage(float dmgAmount, bool logDamage = false)
     {
-        playerHealth -= dmgAmount;
-        healthText.text = playerHealth.ToString();
+        currentPlayerHealth -= dmgAmount;
+        healthText.text = currentPlayerHealth.ToString();
 
         if (logDamage)
             Debug.Log("playerController: damage taken: " + dmgAmount);
@@ -171,13 +173,18 @@ public class playerController : MonoBehaviour
 
     public void giveHealth(float hlthAmount)
     {
-        playerHealth += hlthAmount;
-        healthText.text = playerHealth.ToString();
+        currentPlayerHealth += hlthAmount;
+        healthText.text = currentPlayerHealth.ToString();
     }
 
     public void setHealth(float amount)
     {
-        playerHealth = amount;
-        healthText.text = playerHealth.ToString();
+        currentPlayerHealth = amount;
+        healthText.text = currentPlayerHealth.ToString();
+    }
+
+    public float getCurrentHealth()
+    {
+        return currentPlayerHealth;
     }
 }
