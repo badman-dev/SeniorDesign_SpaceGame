@@ -13,6 +13,7 @@ public class playerController : MonoBehaviour
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
+    public InputActionReference sideDashAction;
 
     [Header("Thrust Settings")]
     public int thrusterStrength = 5;
@@ -25,6 +26,8 @@ public class playerController : MonoBehaviour
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
     public float rotationStrafeStrength = 3;
+    [Header("Dash Settings")]
+    public float dashCooldownSeconds = 1;
 
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
@@ -37,8 +40,11 @@ public class playerController : MonoBehaviour
     public float currentBrakeValue;
     [HideInInspector]
     public float currentThrusterRotateValue;
+    [HideInInspector]
+    public float currentSideDashInputValue;
 
     private float radDmgTimer;
+    private float dashTimer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +58,7 @@ public class playerController : MonoBehaviour
         thrusterAction.action.Enable();
         brakesAction.action.Enable();
         rotationAction.action.Enable();
+        sideDashAction.action.Enable();
 
         //display player health (change this to actual ui later)
         healthText.text = playerHealth.ToString();
@@ -64,6 +71,7 @@ public class playerController : MonoBehaviour
         currentThrusterAxisValue = thrusterAction.action.ReadValue<float>();
         currentBrakeValue = brakesAction.action.ReadValue<float>();
         currentThrusterRotateValue = rotationAction.action.ReadValue<float>();
+        currentSideDashInputValue = sideDashAction.action.ReadValue<float>();
 
         //add forward/backward thrust
         if (currentThrusterAxisValue != 0)
@@ -79,6 +87,14 @@ public class playerController : MonoBehaviour
             //add some horizontal force when turning to keep the flying from being totally uncontrollable (hopefully)
             rb.AddRelativeForce(Vector2.right * Mathf.Sign(currentThrusterRotateValue * -1) * rotationStrafeStrength * currentThrusterAxisValue * (rb.velocity.magnitude / maximumVelocity) * Time.deltaTime);
         }
+
+        //handle side dash input
+        if (currentSideDashInputValue != 0)
+        {
+
+        }
+
+
 
         //clamp torque in general, not just when thrusting
         if (Mathf.Abs(rb.angularVelocity) > maximumTorque)
@@ -122,6 +138,7 @@ public class playerController : MonoBehaviour
             Debug.Log("playerController: damage taken: " + dmgAmount);
     }
 
+    //Tick rate for rad damage determined by player so that rad damage doesn't stack up in overlapping zones
     public void applyRadDamage(float dmgAmount, bool logDamage = false)
     {
         if (radDmgTimer >= radDmgTickRateSeconds)
