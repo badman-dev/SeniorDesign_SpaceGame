@@ -507,23 +507,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  playerCollider: {fileID: 0}
   thrusterAction: {fileID: 1013188170841487215, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   brakesAction: {fileID: -4821001230440160799, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   rotationAction: {fileID: 5068603306116860961, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
+  sideDashAction: {fileID: 6765874131710462758, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   thrusterStrength: 200
   brakeStrength: 200
   maximumVelocity: 5
   applyBrakeToRotation: 1
   brakeRotationStrength: 0.3
-  thrusterRotationStrength: 20
-  maximumTorque: 45
+  thrusterRotationStrength: 80
+  maximumTorque: 113
   rotationStrafeStrength: 200
+  dashCooldownSeconds: 1
+  dashDuration: 0.1
+  dashDistance: 1
   healthText: {fileID: 2024978895}
   playerHealth: 100
   radDmgTickRateSeconds: 1
   currentThrusterAxisValue: 0
   currentBrakeValue: 0
   currentThrusterRotateValue: 0
+  currentSideDashInputValue: 0
 --- !u!50 &1804189453975380232
 Rigidbody2D:
   serializedVersion: 4

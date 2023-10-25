@@ -4,15 +4,19 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
+using DG.Tweening;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class playerController : MonoBehaviour
 {
     [HideInInspector]
     public Rigidbody2D rb;
+    [HideInInspector]
+    public Collider2D playerCollider;
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
+    public InputActionReference sideDashAction;
 
     [Header("Thrust Settings")]
     public int thrusterStrength = 5;
@@ -25,10 +29,15 @@ public class playerController : MonoBehaviour
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
     public float rotationStrafeStrength = 3;
+    [Header("Dash Settings")]
+    public float dashCooldownSeconds = 1;
+    public float dashDuration = .25f;
+    public float dashDistance = 1;
 
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
-    public float playerHealth = 100f;
+    public float startingPlayerHealth = 100f;
+    private float currentPlayerHealth;
     public float radDmgTickRateSeconds = 1;
 
     [HideInInspector]
@@ -37,8 +46,11 @@ public class playerController : MonoBehaviour
     public float currentBrakeValue;
     [HideInInspector]
     public float currentThrusterRotateValue;
+    [HideInInspector]
+    public float currentSideDashInputValue;
 
     private float radDmgTimer;
+    private float dashTimer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -47,14 +59,18 @@ public class playerController : MonoBehaviour
 
         //get reference to rigidbody
         rb = this.GetComponent<Rigidbody2D>();
+        //get reference to collider
+        playerCollider = this.GetComponent<Collider2D>();
 
         //Activate actions (without this the inputs will not register)
         thrusterAction.action.Enable();
         brakesAction.action.Enable();
         rotationAction.action.Enable();
+        sideDashAction.action.Enable();
 
         //display player health (change this to actual ui later)
-        healthText.text = playerHealth.ToString();
+        healthText.text = startingPlayerHealth.ToString();
+        currentPlayerHealth = startingPlayerHealth;
     }
 
     // Update is called once per frame
@@ -64,6 +80,7 @@ public class playerController : MonoBehaviour
         currentThrusterAxisValue = thrusterAction.action.ReadValue<float>();
         currentBrakeValue = brakesAction.action.ReadValue<float>();
         currentThrusterRotateValue = rotationAction.action.ReadValue<float>();
+        currentSideDashInputValue = sideDashAction.action.ReadValue<float>();
 
         //add forward/backward thrust
         if (currentThrusterAxisValue != 0)
@@ -80,6 +97,28 @@ public class playerController : MonoBehaviour
             rb.AddRelativeForce(Vector2.right * Mathf.Sign(currentThrusterRotateValue * -1) * rotationStrafeStrength * currentThrusterAxisValue * (rb.velocity.magnitude / maximumVelocity) * Time.deltaTime);
         }
 
+        //handle side dash input
+
+        if (currentSideDashInputValue != 0 && dashTimer >= dashCooldownSeconds)
+        {
+            //remove relative horizontal component from player velocity
+            Vector2 relativeForwardVelocity = new Vector2(0, transform.InverseTransformDirection(rb.velocity).y);
+            rb.velocity = transform.TransformDirection(relativeForwardVelocity);
+
+            rb.DOMove(transform.position + (transform.right * currentSideDashInputValue * dashDistance), dashDuration);
+            dashTimer = 0;
+        }
+        if (dashTimer >= dashCooldownSeconds)
+        {
+            dashTimer = dashCooldownSeconds;
+        }
+        else
+        {
+            dashTimer += Time.deltaTime;
+        }
+
+
+
         //clamp torque in general, not just when thrusting
         if (Mathf.Abs(rb.angularVelocity) > maximumTorque)
         {
@@ -94,6 +133,7 @@ public class playerController : MonoBehaviour
         
         //apply counter-thrust if brake is pressed
         //TODO: holding the brake button shifts player back and forth very slightly instead of coming to a stop
+        //(maybe because brake Strength isn't zero so it overshoots a little every time unless you're very quick?
         if (currentBrakeValue != 0)
         {
             rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
@@ -115,13 +155,14 @@ public class playerController : MonoBehaviour
 
     public void applyDamage(float dmgAmount, bool logDamage = false)
     {
-        playerHealth -= dmgAmount;
-        healthText.text = playerHealth.ToString();
+        currentPlayerHealth -= dmgAmount;
+        healthText.text = currentPlayerHealth.ToString();
 
         if (logDamage)
             Debug.Log("playerController: damage taken: " + dmgAmount);
     }
 
+    //Tick rate for rad damage determined by player so that rad damage doesn't stack up in overlapping zones
     public void applyRadDamage(float dmgAmount, bool logDamage = false)
     {
         if (radDmgTimer >= radDmgTickRateSeconds)
@@ -133,13 +174,18 @@ public class playerController : MonoBehaviour
 
     public void giveHealth(float hlthAmount)
     {
-        playerHealth += hlthAmount;
-        healthText.text = playerHealth.ToString();
+        currentPlayerHealth += hlthAmount;
+        healthText.text = currentPlayerHealth.ToString();
     }
 
     public void setHealth(float amount)
     {
-        playerHealth = amount;
-        healthText.text = playerHealth.ToString();
+        currentPlayerHealth = amount;
+        healthText.text = currentPlayerHealth.ToString();
+    }
+
+    public float getCurrentHealth()
+    {
+        return currentPlayerHealth;
     }
 }
