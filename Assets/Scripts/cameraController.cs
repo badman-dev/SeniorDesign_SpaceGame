@@ -16,12 +16,15 @@ public class cameraController : MonoBehaviour
     private void Update()
     {
         //convert player velocity to vector3 and make sure it's relative to player position and thruster value
-        Vector3 targetPos = new Vector3(player.rb.velocity.normalized.x * distanceMultiplier, player.rb.velocity.normalized.y * distanceMultiplier, 0);
+        Vector3 targetPos = new Vector3(player.rb.velocity.normalized.x * distanceMultiplier, player.rb.velocity.normalized.y * distanceMultiplier, transform.position.z);
         targetPos = (targetPos) + player.transform.position;
 
-        pushCameraTowardsPosition(targetPos, cameraSpeed * player.rb.velocity.magnitude);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, player.rb.velocity.magnitude / 100 * cameraSpeed);
+
+        // pushCameraTowardsPosition(targetPos, cameraSpeed * player.rb.velocity.magnitude);
     }
 
+    //Leaving this here just in case but it's not currently being used - Chris
     public void pushCameraTowardsPosition(Vector3 targetPos, float pushStrength)
     {
         pushDir = targetPos - transform.position;
