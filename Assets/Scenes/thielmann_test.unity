@@ -1879,6 +1879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1804189453052416308}
   cameraSpeed: 0.5
+  distanceMultiplier: 1
 --- !u!1001 &1629762010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2268,11 +2269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1804189453975380237, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.009999992
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1804189453975380237, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.060000014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1804189453975380237, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2332,11 +2333,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2928335260906125492, guid: 430c8139bd35fcc45af581183da76286, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.2
+      value: -4.61
       objectReference: {fileID: 0}
     - target: {fileID: 2928335260906125492, guid: 430c8139bd35fcc45af581183da76286, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 2928335260906125492, guid: 430c8139bd35fcc45af581183da76286, type: 3}
       propertyPath: m_LocalPosition.z

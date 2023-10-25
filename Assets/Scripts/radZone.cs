@@ -39,12 +39,14 @@ public class radZone : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        playerController player;
-        collision.TryGetComponent<playerController>(out player);
-        if (player == null)
-            return;
+        playerController player = new playerController();
+        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player = collision.gameObject.GetComponent<playerController>();
+        }
 
-        Collider2D playerCollider = player.GetComponent<Collider2D>();
+        Collider2D playerCollider = player.playerCollider;
 
         //Apply damage based on zone player is in. Damage tick rate determined by player controller.
         if (highDmgTrigger.IsTouching(playerCollider))
