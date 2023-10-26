@@ -49,6 +49,10 @@ public class playerController : MonoBehaviour
     [HideInInspector]
     public float currentSideDashInputValue;
 
+    //animator
+    Animator animator;
+    bool isMoving;
+
     private float radDmgTimer;
     private float dashTimer = 0;
 
@@ -61,6 +65,8 @@ public class playerController : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         //get reference to collider
         playerCollider = this.GetComponent<Collider2D>();
+        //get reference to animator
+        animator = this.GetComponent<Animator>();
 
         //Activate actions (without this the inputs will not register)
         thrusterAction.action.Enable();
@@ -82,10 +88,15 @@ public class playerController : MonoBehaviour
         currentThrusterRotateValue = rotationAction.action.ReadValue<float>();
         currentSideDashInputValue = sideDashAction.action.ReadValue<float>();
 
+        //animator controller
+        animator.SetBool("IsMoving", false);
+
         //add forward/backward thrust
         if (currentThrusterAxisValue != 0)
         {
             rb.AddRelativeForce(new Vector2(0, currentThrusterAxisValue * thrusterStrength * Time.deltaTime));
+            
+            animator.SetBool("IsMoving", true);
         }
 
         //add torque based on rotation direction input
