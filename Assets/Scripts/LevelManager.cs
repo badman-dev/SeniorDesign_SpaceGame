@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
     private static LevelManager _instance;
     public static LevelManager Instance { get {return _instance; } }
 
-    private int mainAstCount1, sideAstCount1, sideAstCount2; //0, 1, 2
+    public TextMeshProUGUI inventoryText;
+    private int goalAstCountA, bonusAstCountA, bonusAstCountB; //0, 1, 2
 
     private void Awake()
     {
@@ -25,15 +27,15 @@ public class LevelManager : MonoBehaviour
         switch (type)
         {
             case 0:
-                mainAstCount1++;
+                goalAstCountA++;
                 Debug.Log("Picked up goal asteroid");
                 break;
             case 1:
-                sideAstCount1++;
+                bonusAstCountA++;
                 Debug.Log("Picked up bonus asteroid type 1");
                 break;
             case 2:
-                sideAstCount2++;
+                bonusAstCountB++;
                 Debug.Log("Picked up bonus asteroid type 2");
                 break;
         }
@@ -42,7 +44,7 @@ public class LevelManager : MonoBehaviour
 
     private void UpdateObjectiveUI()
     {
-        
+        inventoryText.text = "Goal Asteroids: " + goalAstCountA + "\nBonus Asteroids A: " + bonusAstCountA + "\nBonus Asteroids B: " + bonusAstCountB;
     }
 
     public void ChangeScene(string sceneName)

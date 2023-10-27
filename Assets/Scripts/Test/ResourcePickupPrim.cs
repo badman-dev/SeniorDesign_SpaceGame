@@ -21,9 +21,8 @@ public class ResourcePickupPrim : MonoBehaviour
         if (col.tag == "Player")
         {
             LevelManager.Instance.AddPickup((int)pickupType);
-            transform.parent.GetComponent<SpriteRenderer>().enabled = false;
-            transform.parent.GetComponent<Collider2D>().enabled = false;
             onPickup.Invoke();
+            Destroy(transform.parent.gameObject);
         }
     }
 }
