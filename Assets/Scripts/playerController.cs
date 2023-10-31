@@ -51,7 +51,6 @@ public class playerController : MonoBehaviour
 
     //animator
     Animator animator;
-    bool isMoving;
 
     private float radDmgTimer;
     private float dashTimer = 0;
@@ -89,14 +88,26 @@ public class playerController : MonoBehaviour
         currentSideDashInputValue = sideDashAction.action.ReadValue<float>();
 
         //animator controller
-        animator.SetBool("IsMoving", false);
+        animator.SetBool("IsMovingForward", false);
+        animator.SetBool("IsMovingBack", false);
+        animator.SetBool("IsMovingLeft", false);
+        animator.SetBool("IsMovingRight", false);
+        
 
         //add forward/backward thrust
         if (currentThrusterAxisValue != 0)
         {
             rb.AddRelativeForce(new Vector2(0, currentThrusterAxisValue * thrusterStrength * Time.deltaTime));
             
-            animator.SetBool("IsMoving", true);
+            if(currentThrusterAxisValue > 0)
+            {
+                animator.SetBool("IsMovingForward", true);
+            }
+            else if (currentThrusterAxisValue < 0)
+            {
+                animator.SetBool("IsMovingBack", true);
+            }
+            
         }
 
         //add torque based on rotation direction input
@@ -106,6 +117,16 @@ public class playerController : MonoBehaviour
             
             //add some horizontal force when turning to keep the flying from being totally uncontrollable (hopefully)
             rb.AddRelativeForce(Vector2.right * Mathf.Sign(currentThrusterRotateValue * -1) * rotationStrafeStrength * currentThrusterAxisValue * (rb.velocity.magnitude / maximumVelocity) * Time.deltaTime);
+
+
+            if(currentThrusterRotateValue > 0)
+            {
+                animator.SetBool("IsMovingLeft", true);
+            }
+            else if(currentThrusterRotateValue < 0)
+            {
+                animator.SetBool("IsMovingRight", true);
+            }
         }
 
         //handle side dash input
@@ -116,16 +137,31 @@ public class playerController : MonoBehaviour
             Vector2 relativeForwardVelocity = new Vector2(0, transform.InverseTransformDirection(rb.velocity).y);
             rb.velocity = transform.TransformDirection(relativeForwardVelocity);
 
+            if (currentSideDashInputValue > 0)
+            {
+                animator.SetTrigger("DodgeRight");
+                
+            }
+            else if (currentSideDashInputValue < 0)
+            {
+                animator.SetTrigger("DodgeLeft");
+            }
+
             rb.DOMove(transform.position + (transform.right * currentSideDashInputValue * dashDistance), dashDuration);
             dashTimer = 0;
+
+            
+
         }
         if (dashTimer >= dashCooldownSeconds)
         {
             dashTimer = dashCooldownSeconds;
+            
         }
         else
         {
             dashTimer += Time.deltaTime;
+            
         }
 
 
