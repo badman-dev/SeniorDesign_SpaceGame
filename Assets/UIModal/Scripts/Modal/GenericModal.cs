@@ -1,5 +1,6 @@
 ﻿namespace Gravitons.UI.Modal
 {
+    using System.Collections;
     using UnityEngine;
     using UnityEngine.UI;
 
@@ -11,6 +12,10 @@
         [SerializeField] protected Text m_Body;
         [Tooltip("Buttons in the modal")]
         [SerializeField] protected Button[] m_Buttons;
+        [Tooltip("How long between when each character is displayed")]
+        [SerializeField] protected float textDelaySeconds = .1f;
+        [Tooltip("Whether or not to display text gradually or all at once")]
+        [SerializeField] protected bool displayTextGradually = false;
 
         /// <summary>
         /// Deactivate buttons in awake
@@ -21,13 +26,23 @@
             {
                 m_Buttons[i].gameObject.SetActive(false);
             }
+
+            StopAllCoroutines();
         }
 
         public override void Show(ModalContentBase modalContent, ModalButton[] modalButton)
         {
             GenericModalContent content = (GenericModalContent) modalContent;
-            m_Title.text = content.Title;
-            m_Body.text = content.Body;
+            if (!displayTextGradually)
+            {
+                m_Title.text = content.Title;
+                m_Body.text = content.Body;
+            }
+            else
+            {
+                StartCoroutine(displayTextGradual(m_Title, content.Title, textDelaySeconds));
+                StartCoroutine(displayTextGradual(m_Body, content.Body, textDelaySeconds));
+            }
             
             //Activate buttons and populate properties
             for (int i = 0; i < modalButton.Length; i++)
@@ -54,6 +69,24 @@
                     m_Buttons[index].onClick.RemoveAllListeners();
                 });
             }
+        }
+
+        //custom modfication
+        //display text one character at a time asynchronously
+        private IEnumerator displayTextGradual(Text textBody, string content, float waitTimeSeconds = .1f, bool replaceExistingText = true)
+        {
+            char[] contentSplit = content.ToCharArray();
+
+            if (replaceExistingText)
+                textBody.text = "";
+
+            for (int i = 0; i < contentSplit.Length; i++)
+            {
+                textBody.text += contentSplit[i];
+                yield return new WaitForSeconds(waitTimeSeconds);
+            }
+
+            yield return null;
         }
     }
 }

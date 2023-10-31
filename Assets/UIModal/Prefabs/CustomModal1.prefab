@@ -1135,6 +1135,8 @@ MonoBehaviour:
   - {fileID: 4829560058525075181}
   - {fileID: 8733685475542501622}
   - {fileID: 9068166418011184046}
+  textDelaySeconds: 0.05
+  displayTextGradually: 1
 --- !u!1 &5513796223553707629
 GameObject:
   m_ObjectHideFlags: 0
