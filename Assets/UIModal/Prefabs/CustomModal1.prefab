@@ -619,9 +619,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: b072a4bbe8f46dc47b465f9594715a15, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
+    m_BestFit: 1
+    m_MinSize: 8
+    m_MaxSize: 12
     m_Alignment: 0
     m_AlignByGeometry: 1
     m_RichText: 1
@@ -1135,7 +1135,7 @@ MonoBehaviour:
   - {fileID: 4829560058525075181}
   - {fileID: 8733685475542501622}
   - {fileID: 9068166418011184046}
-  textDelaySeconds: 0.05
+  textDelaySeconds: 0.01
   displayTextGradually: 1
 --- !u!1 &5513796223553707629
 GameObject:
