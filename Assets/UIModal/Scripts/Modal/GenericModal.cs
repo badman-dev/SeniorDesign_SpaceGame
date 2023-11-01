@@ -17,6 +17,11 @@
         [Tooltip("Whether or not to display text gradually or all at once")]
         [SerializeField] protected bool displayTextGradually = false;
 
+        [Header("Audio")]
+        public AudioSource audSource;
+        public AudioClip[] textBlips;
+        public AudioClip closeWindowSound;
+
         /// <summary>
         /// Deactivate buttons in awake
         /// </summary>
@@ -64,6 +69,7 @@
                     
                     if (modalButton[index].CloseModalOnClick)
                     {
+                        audSource.PlayOneShot(closeWindowSound);
                         Close();
                     }
                     m_Buttons[index].onClick.RemoveAllListeners();
@@ -83,6 +89,8 @@
             for (int i = 0; i < contentSplit.Length; i++)
             {
                 textBody.text += contentSplit[i];
+                audSource.PlayOneShot(textBlips[Mathf.FloorToInt(Random.Range(0, textBlips.Length - .01f))]);
+
                 yield return new WaitForSeconds(waitTimeSeconds);
             }
 
