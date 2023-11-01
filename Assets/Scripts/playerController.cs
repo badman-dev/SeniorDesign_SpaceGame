@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
 using DG.Tweening;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class playerController : MonoBehaviour
@@ -39,6 +40,9 @@ public class playerController : MonoBehaviour
     public float startingPlayerHealth = 100f;
     private float currentPlayerHealth;
     public float radDmgTickRateSeconds = 1;
+    public Image healthBar;
+    private float timeSinceLastHit = 0f;
+    private float lerpSpeed;
 
     [HideInInspector]
     public float currentThrusterAxisValue;
@@ -76,6 +80,7 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeSinceLastHit += Time.deltaTime;
         //save current input values
         currentThrusterAxisValue = thrusterAction.action.ReadValue<float>();
         currentBrakeValue = brakesAction.action.ReadValue<float>();
@@ -147,6 +152,10 @@ public class playerController : MonoBehaviour
         {
             radDmgTimer += Time.deltaTime;
         }
+
+        lerpSpeed = 3f * Time.deltaTime;
+        AdjustHealth();
+        ColorChanger();
     }
 
     //----------------------------------
@@ -160,6 +169,7 @@ public class playerController : MonoBehaviour
 
         if (logDamage)
             Debug.Log("playerController: damage taken: " + dmgAmount);
+        timeSinceLastHit = 0f;
     }
 
     //Tick rate for rad damage determined by player so that rad damage doesn't stack up in overlapping zones
@@ -170,6 +180,7 @@ public class playerController : MonoBehaviour
             applyDamage(dmgAmount, logDamage);
             radDmgTimer = 0;
         }
+        timeSinceLastHit = 0f;
     }
 
     public void giveHealth(float hlthAmount)
@@ -187,5 +198,28 @@ public class playerController : MonoBehaviour
     public float getCurrentHealth()
     {
         return currentPlayerHealth;
+    }
+
+    public void AdjustHealth()
+    {
+        float currentHealth = getCurrentHealth();
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (currentHealth / startingPlayerHealth) / 2, lerpSpeed);
+        HealthFade();
+    }
+
+    public void HealthFade()
+    {
+        if (timeSinceLastHit > 3)
+        {
+            healthBar.CrossFadeAlpha(0, .5f, false);
+        } else
+        {
+            healthBar.CrossFadeAlpha(1, .1f, false);
+        }
+    }
+    public void ColorChanger()
+    {
+        Color healthColor = Color.Lerp(Color.red, Color.green, (getCurrentHealth() / startingPlayerHealth));
+        healthBar.color = healthColor;
     }
 }
