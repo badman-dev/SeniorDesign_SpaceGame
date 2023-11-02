@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class LevelManager : MonoBehaviour
@@ -9,8 +10,12 @@ public class LevelManager : MonoBehaviour
     private static LevelManager _instance;
     public static LevelManager Instance { get {return _instance; } }
 
+    public GameObject fadeScreen;
+    public float fadeTime = 1f;
+    public GameObject deathPanel;
     public TextMeshProUGUI inventoryText;
     private int goalAstCountA, bonusAstCountA, bonusAstCountB; //0, 1, 2
+    private bool restartingLevel = false;
 
     private void Awake()
     {
@@ -40,6 +45,33 @@ public class LevelManager : MonoBehaviour
                 break;
         }
         UpdateObjectiveUI();
+    }
+
+    public void StartPlayerDeath()
+    {
+        if (!restartingLevel)
+        {
+            restartingLevel = true;
+            StartCoroutine(PlayerDeathRoutine());
+        }
+    }
+
+    private IEnumerator PlayerDeathRoutine()
+    {
+        Image fadeImage = fadeScreen.GetComponent<Image>();
+        Color newColor = fadeImage.color;
+        newColor.a = 1;
+        fadeImage.color = newColor;
+
+        float currentTime = 0;
+        while (currentTime < fadeTime)
+        {
+            currentTime += Time.deltaTime;
+            newColor.a = currentTime / fadeTime;
+            fadeImage.color = newColor;
+            yield return null;
+        }
+        deathPanel.SetActive(true);
     }
 
     private void UpdateObjectiveUI()

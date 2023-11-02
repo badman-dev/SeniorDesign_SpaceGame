@@ -170,6 +170,7 @@ public class playerController : MonoBehaviour
         if (logDamage)
             Debug.Log("playerController: damage taken: " + dmgAmount);
         timeSinceLastHit = 0f;
+        CheckDead();
     }
 
     //Tick rate for rad damage determined by player so that rad damage doesn't stack up in overlapping zones
@@ -193,6 +194,7 @@ public class playerController : MonoBehaviour
     {
         currentPlayerHealth = amount;
         healthText.text = currentPlayerHealth.ToString();
+        CheckDead();
     }
 
     public float getCurrentHealth()
@@ -217,6 +219,14 @@ public class playerController : MonoBehaviour
             healthBar.CrossFadeAlpha(1, .1f, false);
         }
     }
+
+    private void CheckDead() {
+        if (currentPlayerHealth <= 0)
+        {
+            LevelManager.Instance.StartPlayerDeath();
+        }
+    }
+
     public void ColorChanger()
     {
         Color healthColor = Color.Lerp(Color.red, Color.green, (getCurrentHealth() / startingPlayerHealth));
