@@ -184,9 +184,9 @@ public class playerController : MonoBehaviour
         timeSinceLastHit = 0f;
     }
 
-    public void giveHealth(float hlthAmount)
+    public void giveHealth(float healthAmount)
     {
-        currentPlayerHealth += hlthAmount;
+        currentPlayerHealth += healthAmount;
         healthText.text = currentPlayerHealth.ToString();
     }
 
