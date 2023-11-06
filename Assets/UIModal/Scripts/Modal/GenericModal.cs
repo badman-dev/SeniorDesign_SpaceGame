@@ -23,6 +23,8 @@
         public AudioClip[] textBlips;
         public AudioClip closeWindowSound;
 
+        private bool skipToEndOfText = false;
+
         /// <summary>
         /// Deactivate buttons in awake
         /// </summary>
@@ -88,6 +90,14 @@
 
             for (int i = 0; i < contentSplit.Length; i++)
             {
+                //check if player clicked to skip text printout
+                if (skipToEndOfText)
+                {
+                    skipToEndOfText = false;
+                    textBody.text = content;
+                    break;
+                }
+
                 textBody.text += contentSplit[i];
 
                 if (playAudio && audSource != null)
@@ -97,6 +107,15 @@
             }
 
             yield return null;
+        }
+
+        private void Update()
+        {
+            //listen for mouse click in case player tries to skip to the end of the text immediately
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                skipToEndOfText = true;
+            }
         }
     }
 }
