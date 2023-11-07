@@ -3,16 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PopupUIManager : MonoBehaviour
 {
     public string currentTitle = "Default Title";
     [TextArea]
     public string currentBodyText = "Default Text Lorem Ipsum Dolor Sit Amet the fitnessgram pacer test is a multistage etc etc";
-    public string currentURL = "www.hackertyper.net";
+    public string currentURL = "www.hackertyper.com";
     public string currentURLButtonText = "Learn More";
     public string currentConfirmText = "Close";
     public string currentNextLevelBtnText = "Next Level";
+    public string targetSceneName = "0_Tutorial";
 
     ////////////
     //Set Values
@@ -49,6 +51,11 @@ public class PopupUIManager : MonoBehaviour
         currentNextLevelBtnText = newBtnText;
     }
 
+    public void setTargetSceneName(string newName)
+    {
+        targetSceneName = newName;
+    }
+
     //////////////////
     //Popup Management
     //////////////////
@@ -80,7 +87,7 @@ public class PopupUIManager : MonoBehaviour
             currentTitle,
             currentBodyText,
             new ModalButton[]{
-                new ModalButton() { Text = currentNextLevelBtnText}
+                new ModalButton() { Text = currentNextLevelBtnText, Callback = loadTargetScene}
                 }
             );
     }
@@ -103,5 +110,11 @@ public class PopupUIManager : MonoBehaviour
     private void goToCurrentURL()
     {
         Application.OpenURL(currentURL);
+    }
+
+    private void loadTargetScene()
+    {
+        //can we get a method for moving sequentially to next level that doesn't take a value?
+        LevelManager.Instance.ChangeScene(targetSceneName);
     }
 }

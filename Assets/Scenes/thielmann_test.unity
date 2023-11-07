@@ -345,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -358,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1804189453052416308}
+      objectReference: {fileID: 679824586}
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -381,7 +381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: setHealth
+      value: createDefaultPopup
       objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -393,11 +393,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: playerController, Assembly-CSharp
+      value: PopupUIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
-      value: 42
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -1131,10 +1131,11 @@ MonoBehaviour:
   currentTitle: Default Title
   currentBodyText: Default Text Lorem Ipsum Dolor Sit Amet the fitnessgram pacer
     test is a multistage etc etc
-  currentURL: www.hackertyper.net
+  currentURL: www.hackertyper.com
   currentURLButtonText: Learn More
   currentConfirmText: Close
   currentNextLevelBtnText: Next Level
+  targetSceneName: 0_Tutorial
 --- !u!1001 &688879724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2046,6 +2047,102 @@ PrefabInstance:
       propertyPath: m_Name
       value: obstacleNoArt (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.g
+      value: 0.22749758
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 679824586}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 679824586}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 679824586}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: DID YOU KNOW?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: check out this website!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689499, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2169,6 +2266,74 @@ PrefabInstance:
     - target: {fileID: 8347613963192689478, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: m_Name
       value: obstacleNoArt (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18460178
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 679824586}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 679824586}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: createNextLevelPopup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: go to the next level!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689499, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: m_RootOrder
