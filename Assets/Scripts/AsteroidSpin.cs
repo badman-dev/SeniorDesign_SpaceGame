@@ -16,6 +16,7 @@ public class AsteroidSpin : MonoBehaviour
     public bool isCounterClockwise = true;
     private float speed = 0;
     private bool spinning = false;
+    public PolygonCollider2D asteroid;
 
     void Start()
     {
@@ -70,7 +71,19 @@ public class AsteroidSpin : MonoBehaviour
         {
             StartSpinning();
         }
+
+
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "bomb")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+    }
+
 
     void OnTriggerExit2D(Collider2D col)
     {

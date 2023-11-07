@@ -18,6 +18,7 @@ public class playerController : MonoBehaviour
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
     public InputActionReference sideDashAction;
+    public bombSpawner bombSpawner;
 
     [Header("Thrust Settings")]
     public int thrusterStrength = 5;
@@ -169,7 +170,10 @@ public class playerController : MonoBehaviour
             
         }
 
-
+        if (Input.GetKeyDown("space"))
+        {
+            bombSpawner.FireBomb();
+        }
 
         //clamp torque in general, not just when thrusting
         if (Mathf.Abs(rb.angularVelocity) > maximumTorque)
@@ -201,8 +205,8 @@ public class playerController : MonoBehaviour
         }
 
         lerpSpeed = 3f * Time.deltaTime;
-        AdjustHealth();
-        ColorChanger();
+        AdjustHealthBar();
+        ColorChanger();   
     }
 
     //----------------------------------
@@ -247,7 +251,7 @@ public class playerController : MonoBehaviour
         return currentPlayerHealth;
     }
 
-    public void AdjustHealth()
+    public void AdjustHealthBar()
     {
         float currentHealth = getCurrentHealth();
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (currentHealth / startingPlayerHealth) / 2, lerpSpeed);
