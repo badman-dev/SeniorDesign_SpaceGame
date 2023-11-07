@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class asteroidDeadly : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class asteroidDeadly : MonoBehaviour
     public float terminalVelocity = 5;
     public float minimumVelocity = 2;
 
+    public UnityEvent onCollision;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        onCollision.Invoke();
+
         playerController player;
         collision.gameObject.TryGetComponent<playerController>(out player);
 
