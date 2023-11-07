@@ -319,6 +319,107 @@ PrefabInstance:
       propertyPath: m_Name
       value: obstacleNoArt (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689496, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 679824586}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 679824586}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1804189453052416308}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setHealth
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: playerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: HELLO
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: you shouldn't have done that waltuh now your hull integrity has decreased
+        waltuh we had a good thing going but you just had to ruin it aaghga aagagaha
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347613963192689498, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
+      propertyPath: onCollision.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8347613963192689499, guid: 3b3ae26f149d6d84b8397bbe3ab09980, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1031,6 +1132,9 @@ MonoBehaviour:
   currentBodyText: Default Text Lorem Ipsum Dolor Sit Amet the fitnessgram pacer
     test is a multistage etc etc
   currentURL: www.hackertyper.net
+  currentURLButtonText: Learn More
+  currentConfirmText: Close
+  currentNextLevelBtnText: Next Level
 --- !u!1001 &688879724
 PrefabInstance:
   m_ObjectHideFlags: 0
