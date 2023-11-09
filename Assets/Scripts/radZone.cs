@@ -44,7 +44,7 @@ public class radZone : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        playerController player = new playerController();
+        playerController player = null;
         
         if (collision.gameObject.CompareTag("Player"))
         {
