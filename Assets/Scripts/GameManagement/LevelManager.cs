@@ -13,8 +13,7 @@ public class LevelManager : MonoBehaviour
     public GameObject fadeScreen;
     public float fadeTime = 1f;
     public GameObject deathPanel;
-    public TextMeshProUGUI inventoryText;
-    private int goalAstCountA, bonusAstCountA, bonusAstCountB; //0, 1, 2
+    private int goalAstCount, bonusAstCountA, bonusAstCountB; //0, 1, 2
     private bool restartingLevel = false;
 
     private void Awake()
@@ -32,7 +31,7 @@ public class LevelManager : MonoBehaviour
         switch (type)
         {
             case 0:
-                goalAstCountA++;
+                goalAstCount++;
                 Debug.Log("Picked up goal asteroid");
                 break;
             case 1:
@@ -44,7 +43,8 @@ public class LevelManager : MonoBehaviour
                 Debug.Log("Picked up bonus asteroid type 2");
                 break;
         }
-        UpdateObjectiveUI();
+
+        UIManager.Instance.UpdateObjectiveUI(goalAstCount, bonusAstCountA, bonusAstCountB);
     }
 
     public void StartPlayerDeath()
@@ -72,11 +72,6 @@ public class LevelManager : MonoBehaviour
             yield return null;
         }
         deathPanel.SetActive(true);
-    }
-
-    private void UpdateObjectiveUI()
-    {
-        inventoryText.text = "Goal Asteroids: " + goalAstCountA + "\nBonus Asteroids A: " + bonusAstCountA + "\nBonus Asteroids B: " + bonusAstCountB;
     }
 
     public void ChangeScene(string sceneName)
