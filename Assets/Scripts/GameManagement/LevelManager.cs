@@ -10,11 +10,7 @@ public class LevelManager : MonoBehaviour
     private static LevelManager _instance;
     public static LevelManager Instance { get {return _instance; } }
 
-    public GameObject fadeScreen;
-    public float fadeTime = 1f;
-    public GameObject deathPanel;
-    public TextMeshProUGUI inventoryText;
-    private int goalAstCountA, bonusAstCountA, bonusAstCountB; //0, 1, 2
+    private int goalAstCount, bonusAstCountA, bonusAstCountB; //0, 1, 2
     private bool restartingLevel = false;
 
     private void Awake()
@@ -32,7 +28,7 @@ public class LevelManager : MonoBehaviour
         switch (type)
         {
             case 0:
-                goalAstCountA++;
+                goalAstCount++;
                 Debug.Log("Picked up goal asteroid");
                 break;
             case 1:
@@ -44,7 +40,8 @@ public class LevelManager : MonoBehaviour
                 Debug.Log("Picked up bonus asteroid type 2");
                 break;
         }
-        UpdateObjectiveUI();
+
+        UIManager.Instance.UpdateObjectiveUI(goalAstCount, bonusAstCountA, bonusAstCountB);
     }
 
     public void StartPlayerDeath()
@@ -58,10 +55,11 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator PlayerDeathRoutine()
     {
-        Image fadeImage = fadeScreen.GetComponent<Image>();
+        Image fadeImage = UIManager.Instance.fadeScreen.GetComponent<Image>();
         Color newColor = fadeImage.color;
         newColor.a = 1;
         fadeImage.color = newColor;
+        float fadeTime = UIManager.Instance.fadeTime;
 
         float currentTime = 0;
         while (currentTime < fadeTime)
@@ -71,12 +69,7 @@ public class LevelManager : MonoBehaviour
             fadeImage.color = newColor;
             yield return null;
         }
-        deathPanel.SetActive(true);
-    }
-
-    private void UpdateObjectiveUI()
-    {
-        inventoryText.text = "Goal Asteroids: " + goalAstCountA + "\nBonus Asteroids A: " + bonusAstCountA + "\nBonus Asteroids B: " + bonusAstCountB;
+        UIManager.Instance.deathPanel.SetActive(true);
     }
 
     public void ChangeScene(string sceneName)
