@@ -25,6 +25,10 @@ public class radZone : MonoBehaviour
     public GameObject medDmgObject;
     public GameObject highDmgObject;
 
+    public AudioSource radiationHighAudio;
+    public AudioSource radiationMediumAudio;
+    public AudioSource radiationLowAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,14 +61,38 @@ public class radZone : MonoBehaviour
         if (highDmgTrigger.IsTouching(playerCollider))
         {
             player.applyRadDamage(highDmgValue, true);
+            if (!radiationHighAudio.isPlaying)
+            {
+                radiationHighAudio.Play();
+                radiationMediumAudio.Pause();
+                radiationLowAudio.Pause();
+            }
         }
         else if (medDmgTrigger.IsTouching(playerCollider))
         {
             player.applyRadDamage(medDmgValue, true);
+            if (!radiationMediumAudio.isPlaying)
+            {
+                radiationHighAudio.Pause();
+                radiationMediumAudio.Play();
+                radiationLowAudio.Pause();
+            }
         }
         else if (lowDmgTrigger.IsTouching(playerCollider))
         {
             player.applyRadDamage(lowDmgValue, true);
+            if (!radiationLowAudio.isPlaying)
+            {
+                radiationHighAudio.Pause();
+                radiationMediumAudio.Pause();
+                radiationLowAudio.Play();
+            }
+        }
+        else
+        {
+            radiationHighAudio.Pause();
+            radiationMediumAudio.Pause();
+            radiationLowAudio.Pause();
         }
     }
 
