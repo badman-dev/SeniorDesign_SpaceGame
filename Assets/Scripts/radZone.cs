@@ -25,9 +25,9 @@ public class radZone : MonoBehaviour
     public GameObject medDmgObject;
     public GameObject highDmgObject;
 
-    public AudioSource radiationHighAudio;
-    public AudioSource radiationMediumAudio;
-    public AudioSource radiationLowAudio;
+    private AudioSource radiationLowAudio;
+    private AudioSource radiationMediumAudio;
+    private AudioSource radiationHighAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,10 @@ public class radZone : MonoBehaviour
             medDmgRadius = medDmgTrigger.radius;
             highDmgRadius = highDmgTrigger.radius;
         }
+
+        radiationLowAudio = lowDmgObject.GetComponent<AudioSource>();
+        radiationMediumAudio = medDmgObject.GetComponent<AudioSource>();
+        radiationHighAudio = highDmgObject.GetComponent<AudioSource>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -88,12 +92,25 @@ public class radZone : MonoBehaviour
                 radiationLowAudio.Play();
             }
         }
-        else
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        playerController player = null;
+        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player = collision.gameObject.GetComponent<playerController>();
+        }
+
+        Collider2D playerCollider = player.playerCollider;
+
+        if (!highDmgTrigger.IsTouching(playerCollider) && !medDmgTrigger.IsTouching(playerCollider) && !lowDmgTrigger.IsTouching(playerCollider))
         {
             radiationHighAudio.Pause();
             radiationMediumAudio.Pause();
             radiationLowAudio.Pause();
         }
+
     }
 
     private void OnDrawGizmos()
