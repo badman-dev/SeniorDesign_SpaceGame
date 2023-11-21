@@ -10,9 +10,6 @@ public class LevelManager : MonoBehaviour
     private static LevelManager _instance;
     public static LevelManager Instance { get {return _instance; } }
 
-    public GameObject fadeScreen;
-    public float fadeTime = 1f;
-    public GameObject deathPanel;
     private int goalAstCount, bonusAstCountA, bonusAstCountB; //0, 1, 2
     private bool restartingLevel = false;
 
@@ -58,10 +55,11 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator PlayerDeathRoutine()
     {
-        Image fadeImage = fadeScreen.GetComponent<Image>();
+        Image fadeImage = UIManager.Instance.fadeScreen.GetComponent<Image>();
         Color newColor = fadeImage.color;
         newColor.a = 1;
         fadeImage.color = newColor;
+        float fadeTime = UIManager.Instance.fadeTime;
 
         float currentTime = 0;
         while (currentTime < fadeTime)
@@ -71,7 +69,7 @@ public class LevelManager : MonoBehaviour
             fadeImage.color = newColor;
             yield return null;
         }
-        deathPanel.SetActive(true);
+        UIManager.Instance.deathPanel.SetActive(true);
     }
 
     public void ChangeScene(string sceneName)

@@ -8,6 +8,10 @@ public class UIManager : MonoBehaviour
     private static UIManager _instance;
     public static UIManager Instance { get {return _instance; } }
 
+    public GameObject fadeScreen;
+    public float fadeTime = 1f;
+    public GameObject deathPanel;
+
     public TextMeshProUGUI asteroidGoalText;
     public TextMeshProUGUI asteroidBonusText1;
     public TextMeshProUGUI asteroidBonusText2;

@@ -799,6 +799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af6fd3c7020f64418af0293034fe340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeScreen: {fileID: 6798949979055556828}
+  fadeTime: 2
+  deathPanel: {fileID: 360810465900620116}
   asteroidGoalText: {fileID: 1563624707744081350}
   asteroidBonusText1: {fileID: 8791110314837873191}
   asteroidBonusText2: {fileID: 7324112173790512079}
