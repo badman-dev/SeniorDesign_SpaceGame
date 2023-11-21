@@ -116,6 +116,9 @@ public class radZone : MonoBehaviour
         {
             ManageHighestTier(playerAudio, 1);
         }
+        else {
+            ManageHighestTier(playerAudio, 0);
+        }
     }
 
     private void ManageHighestTier(PlayerAudioController playerAudio, int tier)
