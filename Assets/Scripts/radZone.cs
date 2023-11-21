@@ -25,7 +25,8 @@ public class radZone : MonoBehaviour
     public GameObject medDmgObject;
     public GameObject highDmgObject;
 
-    // Start is called before the first frame update
+    private int highestTier = 0;
+    
     void Start()
     {
         if (setColliderRadiusAutomatically)
@@ -42,15 +43,40 @@ public class radZone : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        playerController player = null;
-        
-        if (collision.gameObject.CompareTag("Player"))
+        if (!collision.gameObject.CompareTag("Player"))
         {
-            player = collision.gameObject.GetComponent<playerController>();
+            return;
         }
 
+        playerController player = collision.gameObject.GetComponent<playerController>();
+        PlayerAudioController playerAudio = collision.gameObject.GetComponent<PlayerAudioController>();
+        Collider2D playerCollider = player.playerCollider;
+
+        if (highDmgTrigger.IsTouching(playerCollider))
+        {
+            ManageHighestTier(playerAudio, 3);
+        }
+        else if (medDmgTrigger.IsTouching(playerCollider))
+        {
+            ManageHighestTier(playerAudio, 2);
+        }
+        else if (lowDmgTrigger.IsTouching(playerCollider))
+        {
+            ManageHighestTier(playerAudio, 1);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+        
+        playerController player = collision.gameObject.GetComponent<playerController>();
+        PlayerAudioController playerAudio = collision.gameObject.GetComponent<PlayerAudioController>();
         Collider2D playerCollider = player.playerCollider;
 
         //Apply damage based on zone player is in. Damage tick rate determined by player controller.
@@ -66,6 +92,42 @@ public class radZone : MonoBehaviour
         {
             player.applyRadDamage(lowDmgValue, true);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (!collision.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        playerController player = collision.gameObject.GetComponent<playerController>();
+        PlayerAudioController playerAudio = collision.gameObject.GetComponent<PlayerAudioController>();
+        Collider2D playerCollider = player.playerCollider;
+
+        if (highDmgTrigger.IsTouching(playerCollider))
+        {
+            ManageHighestTier(playerAudio, 3);
+        }
+        else if (medDmgTrigger.IsTouching(playerCollider))
+        {
+            ManageHighestTier(playerAudio, 2);
+        }
+        else if (lowDmgTrigger.IsTouching(playerCollider))
+        {
+            ManageHighestTier(playerAudio, 1);
+        }
+        else {
+            ManageHighestTier(playerAudio, 0);
+        }
+    }
+
+    private void ManageHighestTier(PlayerAudioController playerAudio, int tier)
+    {
+        //Keep track of the highest tier in THIS radiation zone. Replace it's entry in the PlayerAudioController so that the PlayerAudioController will compare the highest tiers from each radiation zone the player is currently in
+
+        if (highestTier != 0) { playerAudio.RemoveRadiationIndex(highestTier); }
+        highestTier = tier;
+        playerAudio.AddRadiationIndex(tier);
     }
 
     private void OnDrawGizmos()
