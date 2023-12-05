@@ -195,6 +195,9 @@ MonoBehaviour:
   lowDmgObject: {fileID: 3966176793331183379}
   medDmgObject: {fileID: 1336892497680809341}
   highDmgObject: {fileID: 7669542241255173600}
+  lowDmgAudio: {fileID: 8300000, guid: 06b377ffcb5ade94590090297a309848, type: 3}
+  medDmgAudio: {fileID: 8300000, guid: 7a5ad91edc2bc8e4f90d9393694d4c9c, type: 3}
+  highDmgAudio: {fileID: 8300000, guid: f4b9a9c17f7a6d942821610116c8b8f5, type: 3}
 --- !u!1 &3966176793331183379
 GameObject:
   m_ObjectHideFlags: 0
