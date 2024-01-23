@@ -24,8 +24,6 @@ public class cameraController : MonoBehaviour
         Vector3.ClampMagnitude(targetPos, maximumDistance);
 
         targetPos = (targetPos) + player.transform.position;
-
-        Debug.Log("Target: " + targetPos + "\nPLayer: " + player.transform.position);
         transform.position = Vector3.MoveTowards(transform.position, targetPos, /*player.rb.velocity.magnitude **/ cameraSpeed);
 
         // pushCameraTowardsPosition(targetPos, cameraSpeed * player.rb.velocity.magnitude);
