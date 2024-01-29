@@ -859,6 +859,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3713273126439131179, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3713273126439131179, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3713273126439131179, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3713273126439131179, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4338310929344932934, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
       propertyPath: m_Name
       value: PlayerUICanvas
@@ -945,6 +961,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4338310929344932986, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159091470608125577, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159091470608125577, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159091470608125577, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159091470608125577, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322083739072743997, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322083739072743997, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322083739072743997, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322083739072743997, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4744,6 +4792,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1804189453975380239, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
+      propertyPath: drillPrefab
+      value: 
+      objectReference: {fileID: 7390904691590336609, guid: b9ef9d697f59e2c44a7c3843013e21d0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac484e18c4f19b4d94deee7fe395821, type: 3}
 --- !u!4 &2013255819 stripped
