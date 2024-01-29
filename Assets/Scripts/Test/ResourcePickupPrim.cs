@@ -18,7 +18,7 @@ public class ResourcePickupPrim : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Player")
+        if (col.tag == "drill")
         {
             LevelManager.Instance.AddPickup((int)pickupType);
             onPickup.Invoke();

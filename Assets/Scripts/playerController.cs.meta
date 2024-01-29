@@ -3,7 +3,16 @@ guid: b91c389785febfb4fbdef4cbdc357fdd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - playerCollider: {instanceID: 0}
+  - thrusterAction: {instanceID: 0}
+  - brakesAction: {instanceID: 0}
+  - rotationAction: {instanceID: 0}
+  - sideDashAction: {instanceID: 0}
+  - healthText: {instanceID: 0}
+  - healthBar: {instanceID: 0}
+  - drillPrefab: {fileID: 7390904691590336609, guid: b9ef9d697f59e2c44a7c3843013e21d0, type: 3}
   executionOrder: 0
   icon: {fileID: 2800000, guid: 0fa69fc159d2a914296cfda9e9ead04b, type: 3}
   userData: 

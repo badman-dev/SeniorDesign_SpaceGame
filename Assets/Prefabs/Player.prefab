@@ -663,6 +663,7 @@ MonoBehaviour:
   currentBrakeValue: 0
   currentThrusterRotateValue: 0
   currentSideDashInputValue: 0
+  drillPrefab: {fileID: 7390904691590336609, guid: b9ef9d697f59e2c44a7c3843013e21d0, type: 3}
 --- !u!50 &1804189453975380232
 Rigidbody2D:
   serializedVersion: 4

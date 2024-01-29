@@ -58,6 +58,12 @@ public class playerController : MonoBehaviour
 
     private float radDmgTimer;
     private float dashTimer = 0;
+    private bool hasDrill = false;
+
+    [Header("Drill Prefab")]
+    public GameObject drillPrefab;
+
+    private GameObject playerPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -97,6 +103,23 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMovingBack", false);
         animator.SetBool("IsMovingLeft", false);
         animator.SetBool("IsMovingRight", false);
+
+        //drill spawner. If drill is already active, do not spawn
+        if (Input.GetKeyDown("space"))
+        {
+            if (hasDrill == false)
+            {
+                attachDrill();
+                Debug.Log("drill was attached");
+                hasDrill = true;
+            }
+        } 
+        //drill despawner
+            if (Input.GetKeyDown(KeyCode.J) && hasDrill == true) {
+          
+            Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+            hasDrill = false;
+        }
         
 
         //add forward/backward thrust
@@ -278,5 +301,15 @@ public class playerController : MonoBehaviour
     {
         Color healthColor = Color.Lerp(Color.red, Color.green, (getCurrentHealth() / startingPlayerHealth));
         healthBar.color = healthColor;
+    }
+
+    //adds drill prefab as child of player gameobject
+    private void attachDrill()
+    {
+        GameObject PlayerRef = GameObject.Find("Player");
+
+        GameObject go = Instantiate(drillPrefab, GameObject.Find("Player").transform.position, GameObject.Find("Player").transform.rotation) as GameObject;
+        go.transform.parent = GameObject.Find("Player").transform;
+        GameObject.Find("link1").GetComponent<HingeJoint2D>().connectedBody = GameObject.Find("Player").GetComponent<Rigidbody2D>();
     }
 }
