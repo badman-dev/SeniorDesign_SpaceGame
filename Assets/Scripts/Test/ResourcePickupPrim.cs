@@ -22,7 +22,7 @@ public class ResourcePickupPrim : MonoBehaviour
         {
             LevelManager.Instance.AddPickup((int)pickupType);
             onPickup.Invoke();
-            Destroy(transform.parent.gameObject);
+            Destroy(gameObject);
         }
     }
 }
