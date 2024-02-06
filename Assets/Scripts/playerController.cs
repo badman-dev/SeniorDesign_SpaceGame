@@ -238,7 +238,7 @@ public class playerController : MonoBehaviour
         }
 
         lerpSpeed = 3f * Time.deltaTime;
-        AdjustHealth();
+        AdjustHealthBar();
         ColorChanger();
     }
 
@@ -286,7 +286,7 @@ public class playerController : MonoBehaviour
         return currentPlayerHealth;
     }
 
-    public void AdjustHealth()
+    public void AdjustHealthBar()
     {
         float currentHealth = getCurrentHealth();
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (currentHealth / startingPlayerHealth) / 2, lerpSpeed);
