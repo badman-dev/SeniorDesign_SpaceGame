@@ -3,46 +3,53 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class cameraController : MonoBehaviour
 {
 
     public playerController player;
     public float cameraSpeed = 0.5f;
+    public float camSpeedMultiplierOnDash = .01f;
     public float maximumDistance = 1;
+    public float cooldownOnDashInSeconds = .1f;
+    public float slowmodeCooldownSeconds = 1;
 
-    private Vector3 pushDir;
+    private float disableMovementTimer = 999;
+    private float currentDeltaMultiplier = 1;
+    private float slowmodeTimer = 999;
 
     private void Update()
     {
-        //convert player velocity to vector3 and make sure it's relative to player position and velocity
-        Vector3 targetPos =
-            new Vector3(
-            player.rb.velocity.x,
-            player.rb.velocity.y,
-            transform.position.z);
-        Vector3.ClampMagnitude(targetPos, maximumDistance);
+        if (player.sideDashAction.action.WasPressedThisFrame())
+        {
+            disableMovementTimer = 0;
+            slowmodeTimer = 0;
+        }
 
-        targetPos = (targetPos) + player.transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, /*player.rb.velocity.magnitude **/ cameraSpeed);
+        //do not move if dash was just pressed
+        if (disableMovementTimer < cooldownOnDashInSeconds)
+        {
+            disableMovementTimer += Time.deltaTime;
+        }
+        else
+        {
+            if (slowmodeTimer < slowmodeCooldownSeconds)
+            {
+                slowmodeTimer += Time.deltaTime;
+                currentDeltaMultiplier = Mathf.Lerp(camSpeedMultiplierOnDash, 1, (slowmodeTimer / slowmodeCooldownSeconds));
+            }
 
-        // pushCameraTowardsPosition(targetPos, cameraSpeed * player.rb.velocity.magnitude);
-    }
+            //convert player velocity to vector3 and make sure it's relative to player position and velocity
+            Vector3 targetPos =
+                new Vector3(
+                player.rb.velocity.x,
+                player.rb.velocity.y,
+                transform.position.z);
+            Vector3.ClampMagnitude(targetPos, maximumDistance);
 
-    //Leaving this here just in case but it's not currently being used - Chris
-    public void pushCameraTowardsPosition(Vector3 targetPos, float pushStrength)
-    {
-        pushDir = targetPos - transform.position;
-        pushDir.Normalize();
-        pushDir = new Vector3(pushDir.x, pushDir.y, 0);
-
-        transform.position += pushDir * pushStrength;
-        //switch this to lerping you fool!!
-    }
-
-    private void OnDrawGizmos()
-    {
-        Debug.DrawLine(transform.position, pushDir, Color.red);
-        Debug.DrawLine(player.transform.position, player.transform.position + player.transform.up, Color.blue);
+            targetPos = (targetPos) + player.transform.position;
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, cameraSpeed * currentDeltaMultiplier);
+        }
     }
 }

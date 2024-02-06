@@ -18,15 +18,17 @@ public class playerController : MonoBehaviour
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
     public InputActionReference sideDashAction;
+    public InputActionReference deployDrillAction;
+    public InputActionReference retractDrillAction;
+
+    [Header("Drill Prefab")]
+    public GameObject drillPrefab;
 
     [Header("Thrust Settings")]
     public int thrusterStrength = 5;
-    public int brakeStrength = 5;
     public float maximumVelocity = 10;
     [Header("Rotational Thrust Settings")]
-    public bool applyBrakeToRotation = false;
     [Range(0, 1)]
-    public float brakeRotationStrength = .1f;
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
     public float rotationStrafeStrength = 3;
@@ -34,6 +36,12 @@ public class playerController : MonoBehaviour
     public float dashCooldownSeconds = 1;
     public float dashDuration = .25f;
     public float dashDistance = 1;
+    [Header("Brake Settings")]
+    public int brakeStrength = 5;
+    public bool applyBrakeToRotation = false;
+    public float brakeRotationStrength = .1f;
+    public float brakeFullStopThreshold = .1f;
+
 
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
@@ -60,9 +68,6 @@ public class playerController : MonoBehaviour
     private float dashTimer = 0;
     private bool hasDrill = false;
 
-    [Header("Drill Prefab")]
-    public GameObject drillPrefab;
-
     private GameObject playerPrefab;
 
     // Start is called before the first frame update
@@ -82,6 +87,8 @@ public class playerController : MonoBehaviour
         brakesAction.action.Enable();
         rotationAction.action.Enable();
         sideDashAction.action.Enable();
+        deployDrillAction.action.Enable();
+        retractDrillAction.action.Enable();
 
         //display player health (change this to actual ui later)
         healthText.text = startingPlayerHealth.ToString();
@@ -103,23 +110,6 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMovingBack", false);
         animator.SetBool("IsMovingLeft", false);
         animator.SetBool("IsMovingRight", false);
-
-        //drill spawner. If drill is already active, do not spawn
-        if (Input.GetKeyDown("space"))
-        {
-            if (hasDrill == false)
-            {
-                attachDrill();
-                Debug.Log("drill was attached");
-                hasDrill = true;
-            }
-        } 
-        //drill despawner
-            if (Input.GetKeyDown(KeyCode.J) && hasDrill == true) {
-          
-            Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
-            hasDrill = false;
-        }
         
 
         //add forward/backward thrust
@@ -209,12 +199,17 @@ public class playerController : MonoBehaviour
         //apply counter-thrust if brake is pressed
         //TODO: holding the brake button shifts player back and forth very slightly instead of coming to a stop
         //(maybe because brake Strength isn't zero so it overshoots a little every time unless you're very quick?
-        if (currentBrakeValue != 0)
+        if (currentBrakeValue != 0 && rb.velocity.magnitude >= brakeFullStopThreshold)
         {
             rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
 
             if (applyBrakeToRotation)
                 rb.AddTorque(rb.angularVelocity * -1 * brakeRotationStrength * currentBrakeValue * Time.deltaTime);
+        }
+        else if (currentBrakeValue != 0 && rb.velocity.magnitude < brakeFullStopThreshold)
+        {
+            //if going slow enough, just come to a full stop
+            rb.velocity = Vector3.zero;
         }
 
         //keep incrementing radiation timer until enough time has elapsed to allow the player to be damaged by radiation again
@@ -223,8 +218,27 @@ public class playerController : MonoBehaviour
             radDmgTimer += Time.deltaTime;
         }
 
+
+        //drill spawner. If drill is already active, do not spawn
+        if (deployDrillAction.action.WasPressedThisFrame())
+        {
+            if (hasDrill == false)
+            {
+                attachDrill();
+                Debug.Log("drill was attached");
+                hasDrill = true;
+            }
+        }
+        //drill despawner
+        if (retractDrillAction.action.WasPressedThisFrame() && hasDrill == true)
+        {
+
+            Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+            hasDrill = false;
+        }
+
         lerpSpeed = 3f * Time.deltaTime;
-        AdjustHealth();
+        AdjustHealthBar();
         ColorChanger();
     }
 
@@ -272,7 +286,7 @@ public class playerController : MonoBehaviour
         return currentPlayerHealth;
     }
 
-    public void AdjustHealth()
+    public void AdjustHealthBar()
     {
         float currentHealth = getCurrentHealth();
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, (currentHealth / startingPlayerHealth) / 2, lerpSpeed);
@@ -303,13 +317,19 @@ public class playerController : MonoBehaviour
         healthBar.color = healthColor;
     }
 
+
+    //-----------------------
+    //Drill-Related Functions
+    //-----------------------
+
+
     //adds drill prefab as child of player gameobject
     private void attachDrill()
     {
         GameObject PlayerRef = GameObject.Find("Player");
 
-        GameObject go = Instantiate(drillPrefab, GameObject.Find("Player").transform.position, GameObject.Find("Player").transform.rotation) as GameObject;
+        GameObject go = Instantiate(drillPrefab, transform.position, transform.rotation) as GameObject;
         go.transform.parent = GameObject.Find("Player").transform;
-        GameObject.Find("link1").GetComponent<HingeJoint2D>().connectedBody = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        GameObject.Find("link1").GetComponent<HingeJoint2D>().connectedBody = rb;
     }
 }
