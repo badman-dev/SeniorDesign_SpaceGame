@@ -35,6 +35,7 @@ public class playerController : MonoBehaviour
     public int brakeStrength = 5;
     public bool applyBrakeToRotation = false;
     public float brakeRotationStrength = .1f;
+    public float brakeFullStopThreshold = .1f;
 
 
     [Header("Player Stats")]
@@ -211,12 +212,17 @@ public class playerController : MonoBehaviour
         //apply counter-thrust if brake is pressed
         //TODO: holding the brake button shifts player back and forth very slightly instead of coming to a stop
         //(maybe because brake Strength isn't zero so it overshoots a little every time unless you're very quick?
-        if (currentBrakeValue != 0)
+        if (currentBrakeValue != 0 && rb.velocity.magnitude >= brakeFullStopThreshold)
         {
             rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
 
             if (applyBrakeToRotation)
                 rb.AddTorque(rb.angularVelocity * -1 * brakeRotationStrength * currentBrakeValue * Time.deltaTime);
+        }
+        else if (currentBrakeValue != 0 && rb.velocity.magnitude < brakeFullStopThreshold)
+        {
+            //if going slow enough, just come to a full stop
+            rb.velocity = Vector3.zero;
         }
 
         //keep incrementing radiation timer until enough time has elapsed to allow the player to be damaged by radiation again
