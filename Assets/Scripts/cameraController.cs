@@ -26,10 +26,4 @@ public class cameraController : MonoBehaviour
         targetPos = (targetPos) + player.transform.position;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, /*player.rb.velocity.magnitude **/ cameraSpeed);
     }
-
-    private void OnDrawGizmos()
-    {
-        Debug.DrawLine(transform.position, pushDir, Color.red);
-        Debug.DrawLine(player.transform.position, player.transform.position + player.transform.up, Color.blue);
-    }
 }
