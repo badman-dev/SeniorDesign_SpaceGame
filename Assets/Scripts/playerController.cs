@@ -110,23 +110,6 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMovingBack", false);
         animator.SetBool("IsMovingLeft", false);
         animator.SetBool("IsMovingRight", false);
-
-        //drill spawner. If drill is already active, do not spawn
-        if (deployDrillAction.action.WasPressedThisFrame())
-        {
-            if (hasDrill == false)
-            {
-                attachDrill();
-                Debug.Log("drill was attached");
-                hasDrill = true;
-            }
-        } 
-        //drill despawner
-            if (retractDrillAction.action.WasPressedThisFrame() && hasDrill == true) {
-          
-            Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
-            hasDrill = false;
-        }
         
 
         //add forward/backward thrust
@@ -235,6 +218,25 @@ public class playerController : MonoBehaviour
             radDmgTimer += Time.deltaTime;
         }
 
+
+        //drill spawner. If drill is already active, do not spawn
+        if (deployDrillAction.action.WasPressedThisFrame())
+        {
+            if (hasDrill == false)
+            {
+                attachDrill();
+                Debug.Log("drill was attached");
+                hasDrill = true;
+            }
+        }
+        //drill despawner
+        if (retractDrillAction.action.WasPressedThisFrame() && hasDrill == true)
+        {
+
+            Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+            hasDrill = false;
+        }
+
         lerpSpeed = 3f * Time.deltaTime;
         AdjustHealth();
         ColorChanger();
@@ -314,6 +316,12 @@ public class playerController : MonoBehaviour
         Color healthColor = Color.Lerp(Color.red, Color.green, (getCurrentHealth() / startingPlayerHealth));
         healthBar.color = healthColor;
     }
+
+
+    //-----------------------
+    //Drill-Related Functions
+    //-----------------------
+
 
     //adds drill prefab as child of player gameobject
     private void attachDrill()
