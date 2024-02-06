@@ -25,19 +25,6 @@ public class cameraController : MonoBehaviour
 
         targetPos = (targetPos) + player.transform.position;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, /*player.rb.velocity.magnitude **/ cameraSpeed);
-
-        // pushCameraTowardsPosition(targetPos, cameraSpeed * player.rb.velocity.magnitude);
-    }
-
-    //Leaving this here just in case but it's not currently being used - Chris
-    public void pushCameraTowardsPosition(Vector3 targetPos, float pushStrength)
-    {
-        pushDir = targetPos - transform.position;
-        pushDir.Normalize();
-        pushDir = new Vector3(pushDir.x, pushDir.y, 0);
-
-        transform.position += pushDir * pushStrength;
-        //switch this to lerping you fool!!
     }
 
     private void OnDrawGizmos()
