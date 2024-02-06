@@ -18,6 +18,8 @@ public class playerController : MonoBehaviour
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
     public InputActionReference sideDashAction;
+    public InputActionReference deployDrillAction;
+    public InputActionReference retractDrillAction;
 
     [Header("Thrust Settings")]
     public int thrusterStrength = 5;
@@ -85,6 +87,8 @@ public class playerController : MonoBehaviour
         brakesAction.action.Enable();
         rotationAction.action.Enable();
         sideDashAction.action.Enable();
+        deployDrillAction.action.Enable();
+        retractDrillAction.action.Enable();
 
         //display player health (change this to actual ui later)
         healthText.text = startingPlayerHealth.ToString();
@@ -108,7 +112,7 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMovingRight", false);
 
         //drill spawner. If drill is already active, do not spawn
-        if (Input.GetKeyDown("space"))
+        if (deployDrillAction.action.WasPressedThisFrame())
         {
             if (hasDrill == false)
             {
@@ -118,7 +122,7 @@ public class playerController : MonoBehaviour
             }
         } 
         //drill despawner
-            if (Input.GetKeyDown(KeyCode.J) && hasDrill == true) {
+            if (retractDrillAction.action.WasPressedThisFrame() && hasDrill == true) {
           
             Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
             hasDrill = false;
