@@ -21,12 +21,9 @@ public class playerController : MonoBehaviour
 
     [Header("Thrust Settings")]
     public int thrusterStrength = 5;
-    public int brakeStrength = 5;
     public float maximumVelocity = 10;
     [Header("Rotational Thrust Settings")]
-    public bool applyBrakeToRotation = false;
     [Range(0, 1)]
-    public float brakeRotationStrength = .1f;
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
     public float rotationStrafeStrength = 3;
@@ -34,6 +31,11 @@ public class playerController : MonoBehaviour
     public float dashCooldownSeconds = 1;
     public float dashDuration = .25f;
     public float dashDistance = 1;
+    [Header("Brake Settings")]
+    public int brakeStrength = 5;
+    public bool applyBrakeToRotation = false;
+    public float brakeRotationStrength = .1f;
+
 
     [Header("Player Stats")]
     public TMPro.TextMeshProUGUI healthText;
