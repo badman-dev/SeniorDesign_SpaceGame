@@ -21,6 +21,9 @@ public class playerController : MonoBehaviour
     public InputActionReference deployDrillAction;
     public InputActionReference retractDrillAction;
 
+    [Header("Drill Prefab")]
+    public GameObject drillPrefab;
+
     [Header("Thrust Settings")]
     public int thrusterStrength = 5;
     public float maximumVelocity = 10;
@@ -64,9 +67,6 @@ public class playerController : MonoBehaviour
     private float radDmgTimer;
     private float dashTimer = 0;
     private bool hasDrill = false;
-
-    [Header("Drill Prefab")]
-    public GameObject drillPrefab;
 
     private GameObject playerPrefab;
 
@@ -328,8 +328,8 @@ public class playerController : MonoBehaviour
     {
         GameObject PlayerRef = GameObject.Find("Player");
 
-        GameObject go = Instantiate(drillPrefab, GameObject.Find("Player").transform.position, GameObject.Find("Player").transform.rotation) as GameObject;
+        GameObject go = Instantiate(drillPrefab, transform.position, transform.rotation) as GameObject;
         go.transform.parent = GameObject.Find("Player").transform;
-        GameObject.Find("link1").GetComponent<HingeJoint2D>().connectedBody = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        GameObject.Find("link1").GetComponent<HingeJoint2D>().connectedBody = rb;
     }
 }
