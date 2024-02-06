@@ -13,16 +13,11 @@ public class cameraController : MonoBehaviour
     public float camSpeedMultiplierOnDash = .01f;
     public float maximumDistance = 1;
     public float cooldownOnDashInSeconds = .1f;
+    public float slowmodeCooldownSeconds = 1;
 
     private float disableMovementTimer = 999;
     private float currentDeltaMultiplier = 1;
-    private float slowmodeCooldownSeconds;
     private float slowmodeTimer = 999;
-
-    private void Start()
-    {
-        slowmodeCooldownSeconds = player.dashCooldownSeconds;
-    }
 
     private void Update()
     {
