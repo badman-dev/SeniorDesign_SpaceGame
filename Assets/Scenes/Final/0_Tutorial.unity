@@ -2162,12 +2162,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_text
-      value: 'Press Spacebar to deploy drill
+      value: 'Press Spacebar to deploy or retract drill
 
-        Press J to retract drill
-
-        Mine
-        Brightly Colored Asteroids for extra points'
+        Mine Brightly Colored
+        Asteroids for extra points'
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
