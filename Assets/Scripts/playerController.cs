@@ -221,20 +221,25 @@ public class playerController : MonoBehaviour
         //drill spawner. If drill is already active, do not spawn
         if (deployDrillAction.action.WasPressedThisFrame())
         {
-            if (isDrillDeployed == false)
+            if (!isDrillDeployed)
             {
                 attachDrill();
                 Debug.Log("drill was attached");
                 isDrillDeployed = true;
             }
+            else
+            {
+                Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+                isDrillDeployed = false;
+            }
         }
-        //drill despawner
-        if (retractDrillAction.action.WasPressedThisFrame() && isDrillDeployed == true)
-        {
+        ////drill despawner
+        //if (retractDrillAction.action.WasPressedThisFrame() && isDrillDeployed)
+        //{
 
-            Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
-            isDrillDeployed = false;
-        }
+        //    Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+        //    isDrillDeployed = false;
+        //}
 
         lerpSpeed = 3f * Time.deltaTime;
         AdjustHealthBar();
