@@ -14,6 +14,14 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     [HideInInspector]
     public Collider2D playerCollider;
+    //TEst
+    [HideInInspector]
+    public GameObject dmgSpriteController;
+    [HideInInspector]
+    public SpriteRenderer dmgSprite;
+    [HideInInspector]
+    public Color dmgAlpha;
+    //EndTEst
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
@@ -82,6 +90,13 @@ public class playerController : MonoBehaviour
         //get reference to animator
         animator = this.GetComponent<Animator>();
 
+        //Test
+        dmgSpriteController = GameObject.Find("DamageState");
+        dmgSprite = dmgSpriteController.GetComponent<SpriteRenderer>();
+        dmgAlpha = dmgSprite.color;
+        dmgAlpha.a = 0;
+        //EndTest
+
         //Activate actions (without this the inputs will not register)
         thrusterAction.action.Enable();
         brakesAction.action.Enable();
@@ -110,14 +125,14 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMovingBack", false);
         animator.SetBool("IsMovingLeft", false);
         animator.SetBool("IsMovingRight", false);
-        
+
 
         //add forward/backward thrust
         if (currentThrusterAxisValue != 0)
         {
             rb.AddRelativeForce(new Vector2(0, currentThrusterAxisValue * thrusterStrength * Time.deltaTime));
-            
-            if(currentThrusterAxisValue > 0)
+
+            if (currentThrusterAxisValue > 0)
             {
                 animator.SetBool("IsMovingForward", true);
             }
@@ -125,23 +140,23 @@ public class playerController : MonoBehaviour
             {
                 animator.SetBool("IsMovingBack", true);
             }
-            
+
         }
 
         //add torque based on rotation direction input
         if (currentThrusterRotateValue != 0)
         {
             rb.AddTorque(currentThrusterRotateValue * thrusterRotationStrength * Time.deltaTime);
-            
+
             //add some horizontal force when turning to keep the flying from being totally uncontrollable (hopefully)
             rb.AddRelativeForce(Vector2.right * Mathf.Sign(currentThrusterRotateValue * -1) * rotationStrafeStrength * currentThrusterAxisValue * (rb.velocity.magnitude / maximumVelocity) * Time.deltaTime);
 
 
-            if(currentThrusterRotateValue > 0)
+            if (currentThrusterRotateValue > 0)
             {
                 animator.SetBool("IsMovingLeft", true);
             }
-            else if(currentThrusterRotateValue < 0)
+            else if (currentThrusterRotateValue < 0)
             {
                 animator.SetBool("IsMovingRight", true);
             }
@@ -158,7 +173,7 @@ public class playerController : MonoBehaviour
             if (currentSideDashInputValue > 0)
             {
                 animator.SetTrigger("DodgeRight");
-                
+
             }
             else if (currentSideDashInputValue < 0)
             {
@@ -168,18 +183,18 @@ public class playerController : MonoBehaviour
             rb.DOMove(transform.position + (transform.right * currentSideDashInputValue * dashDistance), dashDuration);
             dashTimer = 0;
 
-            
+
 
         }
         if (dashTimer >= dashCooldownSeconds)
         {
             dashTimer = dashCooldownSeconds;
-            
+
         }
         else
         {
             dashTimer += Time.deltaTime;
-            
+
         }
 
 
@@ -195,7 +210,7 @@ public class playerController : MonoBehaviour
         {
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
         }
-        
+
         //apply counter-thrust if brake is pressed
         //TODO: holding the brake button shifts player back and forth very slightly instead of coming to a stop
         //(maybe because brake Strength isn't zero so it overshoots a little every time unless you're very quick?
@@ -254,6 +269,9 @@ public class playerController : MonoBehaviour
         if (logDamage)
             Debug.Log("playerController: damage taken: " + dmgAmount);
         timeSinceLastHit = 0f;
+        //Test
+        DamageAlpha();
+        //EndTest
         CheckDead();
     }
 
@@ -298,13 +316,15 @@ public class playerController : MonoBehaviour
         if (timeSinceLastHit > 3)
         {
             healthBar.CrossFadeAlpha(0, .5f, false);
-        } else
+        }
+        else
         {
             healthBar.CrossFadeAlpha(1, .1f, false);
         }
     }
 
-    private void CheckDead() {
+    private void CheckDead()
+    {
         if (currentPlayerHealth <= 0)
         {
             LevelManager.Instance.StartPlayerDeath();
@@ -331,5 +351,13 @@ public class playerController : MonoBehaviour
         GameObject go = Instantiate(drillPrefab, transform.position, transform.rotation) as GameObject;
         go.transform.parent = GameObject.Find("Player").transform;
         GameObject.Find("link1").GetComponent<HingeJoint2D>().connectedBody = rb;
+    }
+
+    //Test
+    public void DamageAlpha()
+    {
+        dmgAlpha.a = 1 - (currentPlayerHealth / startingPlayerHealth);
+        dmgSprite.color = dmgAlpha;
+        Debug.Log("playerController: Alpha: " + dmgAlpha.a.ToString());
     }
 }
