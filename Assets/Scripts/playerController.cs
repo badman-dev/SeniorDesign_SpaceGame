@@ -89,6 +89,7 @@ public class playerController : MonoBehaviour
         playerCollider = this.GetComponent<Collider2D>();
         //get reference to animator
         animator = this.GetComponent<Animator>();
+        animator.SetBool("IsHarvesting", false);
 
         //Test
         dmgSpriteController = GameObject.Find("DamageState");
@@ -125,7 +126,7 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMovingBack", false);
         animator.SetBool("IsMovingLeft", false);
         animator.SetBool("IsMovingRight", false);
-
+        
 
         //add forward/backward thrust
         if (currentThrusterAxisValue != 0)
@@ -242,6 +243,7 @@ public class playerController : MonoBehaviour
                 attachDrill();
                 Debug.Log("drill was attached");
                 hasDrill = true;
+                animator.SetBool("IsHarvesting", true);
             }
         }
         //drill despawner
@@ -249,6 +251,7 @@ public class playerController : MonoBehaviour
         {
 
             Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+            animator.SetBool("IsHarvesting", false);
             hasDrill = false;
         }
 

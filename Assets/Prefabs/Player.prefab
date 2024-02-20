@@ -615,7 +615,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 0fa69fc159d2a914296cfda9e9ead04b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -641,6 +641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   playerCollider: {fileID: 0}
+  dmgSpriteController: {fileID: 0}
+  dmgSprite: {fileID: 0}
+  dmgAlpha: {r: 0, g: 0, b: 0, a: 0}
   thrusterAction: {fileID: 1013188170841487215, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   brakesAction: {fileID: -4821001230440160799, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   rotationAction: {fileID: 5068603306116860961, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
