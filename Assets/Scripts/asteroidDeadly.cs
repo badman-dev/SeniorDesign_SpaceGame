@@ -27,7 +27,8 @@ public class asteroidDeadly : MonoBehaviour
     {
         onCollision.Invoke();
 
-        audioSource.PlayOneShot(damageSounds[Random.Range(0, damageSounds.Length - 1)]); //play random hit sound
+        if (damageSounds.Length != 0)
+            audioSource.PlayOneShot(damageSounds[Random.Range(0, damageSounds.Length - 1)]); //play random hit sound
 
         playerController player;
         collision.gameObject.TryGetComponent<playerController>(out player);
