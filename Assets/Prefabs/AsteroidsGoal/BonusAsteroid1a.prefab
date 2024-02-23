@@ -311,6 +311,12 @@ MonoBehaviour:
   maxCollisionDmg: 10
   terminalVelocity: 5
   minimumVelocity: 2
+  damageSounds:
+  - {fileID: 8300000, guid: 6af0a16ae621eff42bb57ba360e0dd58, type: 3}
+  - {fileID: 8300000, guid: bf48531425864e64b87d71fce2fc279a, type: 3}
+  - {fileID: 8300000, guid: 861131526c45cce449b9d86cdf68e64e, type: 3}
+  - {fileID: 8300000, guid: e8c6d3b956566bd44b195fab7b81158e, type: 3}
+  audioSource: {fileID: 0}
   onCollision:
     m_PersistentCalls:
       m_Calls: []
