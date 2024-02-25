@@ -2304,7 +2304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2345,6 +2345,119 @@ PrefabInstance:
     - target: {fileID: 2056150645877165424, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Galactic Cosmic Radiation (GRC) is a major source of radiation in our
+        solar system that comes from other parts of the Milky Way.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://www.nasa.gov/missions/analog-field-testing/why-space-radiation-matters/
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
@@ -3654,7 +3767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3696,6 +3809,118 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: M-class solar flares can cause radio blackouts at the Earth's poles.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://science.nasa.gov/science-research/heliophysics/space-weather/solar-flares/what-is-a-solar-flare/
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868072233509881560, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0986f3f3f03a4ac478a4e7b88298c923, type: 3}
 --- !u!4 &275892985 stripped
@@ -3716,7 +3941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3757,6 +3982,118 @@ PrefabInstance:
     - target: {fileID: 2056150645877165424, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Solar flares emit 1 million times more energy than a volcanic eruption.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://scied.ucar.edu/learning-zone/sun-space-weather/solar-flare
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
@@ -4988,9 +5325,122 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusAsteroid2a
       objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Galactic Cosmic Radiation (GRC) can come from the remnants of supernovas,
+        exploded stars.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://www.nasa.gov/universe/nasas-fermi-proves-supernova-remnants-produce-cosmic-rays/
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055305486024253259, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: c1cbd5f79f8adea48aad91694a0c0e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6757,7 +7207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6798,6 +7248,119 @@ PrefabInstance:
     - target: {fileID: 2056150645877165424, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Solar flares are large amounts of radiation generated from the sun when
+        magnetic energy from its corona is suddenly released.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://hesperia.gsfc.nasa.gov/rhessi2/docs/monograph/fletcher.pdf
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
@@ -7138,7 +7701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7179,6 +7742,118 @@ PrefabInstance:
     - target: {fileID: 2056150645877165424, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Retrieving data. Wait a few seconds and try to cut or copy again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://www.nasa.gov/missions/analog-field-testing/why-space-radiation-matters/
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973960354115629024, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94e2ebb3d1c527f4e811ef172cc4d940, type: 3}
@@ -8204,9 +8879,122 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusAsteroid4a
       objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: X-class solar flares can produce as much energy as one billion hydrogen
+        bombs.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://science.nasa.gov/science-research/heliophysics/space-weather/solar-flares/what-is-a-solar-flare/
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934871161151425979, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 2979cf8031b581c41bee2726aa2cafac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10150,7 +10938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10191,6 +10979,119 @@ PrefabInstance:
     - target: {fileID: 2056150645877165424, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Individual people vary in susceptibility to the effects of space radiation,
+        but scientists haven't narrowed down why this is.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://www.nasa.gov/missions/analog-field-testing/why-space-radiation-matters/
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559493105086170934, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691236beaebb5ed4c9894d554053871e, type: 3}
@@ -12422,8 +13323,8 @@ Transform:
   - {fileID: 387546470}
   - {fileID: 275892985}
   - {fileID: 659988852}
-  - {fileID: 395309101}
   - {fileID: 885133228}
+  - {fileID: 395309101}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12445,7 +13346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12486,6 +13387,119 @@ PrefabInstance:
     - target: {fileID: 2056150645877165424, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: NASA and other government agencies monitor the sun in order to predict
+        and prepare for X-class solar flares in order to minimize damage to spacecraft.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://science.nasa.gov/science-research/heliophysics/space-weather/solar-flares/what-is-a-solar-flare/
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
@@ -12715,7 +13729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12756,6 +13770,119 @@ PrefabInstance:
     - target: {fileID: 2056150645877165424, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Solar Flares generally pose no danger to Earth because of its magnetic
+        field and atmosphere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://hesperia.gsfc.nasa.gov/rhessi3/mission/science/the-impact-of-flares/index.html
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
@@ -19079,6 +20206,119 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Radiation is invisible to the human eye, and can cause long term problems
+        in humans like cancer, neurological disorders, and radiation sickness.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://www.nasa.gov/hrp/radiation/
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136428676261341964, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 894c2f8c5d181a545815a2f04e182f2d, type: 3}
 --- !u!4 &1562184149 stripped
@@ -22803,7 +24043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2056150645877165424, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22844,6 +24084,119 @@ PrefabInstance:
     - target: {fileID: 2056150645877165424, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2134707129}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBodyText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: setURL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: createPopupWithLink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PopupUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: At higher altitudes the Earth's astmopheric protection and magnetic
+        field are weaker, protecting less against solar radiation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Did You Know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: https://www.nasa.gov/missions/analog-field-testing/why-space-radiation-matters/
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411156001028818267, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d9c1167925e9248bf042c669075ecd, type: 3}
@@ -27033,6 +28386,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6798949979055556828, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
   m_PrefabInstance: {fileID: 2134707125}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134707129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5565958854458163764, guid: 33a108e9e8e51f94d82866bbf3825886, type: 3}
+  m_PrefabInstance: {fileID: 2134707125}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822bfb91ecdc28a4db39112997ac5c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2135224440
 PrefabInstance:
   m_ObjectHideFlags: 0
