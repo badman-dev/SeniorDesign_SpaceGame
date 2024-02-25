@@ -11,7 +11,7 @@ public class MineralBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // rotates mineral deposits towards center of asteroid
+        // rotates self deposit towards center of asteroid
         Vector3 placement = transform.InverseTransformPoint(astOrigin.transform.position);
         float angle = Mathf.Atan2(placement.y, placement.x) * Mathf.Rad2Deg + 90;
         transform.Rotate(0, 0, angle);

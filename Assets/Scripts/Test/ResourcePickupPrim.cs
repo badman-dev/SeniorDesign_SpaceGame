@@ -19,10 +19,6 @@ public class ResourcePickupPrim : MonoBehaviour
 
     public UnityEvent onPickup;
 
-    void Start()
-    {
-    }
-
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "drill")
@@ -53,7 +49,7 @@ public class ResourcePickupPrim : MonoBehaviour
 
     }
 
-    // spawn final mining particles, add score to pickup counter, invoke pickup, destroy mineral deposit
+    // spawn final mining particles, add score to pickup counter, invoke pickup, destroy mineral deposit gameObject
     public void FinishMining()
     {
         GameObject poof = Instantiate(finalDustCloud, transform.position + new Vector3(0,0,2), new Quaternion(0,0,0,0)) as GameObject;

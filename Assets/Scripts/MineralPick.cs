@@ -7,7 +7,7 @@ public class MineralPick : MonoBehaviour
     public Sprite[] sprites;
     void Start()
     {
-        //choose sprite from list of selected sprites
+        //choose mineral sprite from list of sprites. Maybe change to a hue select in future
         GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
     }
 
