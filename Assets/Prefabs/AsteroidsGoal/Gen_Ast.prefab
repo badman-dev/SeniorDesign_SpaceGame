@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6176564736098050604}
   - component: {fileID: 8206620972803611514}
   m_Layer: 0
-  m_Name: BonusAsteroidGenerator
+  m_Name: Gen_Ast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 8894048129103762590}
   - {fileID: 3588565981127961989}
+  - {fileID: 4443519633352944566}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -233,6 +234,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5803331493747534787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4443519633352944566}
+  m_Layer: 0
+  m_Name: Asteroid_Origin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4443519633352944566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803331493747534787}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6370722884084143443}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8202489579031798234
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +277,8 @@ GameObject:
   - component: {fileID: 973519400953250111}
   - component: {fileID: 5569699444206713409}
   - component: {fileID: 4263507763373859084}
+  - component: {fileID: 5454564578536860665}
+  - component: {fileID: 1135229535906839761}
   m_Layer: 0
   m_Name: Resource
   m_TagString: Untagged
@@ -259,7 +293,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8202489579031798234}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0.47, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
@@ -307,8 +341,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 9cd926349b05f9b4ea959810ce8aa049, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 61208ca38e7598b428c7fe3822d5cdde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -347,7 +381,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7c85620323ae8498b2fa35ec929825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToBreak: 3
+  finalDustCloud: {fileID: 6327708270807129149, guid: f93a44874398f6943a9659324884c2e5, type: 3}
   pickupType: 2
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5454564578536860665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202489579031798234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0531b543d93de574fab7c567307e5539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dustCloud: {fileID: 4812839375587315032, guid: e89da6e36f8018440a5a4ae817fdcf19, type: 3}
+  astOrigin: {fileID: 5803331493747534787}
+--- !u!114 &1135229535906839761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202489579031798234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98e59eb74aad644fb24fa5853c3b5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 8a9fade6d8bb2904c8e6ed4aabf3cc42, type: 3}
+  - {fileID: 21300000, guid: 928fa34c63cd45842ba6412c0a838a88, type: 3}
+  - {fileID: 21300000, guid: 61208ca38e7598b428c7fe3822d5cdde, type: 3}

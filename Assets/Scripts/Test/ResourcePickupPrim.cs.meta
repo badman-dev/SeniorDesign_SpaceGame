@@ -3,7 +3,11 @@ guid: 4e7c85620323ae8498b2fa35ec929825
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - dustCloud: {instanceID: 0}
+  - astOrigin: {instanceID: 0}
+  - mineralPrefab: {instanceID: 0}
+  - rockPoof: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
