@@ -66,7 +66,8 @@ public class playerController : MonoBehaviour
 
     private float radDmgTimer;
     private float dashTimer = 0;
-    private bool hasDrill = false;
+    [HideInInspector]
+    public bool isDrillDeployed = false;
 
     private GameObject playerPrefab;
 
@@ -197,8 +198,6 @@ public class playerController : MonoBehaviour
         }
         
         //apply counter-thrust if brake is pressed
-        //TODO: holding the brake button shifts player back and forth very slightly instead of coming to a stop
-        //(maybe because brake Strength isn't zero so it overshoots a little every time unless you're very quick?
         if (currentBrakeValue != 0 && rb.velocity.magnitude >= brakeFullStopThreshold)
         {
             rb.AddForce(rb.velocity.normalized * -1 * brakeStrength * currentBrakeValue * Time.deltaTime);
@@ -222,20 +221,25 @@ public class playerController : MonoBehaviour
         //drill spawner. If drill is already active, do not spawn
         if (deployDrillAction.action.WasPressedThisFrame())
         {
-            if (hasDrill == false)
+            if (!isDrillDeployed)
             {
                 attachDrill();
                 Debug.Log("drill was attached");
-                hasDrill = true;
+                isDrillDeployed = true;
+            }
+            else
+            {
+                Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+                isDrillDeployed = false;
             }
         }
-        //drill despawner
-        if (retractDrillAction.action.WasPressedThisFrame() && hasDrill == true)
-        {
+        ////drill despawner
+        //if (retractDrillAction.action.WasPressedThisFrame() && isDrillDeployed)
+        //{
 
-            Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
-            hasDrill = false;
-        }
+        //    Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+        //    isDrillDeployed = false;
+        //}
 
         lerpSpeed = 3f * Time.deltaTime;
         AdjustHealthBar();
