@@ -365,6 +365,7 @@ public class playerController : MonoBehaviour
         {
             LevelManager.Instance.StartPlayerDeath();
             Destroy(playerSprite);
+            Destroy(dmgSprite);
             deathSystemWhite.GetComponent<ParticleSystem>().Play();
             deathSystemWhite2.GetComponent<ParticleSystem>().Play();
             deathSystemOrange.GetComponent<ParticleSystem>().Play();
