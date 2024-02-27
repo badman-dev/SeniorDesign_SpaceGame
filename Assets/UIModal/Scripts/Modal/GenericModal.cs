@@ -72,6 +72,7 @@
                     
                     if (modalButton[index].CloseModalOnClick)
                     {
+                        playCloseWindowSound();
                         Close();
                     }
                     m_Buttons[index].onClick.RemoveAllListeners();
@@ -107,6 +108,11 @@
             }
 
             yield return null;
+        }
+
+        private void playCloseWindowSound()
+        {
+            gameObject.transform.parent.GetComponentInParent<AudioSource>().PlayOneShot(closeWindowSound);
         }
 
         private void Update()
