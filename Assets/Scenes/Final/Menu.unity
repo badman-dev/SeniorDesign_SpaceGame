@@ -802,11 +802,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1377159655}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: playButtonSound
-        m_Mode: 2
+        m_MethodName: playRandomButtonSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -948,11 +948,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1377159655}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: playButtonSound
-        m_Mode: 2
+        m_MethodName: playRandomButtonSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1106,11 +1106,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1377159655}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: playButtonSound
-        m_Mode: 2
+        m_MethodName: playRandomButtonSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1264,11 +1264,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1377159655}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: playButtonSound
-        m_Mode: 2
+        m_MethodName: playRandomButtonSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2556,11 +2556,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1377159655}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: playButtonSound
-        m_Mode: 2
+        m_MethodName: playRandomButtonSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2647,10 +2647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1261787816}
   buttonSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: dfc19f438e40a8a4484c0bc8f344e645, type: 3}
 --- !u!4 &1377159656
 Transform:
   m_ObjectHideFlags: 0
@@ -2764,11 +2761,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1377159655}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: playButtonSound
-        m_Mode: 2
+        m_MethodName: playRandomButtonSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3143,11 +3140,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1377159655}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: playButtonSound
-        m_Mode: 2
+        m_MethodName: playRandomButtonSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3289,11 +3286,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1377159655}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: playButtonSound
-        m_Mode: 2
+        m_MethodName: playRandomButtonSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
