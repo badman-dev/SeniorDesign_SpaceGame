@@ -14,13 +14,28 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     [HideInInspector]
     public Collider2D playerCollider;
-    //TEst
     [HideInInspector]
     public GameObject dmgSpriteController;
     [HideInInspector]
     public SpriteRenderer dmgSprite;
     [HideInInspector]
     public Color dmgAlpha;
+
+
+    //TEst
+    [HideInInspector]
+    public SpriteRenderer playerSprite;
+    [HideInInspector]
+    public GameObject damageSystem;
+    [HideInInspector]
+    public GameObject deathSystemWhite;
+    [HideInInspector]
+    public GameObject deathSystemWhite2;
+    [HideInInspector]
+    public GameObject deathSystemOrange;
+    [HideInInspector]
+    public GameObject deathSystemOrange2;
+
     //EndTEst
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
@@ -91,12 +106,22 @@ public class playerController : MonoBehaviour
         //get reference to animator
         animator = this.GetComponent<Animator>();
         animator.SetBool("IsHarvesting", false);
+        //get reference to player sprite
+        playerSprite = this.GetComponent<SpriteRenderer>();
 
-        //Test
+        //Gets the damage state sprite
         dmgSpriteController = GameObject.Find("DamageState");
         dmgSprite = dmgSpriteController.GetComponent<SpriteRenderer>();
         dmgAlpha = dmgSprite.color;
         dmgAlpha.a = 0;
+
+        //Test
+        //gets reference to particle systems
+        damageSystem = GameObject.Find("FireSystem");
+        deathSystemWhite = GameObject.Find("DeathSystemWhite1");
+        deathSystemWhite2 = GameObject.Find("DeathSystemWhite2");
+        deathSystemOrange = GameObject.Find("DeathSystemOrange1");
+        deathSystemOrange2 = GameObject.Find("DeathSystemOrange2");
         //EndTest
 
         //Activate actions (without this the inputs will not register)
@@ -281,6 +306,7 @@ public class playerController : MonoBehaviour
         //Test
         DamageAlpha();
         //EndTest
+        CheckDamage();
         CheckDead();
     }
 
@@ -305,6 +331,7 @@ public class playerController : MonoBehaviour
     {
         currentPlayerHealth = amount;
         healthText.text = currentPlayerHealth.ToString();
+        
         CheckDead();
     }
 
@@ -337,6 +364,11 @@ public class playerController : MonoBehaviour
         if (currentPlayerHealth <= 0)
         {
             LevelManager.Instance.StartPlayerDeath();
+            Destroy(playerSprite);
+            deathSystemWhite.GetComponent<ParticleSystem>().Play();
+            deathSystemWhite2.GetComponent<ParticleSystem>().Play();
+            deathSystemOrange.GetComponent<ParticleSystem>().Play();
+            deathSystemOrange2.GetComponent<ParticleSystem>().Play();
         }
     }
 
@@ -366,7 +398,18 @@ public class playerController : MonoBehaviour
     public void DamageAlpha()
     {
         dmgAlpha.a = 1 - (currentPlayerHealth / startingPlayerHealth);
+
         dmgSprite.color = dmgAlpha;
+
         Debug.Log("playerController: Alpha: " + dmgAlpha.a.ToString());
+    }
+
+    public void CheckDamage()
+    {
+        if (currentPlayerHealth <= 50)
+        {
+            Debug.Log(damageSystem.name);
+            damageSystem.GetComponent<ParticleSystem>().Play();
+        }
     }
 }
