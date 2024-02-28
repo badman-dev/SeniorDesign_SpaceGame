@@ -14,6 +14,29 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     [HideInInspector]
     public Collider2D playerCollider;
+    [HideInInspector]
+    public GameObject dmgSpriteController;
+    [HideInInspector]
+    public SpriteRenderer dmgSprite;
+    [HideInInspector]
+    public Color dmgAlpha;
+
+
+    //TEst
+    [HideInInspector]
+    public SpriteRenderer playerSprite;
+    [HideInInspector]
+    public GameObject damageSystem;
+    [HideInInspector]
+    public GameObject deathSystemWhite;
+    [HideInInspector]
+    public GameObject deathSystemWhite2;
+    [HideInInspector]
+    public GameObject deathSystemOrange;
+    [HideInInspector]
+    public GameObject deathSystemOrange2;
+
+    //EndTEst
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
@@ -82,6 +105,24 @@ public class playerController : MonoBehaviour
         playerCollider = this.GetComponent<Collider2D>();
         //get reference to animator
         animator = this.GetComponent<Animator>();
+        animator.SetBool("IsHarvesting", false);
+        //get reference to player sprite
+        playerSprite = this.GetComponent<SpriteRenderer>();
+
+        //Gets the damage state sprite
+        dmgSpriteController = GameObject.Find("DamageState");
+        dmgSprite = dmgSpriteController.GetComponent<SpriteRenderer>();
+        dmgAlpha = dmgSprite.color;
+        dmgAlpha.a = 0;
+
+        //Test
+        //gets reference to particle systems
+        damageSystem = GameObject.Find("FireSystem");
+        deathSystemWhite = GameObject.Find("DeathSystemWhite1");
+        deathSystemWhite2 = GameObject.Find("DeathSystemWhite2");
+        deathSystemOrange = GameObject.Find("DeathSystemOrange1");
+        deathSystemOrange2 = GameObject.Find("DeathSystemOrange2");
+        //EndTest
 
         //Activate actions (without this the inputs will not register)
         thrusterAction.action.Enable();
@@ -117,8 +158,8 @@ public class playerController : MonoBehaviour
         if (currentThrusterAxisValue != 0)
         {
             rb.AddRelativeForce(new Vector2(0, currentThrusterAxisValue * thrusterStrength * Time.deltaTime));
-            
-            if(currentThrusterAxisValue > 0)
+
+            if (currentThrusterAxisValue > 0)
             {
                 animator.SetBool("IsMovingForward", true);
             }
@@ -126,23 +167,23 @@ public class playerController : MonoBehaviour
             {
                 animator.SetBool("IsMovingBack", true);
             }
-            
+
         }
 
         //add torque based on rotation direction input
         if (currentThrusterRotateValue != 0)
         {
             rb.AddTorque(currentThrusterRotateValue * thrusterRotationStrength * Time.deltaTime);
-            
+
             //add some horizontal force when turning to keep the flying from being totally uncontrollable (hopefully)
             rb.AddRelativeForce(Vector2.right * Mathf.Sign(currentThrusterRotateValue * -1) * rotationStrafeStrength * currentThrusterAxisValue * (rb.velocity.magnitude / maximumVelocity) * Time.deltaTime);
 
 
-            if(currentThrusterRotateValue > 0)
+            if (currentThrusterRotateValue > 0)
             {
                 animator.SetBool("IsMovingLeft", true);
             }
-            else if(currentThrusterRotateValue < 0)
+            else if (currentThrusterRotateValue < 0)
             {
                 animator.SetBool("IsMovingRight", true);
             }
@@ -159,7 +200,7 @@ public class playerController : MonoBehaviour
             if (currentSideDashInputValue > 0)
             {
                 animator.SetTrigger("DodgeRight");
-                
+
             }
             else if (currentSideDashInputValue < 0)
             {
@@ -169,18 +210,18 @@ public class playerController : MonoBehaviour
             rb.DOMove(transform.position + (transform.right * currentSideDashInputValue * dashDistance), dashDuration);
             dashTimer = 0;
 
-            
+
 
         }
         if (dashTimer >= dashCooldownSeconds)
         {
             dashTimer = dashCooldownSeconds;
-            
+
         }
         else
         {
             dashTimer += Time.deltaTime;
-            
+
         }
 
 
@@ -196,7 +237,7 @@ public class playerController : MonoBehaviour
         {
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maximumVelocity);
         }
-        
+
         //apply counter-thrust if brake is pressed
         if (currentBrakeValue != 0 && rb.velocity.magnitude >= brakeFullStopThreshold)
         {
@@ -225,21 +266,25 @@ public class playerController : MonoBehaviour
             {
                 attachDrill();
                 Debug.Log("drill was attached");
+
+                animator.SetBool("IsHarvesting", true);
                 isDrillDeployed = true;
             }
             else
             {
                 Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
+                animator.SetBool("IsHarvesting", false);
                 isDrillDeployed = false;
+
             }
         }
         ////drill despawner
         //if (retractDrillAction.action.WasPressedThisFrame() && isDrillDeployed)
         //{
-
         //    Destroy(GameObject.FindGameObjectWithTag("drillPrefab"));
         //    isDrillDeployed = false;
         //}
+
 
         lerpSpeed = 3f * Time.deltaTime;
         AdjustHealthBar();
@@ -258,6 +303,10 @@ public class playerController : MonoBehaviour
         if (logDamage)
             Debug.Log("playerController: damage taken: " + dmgAmount);
         timeSinceLastHit = 0f;
+        //Test
+        DamageAlpha();
+        //EndTest
+        CheckDamage();
         CheckDead();
     }
 
@@ -282,6 +331,7 @@ public class playerController : MonoBehaviour
     {
         currentPlayerHealth = amount;
         healthText.text = currentPlayerHealth.ToString();
+        
         CheckDead();
     }
 
@@ -302,16 +352,24 @@ public class playerController : MonoBehaviour
         if (timeSinceLastHit > 3)
         {
             healthBar.CrossFadeAlpha(0, .5f, false);
-        } else
+        }
+        else
         {
             healthBar.CrossFadeAlpha(1, .1f, false);
         }
     }
 
-    private void CheckDead() {
+    private void CheckDead()
+    {
         if (currentPlayerHealth <= 0)
         {
             LevelManager.Instance.StartPlayerDeath();
+            Destroy(playerSprite);
+            Destroy(dmgSprite);
+            deathSystemWhite.GetComponent<ParticleSystem>().Play();
+            deathSystemWhite2.GetComponent<ParticleSystem>().Play();
+            deathSystemOrange.GetComponent<ParticleSystem>().Play();
+            deathSystemOrange2.GetComponent<ParticleSystem>().Play();
         }
     }
 
@@ -335,5 +393,24 @@ public class playerController : MonoBehaviour
         GameObject go = Instantiate(drillPrefab, transform.position, transform.rotation) as GameObject;
         go.transform.parent = GameObject.Find("Player").transform;
         GameObject.Find("link1").GetComponent<HingeJoint2D>().connectedBody = rb;
+    }
+
+    //Test
+    public void DamageAlpha()
+    {
+        dmgAlpha.a = 1 - (currentPlayerHealth / startingPlayerHealth);
+
+        dmgSprite.color = dmgAlpha;
+
+        Debug.Log("playerController: Alpha: " + dmgAlpha.a.ToString());
+    }
+
+    public void CheckDamage()
+    {
+        if (currentPlayerHealth <= 50)
+        {
+            Debug.Log(damageSystem.name);
+            damageSystem.GetComponent<ParticleSystem>().Play();
+        }
     }
 }
