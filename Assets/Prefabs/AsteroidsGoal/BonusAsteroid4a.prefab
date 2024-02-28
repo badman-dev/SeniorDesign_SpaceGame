@@ -323,7 +323,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710254295569470817}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9b1d642fa981444995c8b398f677351, type: 3}
   m_Name: 
@@ -357,8 +357,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3065682653885164001}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.4, y: -4.2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.03933613, w: 0.99922603}
+  m_LocalPosition: {x: 2.3169928, y: -11.573675, z: 0}
   m_LocalScale: {x: 22, y: 22, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 4406711971173181414}
   - component: {fileID: 1817323793496699628}
   - component: {fileID: 1934871161151425979}
+  - component: {fileID: 1931769730330642640}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Untagged
@@ -443,15 +444,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8325466828090024729}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6, y: 1.05, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.03933613, w: 0.99922603}
+  m_LocalPosition: {x: -0.35, y: 2.93, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4624907850678914372}
   m_Father: {fileID: 2056150645877165424}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.509}
 --- !u!212 &4406711971173181414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -493,7 +494,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b26e2710234ea446af54490904eeb08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9fade6d8bb2904c8e6ed4aabf3cc42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -532,7 +533,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7c85620323ae8498b2fa35ec929825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToBreak: 3
+  finalDustCloud: {fileID: 6327708270807129149, guid: f93a44874398f6943a9659324884c2e5, type: 3}
   pickupType: 1
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1931769730330642640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8325466828090024729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0531b543d93de574fab7c567307e5539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dustCloud: {fileID: 4812839375587315032, guid: e89da6e36f8018440a5a4ae817fdcf19, type: 3}
+  astOrigin: {fileID: 1710254295569470817}
