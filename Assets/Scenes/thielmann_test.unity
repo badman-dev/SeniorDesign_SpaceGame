@@ -2510,6 +2510,14 @@ PrefabInstance:
       propertyPath: inventoryText
       value: 
       objectReference: {fileID: 1007965268}
+    - target: {fileID: 2496884292703080593, guid: 8ca066930ba7d7a408594e747e168329, type: 3}
+      propertyPath: inputActions.m_Id
+      value: 09e1f9ac-4f42-4a69-9219-df45b7e85c5c
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496884292703080593, guid: 8ca066930ba7d7a408594e747e168329, type: 3}
+      propertyPath: inputActions.m_Name
+      value: Input Actions
+      objectReference: {fileID: 0}
     - target: {fileID: 5582895057195111995, guid: 8ca066930ba7d7a408594e747e168329, type: 3}
       propertyPath: m_RootOrder
       value: 7
