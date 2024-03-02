@@ -112,7 +112,7 @@
 
         private void playCloseWindowSound()
         {
-            gameObject.transform.parent.GetComponentInParent<AudioSource>().PlayOneShot(closeWindowSound);
+            GetComponentInParent<AudioSource>().PlayOneShot(closeWindowSound);
         }
 
         private void Update()
