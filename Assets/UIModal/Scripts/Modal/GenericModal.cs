@@ -72,12 +72,15 @@
                     
                     if (modalButton[index].CloseModalOnClick)
                     {
+                        LevelManager.Instance.resumeGame();
                         playCloseWindowSound();
                         Close();
                     }
                     m_Buttons[index].onClick.RemoveAllListeners();
                 });
             }
+
+            LevelManager.Instance.pauseGame();
         }
 
         //custom modfication
