@@ -104,7 +104,7 @@
                 if (playAudio && audSource != null)
                     audSource.PlayOneShot(textBlips[Mathf.FloorToInt(Random.Range(0, textBlips.Length - .01f))]);
 
-                yield return new WaitForSeconds(waitTimeSeconds);
+                yield return new WaitForSecondsRealtime(waitTimeSeconds);
             }
 
             yield return null;
