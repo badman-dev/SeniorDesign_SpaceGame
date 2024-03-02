@@ -48,7 +48,6 @@ public class LevelManager : MonoBehaviour
     {
         if (!restartingLevel)
         {
-            restartingLevel = true;
             StartCoroutine(PlayerDeathRoutine());
         }
     }
@@ -70,6 +69,8 @@ public class LevelManager : MonoBehaviour
             yield return null;
         }
         UIManager.Instance.deathPanel.SetActive(true);
+
+        restartingLevel = false;
     }
 
     public void ChangeScene(string sceneName)
