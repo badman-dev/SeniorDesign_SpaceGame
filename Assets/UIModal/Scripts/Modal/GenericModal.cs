@@ -21,6 +21,7 @@
         public bool playAudio = true;
         public AudioSource audSource;
         public AudioClip[] textBlips;
+        public AudioClip buttonSound;
         public AudioClip closeWindowSound;
 
         private bool skipToEndOfText = false;
@@ -67,6 +68,7 @@
                 {
                     if (modalButton[index].Callback != null)
                     {
+                        audSource.PlayOneShot(buttonSound);
                         modalButton[index].Callback();
                     }
                     
