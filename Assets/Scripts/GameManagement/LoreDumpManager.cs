@@ -21,6 +21,7 @@ public class LoreDumpManager : MonoBehaviour
     public bool playAudio = true;
     public AudioSource audSource;
     public AudioClip[] textBlips;
+    public AudioClip buttonSound;
 
     private bool skipToEndOfText = false;
     private bool displayTextIsFinished = false;
@@ -29,7 +30,10 @@ public class LoreDumpManager : MonoBehaviour
 
     private void Start()
     {
-        continueBtn.onClick.AddListener(() => { LevelManager.Instance.ChangeScene(sceneToLoad); });
+        continueBtn.onClick.AddListener(() => {
+            audSource.PlayOneShot(buttonSound);
+            LevelManager.Instance.ChangeScene(sceneToLoad);
+        });
     }
 
     private void FixedUpdate()

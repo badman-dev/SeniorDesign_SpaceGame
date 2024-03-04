@@ -344,6 +344,7 @@ MonoBehaviour:
   textBlips:
   - {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
   - {fileID: 8300000, guid: dfc19f438e40a8a4484c0bc8f344e645, type: 3}
+  buttonSound: {fileID: 8300000, guid: dfc19f438e40a8a4484c0bc8f344e645, type: 3}
 --- !u!4 &1067669366
 Transform:
   m_ObjectHideFlags: 0
