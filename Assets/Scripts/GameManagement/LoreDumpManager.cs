@@ -6,12 +6,18 @@ using UnityEngine.UI;
 
 public class LoreDumpManager : MonoBehaviour
 {
+    [Header("Text stuff")]
     public Text contentWindow;
     [TextArea]
     public string introText;
     public float charDisplayWaitTime = .05f;
     public float startDelay = 1f;
 
+    [Header("Continue Button settings")]
+    public Button continueBtn;
+    public string sceneToLoad = "1_Asteroid";
+
+    [Header("Audio Settings")]
     public bool playAudio = true;
     public AudioSource audSource;
     public AudioClip[] textBlips;
@@ -21,6 +27,11 @@ public class LoreDumpManager : MonoBehaviour
     private bool displayTextIsRunning = false;
     private float startDelayTimer = 0;
 
+    private void Start()
+    {
+        continueBtn.onClick.AddListener(() => { LevelManager.Instance.ChangeScene(sceneToLoad); });
+    }
+
     private void FixedUpdate()
     {
         if (startDelayTimer < startDelay)
@@ -28,6 +39,10 @@ public class LoreDumpManager : MonoBehaviour
         else if (!displayTextIsFinished)
         {
             displayTextGradual(contentWindow, introText, charDisplayWaitTime);
+        }
+        else
+        {
+            continueBtn.gameObject.SetActive(true); //TODO: make this a tweening animation so it opens up epicly
         }
     }
 
