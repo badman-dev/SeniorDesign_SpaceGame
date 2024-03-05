@@ -163,10 +163,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b072a4bbe8f46dc47b465f9594715a15, type: 3}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 56
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -334,11 +334,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentWindow: {fileID: 49266310}
-  introText: '[insert agency name] is a government agency that deals with space exploration
-    and discovery. The agency continues to get funding by successfully completing
-    exploration missions. These missions are accomplished through the technology
-    designed and developed by government employees to make the [insert ship name],
-    which is the probe used in space to explore. '
+  introText: "The year is 2065. \r\n\r\nThe Special Partition for Acquiring and Cataloguing
+    Extraterrestrials (S.P.A.C.E.) is a global, multinational agency tasked with
+    locating evidence of life among the stars. One potential source for such evidence
+    is asteroids, which could contain fossils of microscopic organisms, or even live
+    samples.  \r\n\r\nExpeditions are accomplished through technology designed and
+    developed by engineers from around the world to create the S.P.A.C.E. Collector,
+    a robust ship designed for deep space exploration and sample collection. \r\n\r\nYour
+    mission, as the pilot of the Collector, is to extract samples from asteroids
+    while navigating through the many hazards of Outer Space. The path ahead will
+    be difficult, but success means priceless knowledge for humanity about the formation
+    of life beyond Earth. Good luck, Commander. "
   charDisplayWaitTime: 0.01
   startDelay: 1
   continueBtn: {fileID: 1969817619}
