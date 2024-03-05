@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class LoreDumpManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class LoreDumpManager : MonoBehaviour
     [Header("Continue Button settings")]
     public Button continueBtn;
     public string sceneToLoad = "1_Asteroid";
+    public float appearTimeSeconds = .3f;
 
     [Header("Audio Settings")]
     public bool playAudio = true;
@@ -44,9 +46,12 @@ public class LoreDumpManager : MonoBehaviour
         {
             displayTextGradual(contentWindow, introText, charDisplayWaitTime);
         }
-        else
+        else if (!continueBtn.gameObject.activeInHierarchy)
         {
-            continueBtn.gameObject.SetActive(true); //TODO: make this a tweening animation so it opens up epicly
+            continueBtn.gameObject.SetActive(true);
+            float fullYScale = continueBtn.transform.localScale.y;
+            continueBtn.transform.localScale = new Vector3(continueBtn.transform.localScale.x, .0f, continueBtn.transform.localScale.z);
+            continueBtn.transform.DOScaleY(fullYScale, appearTimeSeconds);
         }
     }
 

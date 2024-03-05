@@ -211,6 +211,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2496884292703080593, guid: 8ca066930ba7d7a408594e747e168329, type: 3}
+      propertyPath: inputActions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
+    - target: {fileID: 2496884292703080593, guid: 8ca066930ba7d7a408594e747e168329, type: 3}
       propertyPath: inputActions.m_Id
       value: bf374288-4d8b-4cf2-93e3-1850807a0052
       objectReference: {fileID: 0}
@@ -339,6 +343,7 @@ MonoBehaviour:
   startDelay: 1
   continueBtn: {fileID: 1969817619}
   sceneToLoad: 1_Asteroid
+  appearTimeSeconds: 0.25
   playAudio: 1
   audSource: {fileID: 1746078665}
   textBlips:
