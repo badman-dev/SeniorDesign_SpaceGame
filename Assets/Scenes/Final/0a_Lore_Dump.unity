@@ -348,7 +348,7 @@ MonoBehaviour:
   charDisplayWaitTime: 0.01
   startDelay: 1
   continueBtn: {fileID: 1969817619}
-  sceneToLoad: 1_Asteroid
+  sceneToLoad: 0_Tutorial
   appearTimeSeconds: 0.25
   playAudio: 1
   audSource: {fileID: 1746078665}
