@@ -79,7 +79,7 @@
                     {
                         LevelManager.Instance.resumeGame();
                         playCloseWindowSound();
-                        Close();
+                        transform.DOScaleY(0, appearTimeSeconds).OnComplete(Close);
                     }
                     m_Buttons[index].onClick.RemoveAllListeners();
                 });
