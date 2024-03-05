@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
     private int goalAstCount, bonusAstCountA, bonusAstCountB; //0, 1, 2
     private bool restartingLevel = false;
 
-    public InputActionMap inputActions;
+    public InputActionAsset inputActions;
 
     private void Awake()
     {
@@ -38,7 +38,7 @@ public class LevelManager : MonoBehaviour
     public void pauseGame()
     {
         Time.timeScale = 0;
-        foreach (InputAction item in inputActions.actions)
+        foreach (InputAction item in inputActions.actionMaps[0].actions)
         {
             item.Disable();
         }
@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour
     public void resumeGame()
     {
         Time.timeScale = 1;
-        foreach (InputAction item in inputActions.actions)
+        foreach (InputAction item in inputActions.actionMaps[0].actions)
         {
             item.Enable();
         }
