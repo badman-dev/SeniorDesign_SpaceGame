@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Final/0_Tutorial.unity
     guid: 5ef8050f9b1638746819160324f8d08a
   - enabled: 1
+    path: Assets/Scenes/Final/0a_Lore_Dump.unity
+    guid: c9b00058c38f0e9468dca51c5cfee06a
+  - enabled: 1
     path: Assets/Scenes/Final/1_Asteroid.unity
     guid: af3043cbc94b6984189a4b08f3c0f35d
   - enabled: 1

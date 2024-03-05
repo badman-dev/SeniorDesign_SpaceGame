@@ -1,5 +1,6 @@
 ﻿namespace Gravitons.UI.Modal
 {
+    using DG.Tweening;
     using System.Collections;
     using UnityEngine;
     using UnityEngine.UI;
@@ -16,11 +17,14 @@
         [SerializeField] protected float textDelaySeconds = .1f;
         [Tooltip("Whether or not to display text gradually or all at once")]
         [SerializeField] protected bool displayTextGradually = false;
+        [Tooltip("Duration of the opening scale animation")]
+        [SerializeField] protected float appearTimeSeconds = .25f;
 
         [Header("Audio")]
         public bool playAudio = true;
         public AudioSource audSource;
         public AudioClip[] textBlips;
+        public AudioClip buttonSound;
         public AudioClip closeWindowSound;
 
         private bool skipToEndOfText = false;
@@ -67,17 +71,26 @@
                 {
                     if (modalButton[index].Callback != null)
                     {
+                        audSource.PlayOneShot(buttonSound);
                         modalButton[index].Callback();
                     }
                     
                     if (modalButton[index].CloseModalOnClick)
                     {
+                        LevelManager.Instance.resumeGame();
                         playCloseWindowSound();
-                        Close();
+                        transform.DOScaleY(0, appearTimeSeconds).OnComplete(Close);
                     }
                     m_Buttons[index].onClick.RemoveAllListeners();
                 });
             }
+
+            //animate appearance
+            float fullYScale = transform.localScale.y;
+            transform.localScale = new Vector3(transform.localScale.x, .01f, transform.localScale.z);
+            transform.DOScaleY(fullYScale, appearTimeSeconds).SetUpdate(true);
+
+            LevelManager.Instance.pauseGame();
         }
 
         //custom modfication
@@ -104,7 +117,7 @@
                 if (playAudio && audSource != null)
                     audSource.PlayOneShot(textBlips[Mathf.FloorToInt(Random.Range(0, textBlips.Length - .01f))]);
 
-                yield return new WaitForSeconds(waitTimeSeconds);
+                yield return new WaitForSecondsRealtime(waitTimeSeconds);
             }
 
             yield return null;
@@ -118,7 +131,7 @@
         private void Update()
         {
             //listen for mouse click in case player tries to skip to the end of the text immediately
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
             {
                 skipToEndOfText = true;
             }

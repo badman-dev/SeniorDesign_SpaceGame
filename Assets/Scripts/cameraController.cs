@@ -19,7 +19,7 @@ public class cameraController : MonoBehaviour
     private float currentDeltaMultiplier = 1;
     private float slowmodeTimer = 999;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (player.sideDashAction.action.WasPressedThisFrame())
         {

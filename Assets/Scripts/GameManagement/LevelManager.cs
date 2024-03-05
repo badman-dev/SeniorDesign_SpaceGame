@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class LevelManager : MonoBehaviour
     private int goalAstCount, bonusAstCountA, bonusAstCountB; //0, 1, 2
     private bool restartingLevel = false;
 
+    public InputActionAsset inputActions;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -20,6 +24,32 @@ public class LevelManager : MonoBehaviour
             Destroy(this.gameObject);
         } else {
             _instance = this;
+        }
+    }
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus)
+            resumeGame();
+        else
+            pauseGame();
+    }
+
+    public void pauseGame()
+    {
+        Time.timeScale = 0;
+        foreach (InputAction item in inputActions.actionMaps[0].actions)
+        {
+            item.Disable();
+        }
+    }
+
+    public void resumeGame()
+    {
+        Time.timeScale = 1;
+        foreach (InputAction item in inputActions.actionMaps[0].actions)
+        {
+            item.Enable();
         }
     }
 
@@ -48,7 +78,6 @@ public class LevelManager : MonoBehaviour
     {
         if (!restartingLevel)
         {
-            restartingLevel = true;
             StartCoroutine(PlayerDeathRoutine());
         }
     }
@@ -70,6 +99,8 @@ public class LevelManager : MonoBehaviour
             yield return null;
         }
         UIManager.Instance.deathPanel.SetActive(true);
+
+        restartingLevel = false;
     }
 
     public void ChangeScene(string sceneName)

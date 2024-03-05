@@ -21,8 +21,6 @@ public class playerController : MonoBehaviour
     [HideInInspector]
     public Color dmgAlpha;
 
-
-    //TEst
     [HideInInspector]
     public SpriteRenderer playerSprite;
     [HideInInspector]
@@ -36,7 +34,6 @@ public class playerController : MonoBehaviour
     [HideInInspector]
     public GameObject deathSystemOrange2;
 
-    //EndTEst
     public InputActionReference thrusterAction;
     public InputActionReference brakesAction;
     public InputActionReference rotationAction;
