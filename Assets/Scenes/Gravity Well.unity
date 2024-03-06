@@ -692,5 +692,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1030704380}
-  maxGravStrength: 7.5
+  maxGravStrength: 2
   minDistance: 15
