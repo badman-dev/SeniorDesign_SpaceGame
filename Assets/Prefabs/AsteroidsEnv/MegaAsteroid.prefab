@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 5954223344723352392}
   - component: {fileID: 7803181794999296837}
   - component: {fileID: 6813630926187060417}
+  - component: {fileID: 8000842287359227499}
   m_Layer: 0
   m_Name: MegaAsteroid
   m_TagString: Untagged
@@ -336,3 +337,18 @@ MonoBehaviour:
   maxRandomSpeed: 20
   fixedRotateSpeed: 10
   isCounterClockwise: 1
+--- !u!114 &8000842287359227499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279097876069513423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dcbe75ded81304389db2d5ba831a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  maxGravStrength: 2
+  minDistance: 15
