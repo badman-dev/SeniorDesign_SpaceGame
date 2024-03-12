@@ -990,7 +990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &474251563494005446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1180,6 +1180,7 @@ MonoBehaviour:
   stats: {fileID: 4986304315689523379}
   btnContinue: {fileID: 6591583641679934207}
   waitBetweenChars: 0.01
+  waitBetweenLines: 0.75
   asteroidGoalText: {fileID: 1563624707744081350}
   asteroidBonusText1: {fileID: 8791110314837873191}
   asteroidBonusText2: {fileID: 7324112173790512079}

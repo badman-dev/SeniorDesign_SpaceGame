@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     public Text stats;
     public Button btnContinue;
     public float waitBetweenChars = .01f;
+    public float waitBetweenLines = .75f;
 
     public TextMeshProUGUI asteroidGoalText;
     public TextMeshProUGUI asteroidBonusText1;
@@ -49,7 +50,8 @@ public class UIManager : MonoBehaviour
         {
             if (audSource && buttonSound)
                 audSource.PlayOneShot(buttonSound);
-            //NEXT LEVEL
+
+            LevelManager.Instance.nextScene();
         });
     }
 
@@ -89,6 +91,7 @@ public class UIManager : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
         }
+        yield return new WaitForSecondsRealtime(waitBetweenLines);
 
         displayTextIsFinished = false;
         StartCoroutine(displayTextGradualRoutine(stats, "\nTime: " + 00 + ":" + 00, waitBetweenChars, false));
@@ -96,6 +99,7 @@ public class UIManager : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
         }
+        yield return new WaitForSecondsRealtime(waitBetweenLines);
 
         displayTextIsFinished = false;
         StartCoroutine(displayTextGradualRoutine(stats, "\nPar Time: " + 00 + ":" + 00, waitBetweenChars, false));
@@ -103,6 +107,7 @@ public class UIManager : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
         }
+        yield return new WaitForSecondsRealtime(waitBetweenLines);
 
 
         //make continue btn appear
