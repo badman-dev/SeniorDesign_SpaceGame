@@ -31,7 +31,7 @@ public class MegaAsteroidGravity : MonoBehaviour
         }
 
         gravDir *= gravStrength;
-        Debug.Log("Grav direction scaled: " + gravDir);
+        //Debug.Log("Grav direction scaled: " + gravDir);
 
         //apply force
         player.rb.AddForce(gravDir);
