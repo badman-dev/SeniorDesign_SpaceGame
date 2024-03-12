@@ -17,7 +17,7 @@ public class MegaAsteroidGravity : MonoBehaviour
 
         Vector2 gravDir = (asteroidPos2D - playerPos2D);
         gravDir = Vector2.ClampMagnitude(gravDir, 1);
-        Debug.Log("Grav direction: " + gravDir);
+        //Debug.Log("Grav direction: " + gravDir);
 
         float playerDist = Vector3.Distance(asteroidPos2D, playerPos2D);
         float gravStrength = 1;
