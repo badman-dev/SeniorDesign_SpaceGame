@@ -5,9 +5,17 @@ using UnityEngine;
 public class MegaAsteroidGravity : MonoBehaviour
 {
     public playerController player;
+    public PopupUIManager popupManager;
 
     public float maxGravStrength = 7.5f;
     public float minDistance = 15;
+
+    private void Start()
+    {
+        popupManager.setTitle("WARNING!");
+        popupManager.setBodyText("Object of considerable mass detected nearby. \nGravitational Pull: Significant. \nUse caution.");
+        popupManager.createDefaultPopup();
+    }
 
     private void FixedUpdate()
     {
