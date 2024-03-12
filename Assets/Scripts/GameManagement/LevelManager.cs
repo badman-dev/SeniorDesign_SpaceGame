@@ -105,7 +105,12 @@ public class LevelManager : MonoBehaviour
 
     public void nextScene()
     {
-        ChangeScene(SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name);
+        ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ChangeScene(int index)
+    {
+        SceneManager.LoadScene(index);
     }
 
     public void ChangeScene(string sceneName)
