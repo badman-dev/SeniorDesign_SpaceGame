@@ -108,7 +108,16 @@
                 if (skipToEndOfText)
                 {
                     skipToEndOfText = false;
-                    textBody.text = content;
+                    if (replaceExistingText)
+                        textBody.text = content;
+                    else
+                    {
+                        while (i < contentSplit.Length)
+                        {
+                            textBody.text += contentSplit[i];
+                            i++;
+                        }
+                    }
                     break;
                 }
 

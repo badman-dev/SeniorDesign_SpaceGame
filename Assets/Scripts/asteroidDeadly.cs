@@ -27,8 +27,7 @@ public class asteroidDeadly : MonoBehaviour
     {
         onCollision.Invoke();
 
-        if (damageSounds.Length != 0)
-            audioSource.PlayOneShot(damageSounds[Random.Range(0, damageSounds.Length - 1)]); //play random hit sound
+        
 
         playerController player;
         collision.gameObject.TryGetComponent<playerController>(out player);
@@ -37,9 +36,21 @@ public class asteroidDeadly : MonoBehaviour
         if (player != null)
         {
             if (collision.relativeVelocity.magnitude >= terminalVelocity)
+            {
                 player.applyDamage(maxCollisionDmg);
+                playRandomHitSound();
+            }
             else if (collision.relativeVelocity.magnitude >= minimumVelocity)
+            {
                 player.applyDamage(Mathf.Lerp(0, maxCollisionDmg, (player.rb.velocity.magnitude / terminalVelocity)));
+                playRandomHitSound();
+            }
         }
+    }
+
+    private void playRandomHitSound()
+    {
+        if (damageSounds.Length != 0)
+            audioSource.PlayOneShot(damageSounds[Random.Range(0, damageSounds.Length - 1)]);
     }
 }
