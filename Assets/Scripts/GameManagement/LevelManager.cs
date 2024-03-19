@@ -12,7 +12,12 @@ public class LevelManager : MonoBehaviour
     private static LevelManager _instance;
     public static LevelManager Instance { get {return _instance; } }
 
-    private int goalAstCount, bonusAstCountA, bonusAstCountB; //0, 1, 2
+    [HideInInspector]
+    public int totalGoalAstCount, totalBonusAstCountA, totalBonusAstCountB; //0, 1, 2
+    [HideInInspector]
+    public int currentLvlGoalAstCount, currentLvlBonusAstCountA, currentLvlBonusAstCountB;
+    [HideInInspector]
+    public int currentLvlTotalGoal, currentLvlTotalBonusA, currentLvlTotalBonusB;
     private bool restartingLevel = false;
 
     public InputActionAsset inputActions;
@@ -24,6 +29,35 @@ public class LevelManager : MonoBehaviour
             Destroy(this.gameObject);
         } else {
             _instance = this;
+        }
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        currentLvlGoalAstCount = 0;
+        currentLvlBonusAstCountA = 0;
+        currentLvlBonusAstCountB = 0;
+
+        currentLvlTotalGoal = 0;
+        currentLvlTotalBonusA = 0;
+        currentLvlTotalBonusB = 0;
+
+        ResourcePickupPrim[] allPickups = FindObjectsOfType<ResourcePickupPrim>();
+
+        for (int i = 0; i < allPickups.Length; i++)
+        {
+            switch (allPickups[i].pickupType)
+            {
+                case ResourcePickupPrim.PickupType.GoalObjective:
+                    currentLvlTotalGoal++;
+                    break;
+                case ResourcePickupPrim.PickupType.BonusObjectiveA:
+                    currentLvlTotalBonusA++;
+                    break;
+                case ResourcePickupPrim.PickupType.BonusObjectiveB:
+                    currentLvlTotalBonusB++;
+                    break;
+            }
         }
     }
 
@@ -58,20 +92,23 @@ public class LevelManager : MonoBehaviour
         switch (type)
         {
             case 0:
-                goalAstCount++;
+                totalGoalAstCount++;
+                currentLvlGoalAstCount++;
                 Debug.Log("Picked up goal asteroid");
                 break;
             case 1:
-                bonusAstCountA++;
+                totalBonusAstCountA++;
+                currentLvlBonusAstCountA++;
                 Debug.Log("Picked up bonus asteroid type 1");
                 break;
             case 2:
-                bonusAstCountB++;
+                totalBonusAstCountB++;
+                currentLvlBonusAstCountB++;
                 Debug.Log("Picked up bonus asteroid type 2");
                 break;
         }
 
-        UIManager.Instance.UpdateObjectiveUI(goalAstCount, bonusAstCountA, bonusAstCountB);
+        UIManager.Instance.UpdateObjectiveUI(totalGoalAstCount, totalBonusAstCountA, totalBonusAstCountB);
     }
 
     public void StartPlayerDeath()

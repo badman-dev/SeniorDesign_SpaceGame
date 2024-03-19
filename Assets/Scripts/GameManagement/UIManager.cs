@@ -86,7 +86,17 @@ public class UIManager : MonoBehaviour
 
         //TODO: ACTUALLY GET THE STATS
         displayTextIsFinished = false;
-        StartCoroutine(displayTextGradualRoutine(stats, "Asteroids Mined: " + 100, waitBetweenChars, true));
+        float asteroidsGotPercentTypeA = (LevelManager.Instance.currentLvlBonusAstCountA / LevelManager.Instance.currentLvlTotalBonusA) * 100;
+        StartCoroutine(displayTextGradualRoutine(stats, "Type A Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeA), waitBetweenChars, true));
+        while (!displayTextIsFinished)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSecondsRealtime(waitBetweenLines);
+
+        displayTextIsFinished = false;
+        float asteroidsGotPercentTypeB = (LevelManager.Instance.currentLvlBonusAstCountB / LevelManager.Instance.currentLvlTotalBonusB) * 100;
+        StartCoroutine(displayTextGradualRoutine(stats, "\nType B Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeB), waitBetweenChars, true));
         while (!displayTextIsFinished)
         {
             yield return new WaitForEndOfFrame();
