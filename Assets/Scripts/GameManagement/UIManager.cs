@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -104,7 +105,8 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitBetweenLines);
 
         displayTextIsFinished = false;
-        StartCoroutine(displayTextGradualRoutine(stats, "\nTime: " + 00 + ":" + 00, waitBetweenChars, false));
+        string time = TimeSpan.FromSeconds(LevelManager.Instance.currentLvlTime).Minutes + ":" + TimeSpan.FromSeconds(LevelManager.Instance.currentLvlTime).Seconds;
+        StartCoroutine(displayTextGradualRoutine(stats, "\nTime: " + time, waitBetweenChars, false));
         while (!displayTextIsFinished)
         {
             yield return new WaitForEndOfFrame();

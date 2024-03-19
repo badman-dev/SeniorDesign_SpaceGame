@@ -19,6 +19,9 @@ public class LevelManager : MonoBehaviour
     [HideInInspector]
     public int currentLvlTotalGoal, currentLvlTotalBonusA, currentLvlTotalBonusB;
     private bool restartingLevel = false;
+    [HideInInspector]
+    public float currentLvlTime = 0;
+    private bool isTrackingTime = true;
 
     public InputActionAsset inputActions;
 
@@ -41,6 +44,8 @@ public class LevelManager : MonoBehaviour
         currentLvlTotalGoal = 0;
         currentLvlTotalBonusA = 0;
         currentLvlTotalBonusB = 0;
+
+        currentLvlTime = 0;
 
         ResourcePickupPrim[] allPickups = FindObjectsOfType<ResourcePickupPrim>();
 
@@ -69,6 +74,12 @@ public class LevelManager : MonoBehaviour
             pauseGame();
     }
 
+    private void Update()
+    {
+        if (isTrackingTime)
+            currentLvlTime += Time.deltaTime;
+    }
+
     public void pauseGame()
     {
         Time.timeScale = 0;
@@ -76,6 +87,8 @@ public class LevelManager : MonoBehaviour
         {
             item.Disable();
         }
+
+        isTrackingTime = false;
     }
 
     public void resumeGame()
@@ -85,6 +98,8 @@ public class LevelManager : MonoBehaviour
         {
             item.Enable();
         }
+
+        isTrackingTime = true;
     }
 
     public void AddPickup(int type)
