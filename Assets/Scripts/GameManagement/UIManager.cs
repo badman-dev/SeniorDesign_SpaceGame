@@ -166,7 +166,7 @@ public class UIManager : MonoBehaviour
             textBody.text += contentSplit[i];
 
             if (playAudio && audSource != null)
-                audSource.PlayOneShot(textBlips[Mathf.FloorToInt(Random.Range(0, textBlips.Length - .01f))]);
+                audSource.PlayOneShot(textBlips[Mathf.FloorToInt(UnityEngine.Random.Range(0, textBlips.Length - .01f))]);
 
             yield return new WaitForSeconds(waitTimeSeconds);
         }
