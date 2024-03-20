@@ -9,15 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Final/Menu.unity
     guid: 17b6463e3f1f18e4aaf2e9e200906452
   - enabled: 1
-    path: Assets/Scenes/Final/0_Tutorial.unity
-    guid: 5ef8050f9b1638746819160324f8d08a
-  - enabled: 1
     path: Assets/Scenes/Final/0a_Lore_Dump.unity
     guid: c9b00058c38f0e9468dca51c5cfee06a
+  - enabled: 1
+    path: Assets/Scenes/Final/0_Tutorial.unity
+    guid: 5ef8050f9b1638746819160324f8d08a
   - enabled: 1
     path: Assets/Scenes/Final/1_Asteroid.unity
     guid: af3043cbc94b6984189a4b08f3c0f35d
   - enabled: 1
     path: Assets/Scenes/Final/2_Solar.unity
     guid: cf58e91b5596b8b46b6143cd9f86b6e0
+  - enabled: 1
+    path: Assets/Scenes/Final/3_Gravity Well.unity
+    guid: 7c4b0390eafbe3d47ace39073fec88ca
   m_configObjects: {}

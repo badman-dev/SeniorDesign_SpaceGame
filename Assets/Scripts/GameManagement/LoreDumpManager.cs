@@ -53,7 +53,10 @@ public class LoreDumpManager : MonoBehaviour
             continueBtn.transform.localScale = new Vector3(continueBtn.transform.localScale.x, .0f, continueBtn.transform.localScale.z);
             continueBtn.transform.DOScaleY(fullYScale, appearTimeSeconds);
         }
+    }
 
+    private void Update()
+    {
         //listen for mouse click in case player tries to skip to the end of the text immediately
         if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
         {
@@ -85,7 +88,16 @@ public class LoreDumpManager : MonoBehaviour
             if (skipToEndOfText)
             {
                 skipToEndOfText = false;
-                textBody.text = content;
+                if (replaceExistingText)
+                    textBody.text = content;
+                else
+                {
+                    while (i < contentSplit.Length)
+                    {
+                        textBody.text += contentSplit[i];
+                        i++;
+                    }
+                }
                 break;
             }
 

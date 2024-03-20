@@ -103,6 +103,16 @@ public class LevelManager : MonoBehaviour
         restartingLevel = false;
     }
 
+    public void nextScene()
+    {
+        ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ChangeScene(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
