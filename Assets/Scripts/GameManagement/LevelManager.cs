@@ -35,8 +35,19 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void OnLevelWasLoaded(int level)
+    private void OnEnable()
     {
+        SceneManager.sceneLoaded += onLevelFinishedLoading;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= onLevelFinishedLoading;
+    }
+
+    private void onLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+
         currentLvlGoalAstCount = 0;
         currentLvlBonusAstCountA = 0;
         currentLvlBonusAstCountB = 0;
