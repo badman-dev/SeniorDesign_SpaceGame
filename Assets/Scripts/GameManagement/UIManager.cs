@@ -57,9 +57,9 @@ public class UIManager : MonoBehaviour
     }
 
     public void UpdateObjectiveUI(int goalAstCount, int bonusAstCountA, int bonusAstCountB) {
-        asteroidGoalText.text = goalAstCount.ToString();
-        asteroidBonusText1.text = bonusAstCountA.ToString();
-        asteroidBonusText2.text = bonusAstCountB.ToString();
+        asteroidGoalText.text = goalAstCount.ToString() + "/" + LevelManager.Instance.currentLvlTotalGoal;
+        asteroidBonusText1.text = bonusAstCountA.ToString() + "/" + LevelManager.Instance.currentLvlTotalBonusA;
+        asteroidBonusText2.text = bonusAstCountB.ToString() + "/" + LevelManager.Instance.currentLvlTotalBonusB;
     }
 
     private void Update()
@@ -85,7 +85,6 @@ public class UIManager : MonoBehaviour
 
         levelEndPanel.SetActive(true);
 
-        //TODO: ACTUALLY GET THE STATS
         displayTextIsFinished = false;
         float fraction = (LevelManager.Instance.currentLvlTotalBonusA != 0) ? LevelManager.Instance.currentLvlBonusAstCountA / LevelManager.Instance.currentLvlTotalBonusA : 1;
         float asteroidsGotPercentTypeA = fraction * 100;
