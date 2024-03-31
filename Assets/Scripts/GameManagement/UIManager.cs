@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
 using System;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class UIManager : MonoBehaviour
     public float fadeTime = 1f;
     public GameObject deathPanel;
     public GameObject levelEndPanel;
+    public GameObject pauseMenuPanel;
     public Text stats;
     public Button btnContinue;
     public float waitBetweenChars = .01f;
@@ -23,6 +25,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI asteroidGoalText;
     public TextMeshProUGUI asteroidBonusText1;
     public TextMeshProUGUI asteroidBonusText2;
+
+    [Header("Input")]
+    public InputActionReference pauseAction;
 
     [Header("Audio Settings")]
     public bool playAudio = true;
@@ -54,6 +59,8 @@ public class UIManager : MonoBehaviour
 
             LevelManager.Instance.nextScene();
         });
+
+        pauseAction.action.Enable();
     }
 
     public void UpdateObjectiveUI(int goalAstCount, int bonusAstCountA, int bonusAstCountB) {
@@ -68,6 +75,21 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
         {
             skipToEndOfText = true;
+        }
+
+        if (pauseAction.action.WasPressedThisFrame())
+        {
+            LevelManager lvlMgr = LevelManager.Instance;
+            if (lvlMgr.isGamePaused)
+            {
+                pauseMenuPanel.SetActive(false);
+                lvlMgr.resumeGame();
+            }
+            else
+            {
+                pauseMenuPanel.SetActive(true);
+                lvlMgr.pauseGame();
+            }
         }
     }
 

@@ -21,6 +21,9 @@ public class LevelManager : MonoBehaviour
     private bool restartingLevel = false;
     [HideInInspector]
     public float currentLvlTime = 0;
+
+    [HideInInspector]
+    public bool isGamePaused = false;
     private bool isTrackingTime = true;
 
     public InputActionAsset inputActions;
@@ -100,6 +103,7 @@ public class LevelManager : MonoBehaviour
         }
 
         isTrackingTime = false;
+        isGamePaused = true;
     }
 
     public void resumeGame()
@@ -111,6 +115,7 @@ public class LevelManager : MonoBehaviour
         }
 
         isTrackingTime = true;
+        isGamePaused = false;
     }
 
     public void AddPickup(int type)
