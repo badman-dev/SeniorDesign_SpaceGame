@@ -54,13 +54,15 @@ public class UIManager : MonoBehaviour
     private void Start() {
         UpdateObjectiveUI(0, 0, 0);
 
-        //btnContinue.onClick.AddListener(() =>
-        //{
-        //    if (audSource && buttonSound)
-        //        audSource.PlayOneShot(buttonSound);
-
-        //    LevelManager.Instance.nextScene();
-        //});
+        Button[] buttons = GetComponentsInChildren<Button>();
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].onClick.AddListener(() =>
+            {
+                if (audSource && buttonSound)
+                    audSource.PlayOneShot(buttonSound);
+            });
+        }
 
         pauseAction.action.Enable();
     }
