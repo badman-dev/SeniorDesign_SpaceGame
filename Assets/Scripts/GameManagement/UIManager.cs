@@ -6,6 +6,8 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using System.Diagnostics;
 
 public class UIManager : MonoBehaviour
 {
@@ -52,13 +54,13 @@ public class UIManager : MonoBehaviour
     private void Start() {
         UpdateObjectiveUI(0, 0, 0);
 
-        btnContinue.onClick.AddListener(() =>
-        {
-            if (audSource && buttonSound)
-                audSource.PlayOneShot(buttonSound);
+        //btnContinue.onClick.AddListener(() =>
+        //{
+        //    if (audSource && buttonSound)
+        //        audSource.PlayOneShot(buttonSound);
 
-            LevelManager.Instance.nextScene();
-        });
+        //    LevelManager.Instance.nextScene();
+        //});
 
         pauseAction.action.Enable();
     }
@@ -79,16 +81,13 @@ public class UIManager : MonoBehaviour
 
         if (pauseAction.action.WasPressedThisFrame())
         {
-            LevelManager lvlMgr = LevelManager.Instance;
-            if (lvlMgr.isGamePaused)
+            if (LevelManager.Instance.isGamePaused)
             {
-                pauseMenuPanel.SetActive(false);
-                lvlMgr.resumeGame();
+                resume();
             }
             else
             {
-                pauseMenuPanel.SetActive(true);
-                lvlMgr.pauseGame();
+                pause();
             }
         }
     }
@@ -96,6 +95,33 @@ public class UIManager : MonoBehaviour
     public void endLevel()
     {
         StartCoroutine(endLevelPanelRoutine());
+    }
+
+    public void restartRevel()
+    {
+        LevelManager.Instance.restartLevel();
+    }
+
+    public void loadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    public void nextScene()
+    {
+        LevelManager.Instance.nextScene();
+    }
+
+    public void resume()
+    {
+        pauseMenuPanel.SetActive(false);
+        LevelManager.Instance.resumeGame();
+    }
+
+    public void pause()
+    {
+        pauseMenuPanel.SetActive(true);
+        LevelManager.Instance.pauseGame();
     }
 
     private IEnumerator endLevelPanelRoutine()
