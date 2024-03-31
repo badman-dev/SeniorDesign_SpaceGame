@@ -173,7 +173,10 @@ public class LevelManager : MonoBehaviour
 
     public void nextScene()
     {
-        ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int index = 0;
+        index = SceneManager.sceneCountInBuildSettings - 1 == index ? 0 : SceneManager.GetActiveScene().buildIndex + 1;
+
+        ChangeScene(index);
     }
 
     public void ChangeScene(int index)
