@@ -15,6 +15,8 @@ public class asteroidDeadly : MonoBehaviour
 
     public UnityEvent onCollision;
 
+    public ParticleSystem particleSystem;
+
     private void Start()
     {
         if (!audioSource)
@@ -44,6 +46,13 @@ public class asteroidDeadly : MonoBehaviour
             {
                 player.applyDamage(Mathf.Lerp(0, maxCollisionDmg, (player.rb.velocity.magnitude / terminalVelocity)));
                 playRandomHitSound();
+
+                var em = particleSystem.emission;
+                em.enabled = true;
+                var emitParams = new ParticleSystem.EmitParams();
+                emitParams.position = new Vector3(collision.contacts[0].point.x, collision.contacts[0].point.y, 0.0f);
+                particleSystem.Emit(emitParams, 1);
+                particleSystem.Play();
             }
         }
     }
