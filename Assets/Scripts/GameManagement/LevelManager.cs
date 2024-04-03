@@ -13,14 +13,17 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance { get {return _instance; } }
 
     [HideInInspector]
-    public int totalGoalAstCount, totalBonusAstCountA, totalBonusAstCountB; //0, 1, 2
+    public int totalGoalAstCount, totalBonusAstCountA, totalBonusAstCountB; //0, 1, 2 //Total amount of these asteroids collected in play session
     [HideInInspector]
-    public int currentLvlGoalAstCount, currentLvlBonusAstCountA, currentLvlBonusAstCountB;
+    public int currentLvlGoalAstCount, currentLvlBonusAstCountA, currentLvlBonusAstCountB; //amount of these asteroids collected this level
     [HideInInspector]
-    public int currentLvlTotalGoal, currentLvlTotalBonusA, currentLvlTotalBonusB;
+    public int currentLvlTotalGoal, currentLvlTotalBonusA, currentLvlTotalBonusB; //Total amount of these asteroids
     private bool restartingLevel = false;
     [HideInInspector]
     public float currentLvlTime = 0;
+
+    [HideInInspector]
+    public bool isGamePaused = false;
     private bool isTrackingTime = true;
 
     public InputActionAsset inputActions;
@@ -35,8 +38,19 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void OnLevelWasLoaded(int level)
+    private void OnEnable()
     {
+        SceneManager.sceneLoaded += onLevelFinishedLoading;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= onLevelFinishedLoading;
+    }
+
+    private void onLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+
         currentLvlGoalAstCount = 0;
         currentLvlBonusAstCountA = 0;
         currentLvlBonusAstCountB = 0;
@@ -89,6 +103,7 @@ public class LevelManager : MonoBehaviour
         }
 
         isTrackingTime = false;
+        isGamePaused = true;
     }
 
     public void resumeGame()
@@ -100,6 +115,7 @@ public class LevelManager : MonoBehaviour
         }
 
         isTrackingTime = true;
+        isGamePaused = false;
     }
 
     public void AddPickup(int type)
@@ -123,7 +139,7 @@ public class LevelManager : MonoBehaviour
                 break;
         }
 
-        UIManager.Instance.UpdateObjectiveUI(totalGoalAstCount, totalBonusAstCountA, totalBonusAstCountB);
+        UIManager.Instance.UpdateObjectiveUI(currentLvlGoalAstCount, currentLvlBonusAstCountA, currentLvlBonusAstCountB);
     }
 
     public void StartPlayerDeath()
@@ -157,7 +173,10 @@ public class LevelManager : MonoBehaviour
 
     public void nextScene()
     {
-        ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int index = 0;
+        index = SceneManager.sceneCountInBuildSettings - 1 == index ? 0 : SceneManager.GetActiveScene().buildIndex + 1;
+
+        ChangeScene(index);
     }
 
     public void ChangeScene(int index)
@@ -168,5 +187,10 @@ public class LevelManager : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 }

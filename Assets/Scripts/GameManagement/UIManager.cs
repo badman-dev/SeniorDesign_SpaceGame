@@ -5,6 +5,9 @@ using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
 using System;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using System.Diagnostics;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,6 +18,7 @@ public class UIManager : MonoBehaviour
     public float fadeTime = 1f;
     public GameObject deathPanel;
     public GameObject levelEndPanel;
+    public GameObject pauseMenuPanel;
     public Text stats;
     public Button btnContinue;
     public float waitBetweenChars = .01f;
@@ -23,6 +27,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI asteroidGoalText;
     public TextMeshProUGUI asteroidBonusText1;
     public TextMeshProUGUI asteroidBonusText2;
+
+    [Header("Input")]
+    public InputActionReference pauseAction;
 
     [Header("Audio Settings")]
     public bool playAudio = true;
@@ -47,19 +54,23 @@ public class UIManager : MonoBehaviour
     private void Start() {
         UpdateObjectiveUI(0, 0, 0);
 
-        btnContinue.onClick.AddListener(() =>
+        Button[] buttons = GetComponentsInChildren<Button>();
+        for (int i = 0; i < buttons.Length; i++)
         {
-            if (audSource && buttonSound)
-                audSource.PlayOneShot(buttonSound);
+            buttons[i].onClick.AddListener(() =>
+            {
+                if (audSource && buttonSound)
+                    audSource.PlayOneShot(buttonSound);
+            });
+        }
 
-            LevelManager.Instance.nextScene();
-        });
+        pauseAction.action.Enable();
     }
 
     public void UpdateObjectiveUI(int goalAstCount, int bonusAstCountA, int bonusAstCountB) {
-        asteroidGoalText.text = goalAstCount.ToString();
-        asteroidBonusText1.text = bonusAstCountA.ToString();
-        asteroidBonusText2.text = bonusAstCountB.ToString();
+        asteroidGoalText.text = goalAstCount.ToString() + "/" + LevelManager.Instance.currentLvlTotalGoal;
+        asteroidBonusText1.text = bonusAstCountA.ToString() + "/" + LevelManager.Instance.currentLvlTotalBonusA;
+        asteroidBonusText2.text = bonusAstCountB.ToString() + "/" + LevelManager.Instance.currentLvlTotalBonusB;
     }
 
     private void Update()
@@ -69,11 +80,50 @@ public class UIManager : MonoBehaviour
         {
             skipToEndOfText = true;
         }
+
+        if (pauseAction.action.WasPressedThisFrame())
+        {
+            if (LevelManager.Instance.isGamePaused)
+            {
+                resume();
+            }
+            else
+            {
+                pause();
+            }
+        }
     }
 
     public void endLevel()
     {
         StartCoroutine(endLevelPanelRoutine());
+    }
+
+    public void restartRevel()
+    {
+        LevelManager.Instance.restartLevel();
+    }
+
+    public void loadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    public void nextScene()
+    {
+        LevelManager.Instance.nextScene();
+    }
+
+    public void resume()
+    {
+        pauseMenuPanel.SetActive(false);
+        LevelManager.Instance.resumeGame();
+    }
+
+    public void pause()
+    {
+        pauseMenuPanel.SetActive(true);
+        LevelManager.Instance.pauseGame();
     }
 
     private IEnumerator endLevelPanelRoutine()
@@ -85,9 +135,9 @@ public class UIManager : MonoBehaviour
 
         levelEndPanel.SetActive(true);
 
-        //TODO: ACTUALLY GET THE STATS
         displayTextIsFinished = false;
-        float asteroidsGotPercentTypeA = (LevelManager.Instance.currentLvlBonusAstCountA / LevelManager.Instance.currentLvlTotalBonusA) * 100;
+        float fraction = (LevelManager.Instance.currentLvlTotalBonusA != 0) ? LevelManager.Instance.currentLvlBonusAstCountA / LevelManager.Instance.currentLvlTotalBonusA : 1;
+        float asteroidsGotPercentTypeA = fraction * 100;
         StartCoroutine(displayTextGradualRoutine(stats, "Type A Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeA), waitBetweenChars, true));
         while (!displayTextIsFinished)
         {
@@ -96,8 +146,9 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitBetweenLines);
 
         displayTextIsFinished = false;
-        float asteroidsGotPercentTypeB = (LevelManager.Instance.currentLvlBonusAstCountB / LevelManager.Instance.currentLvlTotalBonusB) * 100;
-        StartCoroutine(displayTextGradualRoutine(stats, "\nType B Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeB), waitBetweenChars, true));
+        fraction = (LevelManager.Instance.currentLvlTotalBonusB != 0) ? LevelManager.Instance.currentLvlBonusAstCountB / LevelManager.Instance.currentLvlTotalBonusB : 1;
+        float asteroidsGotPercentTypeB = fraction * 100;
+        StartCoroutine(displayTextGradualRoutine(stats, "\nType B Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeB), waitBetweenChars, false));
         while (!displayTextIsFinished)
         {
             yield return new WaitForEndOfFrame();
@@ -113,13 +164,13 @@ public class UIManager : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(waitBetweenLines);
 
-        displayTextIsFinished = false;
-        StartCoroutine(displayTextGradualRoutine(stats, "\nPar Time: " + 00 + ":" + 00, waitBetweenChars, false));
-        while (!displayTextIsFinished)
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        yield return new WaitForSecondsRealtime(waitBetweenLines);
+        //displayTextIsFinished = false;
+        //StartCoroutine(displayTextGradualRoutine(stats, "\nPar Time: " + 00 + ":" + 00, waitBetweenChars, false));
+        //while (!displayTextIsFinished)
+        //{
+        //    yield return new WaitForEndOfFrame();
+        //}
+        //yield return new WaitForSecondsRealtime(waitBetweenLines);
 
 
         //make continue btn appear
@@ -166,7 +217,7 @@ public class UIManager : MonoBehaviour
             textBody.text += contentSplit[i];
 
             if (playAudio && audSource != null)
-                audSource.PlayOneShot(textBlips[Mathf.FloorToInt(Random.Range(0, textBlips.Length - .01f))]);
+                audSource.PlayOneShot(textBlips[Mathf.FloorToInt(UnityEngine.Random.Range(0, textBlips.Length - .01f))]);
 
             yield return new WaitForSeconds(waitTimeSeconds);
         }
