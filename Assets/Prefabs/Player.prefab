@@ -10405,7 +10405,7 @@ MonoBehaviour:
   rotationStrafeStrength: 200
   dashCooldownSeconds: 1
   dashDuration: 0.1
-  dashDistance: 1
+  dashDistance: 2
   brakeStrength: 200
   applyBrakeToRotation: 1
   brakeRotationStrength: 0.3
