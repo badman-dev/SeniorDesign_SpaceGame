@@ -40,6 +40,8 @@ public class UIManager : MonoBehaviour
     private bool skipToEndOfText = false;
     private bool displayTextIsFinished = true;
     private bool lvlEnded = false;
+    [HideInInspector]
+    public bool isGamePausedWithMenu = false;
 
     private void Awake()
     {
@@ -117,12 +119,14 @@ public class UIManager : MonoBehaviour
     public void resume()
     {
         pauseMenuPanel.SetActive(false);
+        isGamePausedWithMenu = false;
         LevelManager.Instance.resumeGame();
     }
 
     public void pause()
     {
         pauseMenuPanel.SetActive(true);
+        isGamePausedWithMenu = true;
         LevelManager.Instance.pauseGame();
     }
 

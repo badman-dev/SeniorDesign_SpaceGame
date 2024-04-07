@@ -82,7 +82,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnApplicationFocus(bool hasFocus)
     {
-        if (hasFocus)
+        if (hasFocus && !UIManager.Instance.isGamePausedWithMenu)
             resumeGame();
         else
             pauseGame();
