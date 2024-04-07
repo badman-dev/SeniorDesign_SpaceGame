@@ -52,6 +52,7 @@ public class playerController : MonoBehaviour
     public float thrusterRotationStrength = 5;
     public float maximumTorque = 20;
     public float rotationStrafeStrength = 3;
+    public float rotationInputDeadzone = .2f;
     [Header("Dash Settings")]
     public float dashCooldownSeconds = 1;
     public float dashDuration = .25f;
@@ -168,7 +169,7 @@ public class playerController : MonoBehaviour
         }
 
         //add torque based on rotation direction input
-        if (currentThrusterRotateValue != 0)
+        if (currentThrusterRotateValue != 0 && Mathf.Abs(currentThrusterRotateValue) > rotationInputDeadzone)
         {
             rb.AddTorque(currentThrusterRotateValue * thrusterRotationStrength * Time.deltaTime);
 
