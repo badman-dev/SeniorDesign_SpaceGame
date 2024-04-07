@@ -474,6 +474,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Use drill to mine objective and complete level
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -558,6 +578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!114 &636004359 stripped
@@ -1393,6 +1417,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Left Shift to Brake
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1477,6 +1521,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!224 &1205405805 stripped
@@ -1572,6 +1620,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Pay attention to your radar to avoid radiation zones
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1656,6 +1724,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!224 &1263673529 stripped
@@ -2222,6 +2294,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Use Q or E for a quick sideways burst
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2306,6 +2398,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!224 &1453045083 stripped
@@ -2553,6 +2649,26 @@ PrefabInstance:
         Mine Brightly Colored
         Asteroids for extra points'
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2637,6 +2753,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!114 &1527895036 stripped
@@ -3100,6 +3220,26 @@ PrefabInstance:
 
         D to rotate right'
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3184,6 +3324,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!1 &1995699175 stripped
@@ -3477,6 +3621,26 @@ PrefabInstance:
 
         S to move backwards'
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3561,5 +3725,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
