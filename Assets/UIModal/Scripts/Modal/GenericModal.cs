@@ -163,6 +163,7 @@
             //close window if confirm button pressed
             if (listenForConfirm && confirmAction.action.WasPressedThisFrame())
             {
+                listenForConfirm = false;
                 LevelManager.Instance.resumeGame();
                 playCloseWindowSound();
                 transform.DOScaleY(0, appearTimeSeconds).OnComplete(Close);
