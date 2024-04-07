@@ -1882,6 +1882,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
   - {fileID: 8300000, guid: dfc19f438e40a8a4484c0bc8f344e645, type: 3}
   buttonSound: {fileID: 8300000, guid: d159d89e2eb39944a9dfbef221e7c4c5, type: 3}
+  isGamePausedWithMenu: 0
 --- !u!82 &1841224034288937155
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2229,8 +2230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 380.00003, y: 204.67029}
+  m_SizeDelta: {x: -760, y: -409.3405}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3858093048387140393
 CanvasRenderer:
@@ -3117,7 +3118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 375, y: 202}
+  m_AnchoredPosition: {x: 4.0000305, y: 0.99998474}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9115275666882536346
@@ -3624,7 +3625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 375, y: 202}
+  m_AnchoredPosition: {x: 4, y: 1}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4093394015144898677
