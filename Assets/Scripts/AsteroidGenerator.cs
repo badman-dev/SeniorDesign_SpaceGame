@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AsteroidGenerator : MonoBehaviour
 {
+    [Header("Generate Asteroid Sprite From List")]
     public Sprite[] sprites;
     // Start is called before the first frame update
     void Start()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MineralPick : MonoBehaviour
 {
+    [Header("List of Mineral Sprites")]
     public Sprite[] sprites;
     void Start()
     {
@@ -11,9 +12,4 @@ public class MineralPick : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
