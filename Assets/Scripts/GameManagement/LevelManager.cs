@@ -50,6 +50,7 @@ public class LevelManager : MonoBehaviour
 
     private void onLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+        resumeGame();
 
         currentLvlGoalAstCount = 0;
         currentLvlBonusAstCountA = 0;
