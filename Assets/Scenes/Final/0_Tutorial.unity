@@ -474,6 +474,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Use drill to mine objective and complete level
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -558,6 +578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!114 &636004359 stripped
@@ -1391,7 +1415,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_text
-      value: Left Shift to Brake
+      value: Left Shift or Cross/Circle to Brake
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
@@ -1477,6 +1521,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!224 &1205405805 stripped
@@ -1572,6 +1620,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Pay attention to your radar to avoid radiation zones
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
+      objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1656,6 +1724,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!224 &1263673529 stripped
@@ -2220,7 +2292,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_text
-      value: Use Q or E for a quick sideways burst
+      value: Use Q /Left Bumper or E / Right Bumper for a quick sideways burst
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
@@ -2306,6 +2398,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!224 &1453045083 stripped
@@ -2458,7 +2554,7 @@ PrefabInstance:
     - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: When you collect bonus asteroids, you'll be shown cool facts, with links
-        to learn more!
+        to learn more! Click "Close" or press the Cross button to continue.
       objectReference: {fileID: 0}
     - target: {fileID: 8340892921680159087, guid: 9c5a3c57b149e4646bc059d7cefb27cf, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2548,10 +2644,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_text
-      value: 'Press Spacebar to deploy or retract drill
+      value: 'Press Spacebar or Square/Triangle to deploy or retract drill
 
-        Mine Brightly Colored
-        Asteroids for extra points'
+        Mine
+        asteroids which appear brightly colored on radar for extra points'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
@@ -2583,11 +2699,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 20
+      value: 21.7425
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 5
+      value: 4.8451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8851
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8851
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8851
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2619,11 +2747,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 78.19242
+      value: 78.6
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2637,6 +2765,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!114 &1527895036 stripped
@@ -3096,9 +3228,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_text
-      value: 'A to rotate left
+      value: 'A or Left Stick Left to rotate left
 
-        D to rotate right'
+        D or Left Stick Right
+        to rotate right'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
@@ -3184,6 +3337,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
 --- !u!1 &1995699175 stripped
@@ -3473,9 +3630,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_text
-      value: 'W to move forwards
+      value: 'W or Left Stick Up to move forwards
 
-        S to move backwards'
+        S or Left Stick Down to
+        move backwards'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
+    - target: {fileID: 8645167802167427564, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278583040
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_Pivot.x
@@ -3507,11 +3685,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 20
+      value: 10.6291
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 5
+      value: 4.6902
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3543,11 +3721,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.6534
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.5
+      value: 4.3451
       objectReference: {fileID: 0}
     - target: {fileID: 8645167802167427566, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3561,5 +3739,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645167802167427567, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2204158867933396025, guid: b47da050734fd7847a2c27732a2d31c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1fdb02aff198c4f858fbf4e182d319, type: 3}

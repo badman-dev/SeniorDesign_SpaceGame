@@ -73,6 +73,28 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "6a2385eb-5670-449d-a0f6-bf7a01dac79e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brakes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f487a5b-94e5-439f-b51d-2f4352d1f1e9",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brakes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "2cdeb249-459b-42ab-ae29-82146a69f7ad",
                     "path": "1DAxis",
@@ -98,6 +120,72 @@
                     "name": "negative",
                     "id": "82bf5418-448d-47b2-85f9-e28dc15f841c",
                     "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thruster",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "c9b171cf-5acf-4130-8edf-0c172e653fed",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thruster",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "88cb3580-cf5a-4546-95c4-de9fc939174d",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thruster",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "78f9429b-1ea2-49fc-a3fa-72cca90d2318",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thruster",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "9f7051be-8683-495a-867f-5a74c8d806f6",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thruster",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "57d93362-408f-4881-a6d2-ead2676b9543",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thruster",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "3b255566-478d-44ba-89b9-fc6cd9e54168",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -140,6 +228,39 @@
                 },
                 {
                     "name": "1D Axis",
+                    "id": "1ac3b7e2-0db5-4dbb-a20f-d3e0a0380fc7",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "thrusterRotational",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c9681406-8693-4f20-8893-a8b385d65834",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "thrusterRotational",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "90f3d2bd-098c-41c1-b81c-953af98e232f",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "thrusterRotational",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
                     "id": "17b4175a-c0da-4a22-b40a-8ec9df565f5d",
                     "path": "1DAxis",
                     "interactions": "",
@@ -172,9 +293,64 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "1D Axis",
+                    "id": "033f58f0-9c2e-4baa-bbfa-31e5881fb7a4",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Side Dash",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "db6ca282-d5e6-4e45-8bba-20828d43f051",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Side Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "64033589-909c-4375-896d-10a723dbdb0c",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Side Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "e7b3da50-4d2c-4f31-a429-cf2a3b6f5daf",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Deploy Drill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "74c812c4-2db3-441b-a94e-28d04251c255",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Deploy Drill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "727f65c5-5f86-42a6-9c44-adf89dc8ca1a",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -207,6 +383,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "cf3bfe10-4ebf-4b06-82a7-605789e03ae5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -218,6 +403,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c8edd3f0-ab85-4895-9b5c-e88ed4de8d35",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "97624a2d-7429-4685-a73e-f4546dd780da",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

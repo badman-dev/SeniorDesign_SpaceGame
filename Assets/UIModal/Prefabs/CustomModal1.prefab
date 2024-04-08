@@ -1271,6 +1271,7 @@ MonoBehaviour:
   - {fileID: 9068166418011184046}
   textDelaySeconds: 0.01
   displayTextGradually: 1
+  appearTimeSeconds: 0.25
   playAudio: 1
   audSource: {fileID: 1301721890460645382}
   textBlips:
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dfc19f438e40a8a4484c0bc8f344e645, type: 3}
   buttonSound: {fileID: 8300000, guid: dfc19f438e40a8a4484c0bc8f344e645, type: 3}
   closeWindowSound: {fileID: 8300000, guid: 7aff8dfd6542f2e49a27103bd6336405, type: 3}
+  confirmAction: {fileID: -113188153048655691, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
 --- !u!1 &5513796223553707629
 GameObject:
   m_ObjectHideFlags: 0

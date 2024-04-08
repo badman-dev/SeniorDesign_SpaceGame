@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class LoreDumpManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class LoreDumpManager : MonoBehaviour
     public float startDelay = 1f;
 
     [Header("Continue Button settings")]
+    public InputActionReference confirmAction;
     public Button continueBtn;
     public string sceneToLoad = "1_Asteroid";
     public float appearTimeSeconds = .3f;
@@ -36,6 +38,8 @@ public class LoreDumpManager : MonoBehaviour
             audSource.PlayOneShot(buttonSound);
             LevelManager.Instance.ChangeScene(sceneToLoad);
         });
+
+        confirmAction.action.Enable();
     }
 
     private void FixedUpdate()
@@ -61,6 +65,11 @@ public class LoreDumpManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
         {
             skipToEndOfText = true;
+        }
+
+        if (displayTextIsFinished && confirmAction.action.WasPressedThisFrame())
+        {
+            continueBtn.onClick.Invoke();
         }
     }
 

@@ -2,7 +2,10 @@
 {
     using DG.Tweening;
     using System.Collections;
+    using Unity.VisualScripting;
     using UnityEngine;
+    using UnityEngine.InputSystem;
+    using UnityEngine.PlayerLoop;
     using UnityEngine.UI;
 
     public class GenericModal : Modal
@@ -27,6 +30,10 @@
         public AudioClip buttonSound;
         public AudioClip closeWindowSound;
 
+        [Header("Input")]
+        public InputActionReference confirmAction;
+        private bool listenForConfirm = false;
+
         private bool skipToEndOfText = false;
 
         /// <summary>
@@ -40,6 +47,11 @@
             }
 
             StopAllCoroutines();
+        }
+
+        private void Start()
+        {
+            confirmAction.action.Enable();
         }
 
         public override void Show(ModalContentBase modalContent, ModalButton[] modalButton)
@@ -88,7 +100,10 @@
             //animate appearance
             float fullYScale = transform.localScale.y;
             transform.localScale = new Vector3(transform.localScale.x, .01f, transform.localScale.z);
-            transform.DOScaleY(fullYScale, appearTimeSeconds).SetUpdate(true);
+            transform.DOScaleY(fullYScale, appearTimeSeconds).SetUpdate(true).OnComplete(() =>
+            {
+                listenForConfirm = true;
+            });
 
             LevelManager.Instance.pauseGame();
         }
@@ -143,6 +158,15 @@
             if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
             {
                 skipToEndOfText = true;
+            }
+
+            //close window if confirm button pressed
+            if (listenForConfirm && confirmAction.action.WasPressedThisFrame())
+            {
+                listenForConfirm = false;
+                LevelManager.Instance.resumeGame();
+                playCloseWindowSound();
+                transform.DOScaleY(0, appearTimeSeconds).OnComplete(Close);
             }
         }
     }

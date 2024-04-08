@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Input")]
     public InputActionReference pauseAction;
+    public InputActionReference confirmAction;
 
     [Header("Audio Settings")]
     public bool playAudio = true;
@@ -40,6 +41,9 @@ public class UIManager : MonoBehaviour
     private bool skipToEndOfText = false;
     private bool displayTextIsFinished = true;
     private bool lvlEnded = false;
+    [HideInInspector]
+    public bool isGamePausedWithMenu = false;
+    private bool listenForContinue = false;
 
     private void Awake()
     {
@@ -65,6 +69,7 @@ public class UIManager : MonoBehaviour
         }
 
         pauseAction.action.Enable();
+        confirmAction.action.Enable();
     }
 
     public void UpdateObjectiveUI(int goalAstCount, int bonusAstCountA, int bonusAstCountB) {
@@ -92,6 +97,12 @@ public class UIManager : MonoBehaviour
                 pause();
             }
         }
+
+        if (listenForContinue && confirmAction.action.WasPressedThisFrame())
+        {
+            listenForContinue = false;
+            btnContinue.onClick.Invoke();
+        }
     }
 
     public void endLevel()
@@ -117,12 +128,14 @@ public class UIManager : MonoBehaviour
     public void resume()
     {
         pauseMenuPanel.SetActive(false);
+        isGamePausedWithMenu = false;
         LevelManager.Instance.resumeGame();
     }
 
     public void pause()
     {
         pauseMenuPanel.SetActive(true);
+        isGamePausedWithMenu = true;
         LevelManager.Instance.pauseGame();
     }
 
@@ -138,7 +151,7 @@ public class UIManager : MonoBehaviour
         displayTextIsFinished = false;
         float fraction = (LevelManager.Instance.currentLvlTotalBonusA != 0) ? LevelManager.Instance.currentLvlBonusAstCountA / LevelManager.Instance.currentLvlTotalBonusA : 1;
         float asteroidsGotPercentTypeA = fraction * 100;
-        StartCoroutine(displayTextGradualRoutine(stats, "Type A Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeA), waitBetweenChars, true));
+        StartCoroutine(displayTextGradualRoutine(stats, "Type A Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeA) + "%", waitBetweenChars, true));
         while (!displayTextIsFinished)
         {
             yield return new WaitForEndOfFrame();
@@ -148,7 +161,7 @@ public class UIManager : MonoBehaviour
         displayTextIsFinished = false;
         fraction = (LevelManager.Instance.currentLvlTotalBonusB != 0) ? LevelManager.Instance.currentLvlBonusAstCountB / LevelManager.Instance.currentLvlTotalBonusB : 1;
         float asteroidsGotPercentTypeB = fraction * 100;
-        StartCoroutine(displayTextGradualRoutine(stats, "\nType B Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeB), waitBetweenChars, false));
+        StartCoroutine(displayTextGradualRoutine(stats, "\nType B Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeB) + "%", waitBetweenChars, false));
         while (!displayTextIsFinished)
         {
             yield return new WaitForEndOfFrame();
