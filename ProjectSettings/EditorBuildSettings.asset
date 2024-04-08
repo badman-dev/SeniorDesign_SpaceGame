@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final/3_Gravity Well.unity
     guid: 7c4b0390eafbe3d47ace39073fec88ca
+  - enabled: 1
+    path: Assets/Scenes/Final/EndingScreen.unity
+    guid: 8ac5a9935926c144fb4be02268e11f8a
   m_configObjects: {}
