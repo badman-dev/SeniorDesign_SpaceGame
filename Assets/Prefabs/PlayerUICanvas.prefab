@@ -1876,6 +1876,7 @@ MonoBehaviour:
   asteroidBonusText1: {fileID: 8791110314837873191}
   asteroidBonusText2: {fileID: 7324112173790512079}
   pauseAction: {fileID: -4598277937907820132, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
+  confirmAction: {fileID: -113188153048655691, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   playAudio: 1
   audSource: {fileID: 1841224034288937155}
   textBlips:

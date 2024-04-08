@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Input")]
     public InputActionReference pauseAction;
+    public InputActionReference confirmAction;
 
     [Header("Audio Settings")]
     public bool playAudio = true;
@@ -42,6 +43,7 @@ public class UIManager : MonoBehaviour
     private bool lvlEnded = false;
     [HideInInspector]
     public bool isGamePausedWithMenu = false;
+    private bool listenForContinue = false;
 
     private void Awake()
     {
@@ -67,6 +69,7 @@ public class UIManager : MonoBehaviour
         }
 
         pauseAction.action.Enable();
+        confirmAction.action.Enable();
     }
 
     public void UpdateObjectiveUI(int goalAstCount, int bonusAstCountA, int bonusAstCountB) {
@@ -93,6 +96,12 @@ public class UIManager : MonoBehaviour
             {
                 pause();
             }
+        }
+
+        if (listenForContinue && confirmAction.action.WasPressedThisFrame())
+        {
+            listenForContinue = false;
+            btnContinue.onClick.Invoke();
         }
     }
 
