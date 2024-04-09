@@ -50,6 +50,7 @@ public class LevelManager : MonoBehaviour
 
     private void onLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+        Debug.LogWarning("HEY!!!");
         resumeGame();
 
         currentLvlGoalAstCount = 0;

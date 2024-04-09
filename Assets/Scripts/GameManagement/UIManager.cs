@@ -7,7 +7,6 @@ using DG.Tweening;
 using System;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using System.Diagnostics;
 
 public class UIManager : MonoBehaviour
 {
@@ -149,7 +148,9 @@ public class UIManager : MonoBehaviour
         levelEndPanel.SetActive(true);
 
         displayTextIsFinished = false;
-        float fraction = (LevelManager.Instance.currentLvlTotalBonusA != 0) ? LevelManager.Instance.currentLvlBonusAstCountA / LevelManager.Instance.currentLvlTotalBonusA : 1;
+        float collectedA = LevelManager.Instance.currentLvlBonusAstCountA;
+        float totalA = LevelManager.Instance.currentLvlTotalBonusA;
+        float fraction = (LevelManager.Instance.currentLvlTotalBonusA != 0) ? collectedA / totalA : 1;
         float asteroidsGotPercentTypeA = fraction * 100;
         StartCoroutine(displayTextGradualRoutine(stats, "Type A Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeA) + "%", waitBetweenChars, true));
         while (!displayTextIsFinished)
@@ -159,7 +160,9 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitBetweenLines);
 
         displayTextIsFinished = false;
-        fraction = (LevelManager.Instance.currentLvlTotalBonusB != 0) ? LevelManager.Instance.currentLvlBonusAstCountB / LevelManager.Instance.currentLvlTotalBonusB : 1;
+        float collectedB = LevelManager.Instance.currentLvlBonusAstCountB;
+        float totalB = LevelManager.Instance.currentLvlTotalBonusB;
+        fraction = (LevelManager.Instance.currentLvlTotalBonusB != 0) ? collectedB / totalB : 1;
         float asteroidsGotPercentTypeB = fraction * 100;
         StartCoroutine(displayTextGradualRoutine(stats, "\nType B Asteroids Mined: " + Mathf.Floor(asteroidsGotPercentTypeB) + "%", waitBetweenChars, false));
         while (!displayTextIsFinished)
