@@ -83,9 +83,9 @@ public class LevelManager : MonoBehaviour
 
     private void OnApplicationFocus(bool hasFocus)
     {
-        if (hasFocus && !UIManager.Instance.isGamePausedWithMenu)
+        if (hasFocus && UIManager.Instance != null && !UIManager.Instance.isGamePausedWithMenu)
             resumeGame();
-        else
+        else if (!FindObjectOfType<LoreDumpManager>()) //this is dirty code, but expo is tomorrow so it'll do to prevent a hardlock xoxo
             pauseGame();
     }
 
