@@ -273,7 +273,7 @@
                 {
                     "name": "negative",
                     "id": "b0cf1755-a52e-47c7-b001-a4852e3a27cf",
-                    "path": "<Gamepad>/dpad/left",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -284,7 +284,7 @@
                 {
                     "name": "positive",
                     "id": "cf6de939-7023-4f57-b1d8-8141edb38de1",
-                    "path": "<Gamepad>/dpad/right",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
