@@ -976,6 +976,7 @@ MonoBehaviour:
     future upgrades to the ship.\r\n\r"
   charDisplayWaitTime: 0.01
   startDelay: 5
+  confirmAction: {fileID: -113188153048655691, guid: 113c0952eabe6744dbc5338b6df969fc, type: 3}
   continueBtn: {fileID: 1341731039}
   sceneToLoad: Menu
   appearTimeSeconds: 0.25
